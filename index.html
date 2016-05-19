@@ -233,6 +233,141 @@
             
               
                 
+                <a class="post-title-link" href="/2016/05/19/多态出现在成员上调用的特点/" itemprop="url">
+                  多态出现在成员上调用的特点
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-19T20:48:01+08:00" content="2016-05-19">
+              2016-05-19
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/JAVASE/" itemprop="url" rel="index">
+                    <span itemprop="name">JAVASE</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li><p>成员变量：</p>
+<ul>
+<li>编译时期：参考的是引用型变量所属类中是否有可调用的成员变量，如果有编译成功，如果没有，编译失败。</li>
+<li>运行时期：调用的也是引用型变量所属类中的成员变量。</li>
+<li>简单说编译运行都看=左边，其实这种情况不常见。<br> <br></li>
+</ul>
+</li>
+<li><p>成员函数：</p>
+<ul>
+<li>编译时期：参考的是引用型变量所属类中是否有调用的方法，如果有，编译成功，如果没有，编译失败。</li>
+<li>运行时期：参考的是对象所属的类中是否有调用的方法，如果有，调用子类的方法是，如果没有，调用父类的方法。</li>
+<li>简单说编译时期看左边，运行时期看右边。<br> <br></li>
+</ul>
+</li>
+<li><p>静态函数：</p>
+<ul>
+<li>编译时期：参考的是引用型变量所属类中是否有调用的方法。</li>
+<li>运行时期：参考的是引用型变量所属类中的方法。</li>
+<li>简单说：编译运行都看左边，因为静态函数是不所属于对象而是所属于类。<br> <br></li>
+</ul>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/05/17/hello-world/" itemprop="url">
                   Hello World
                 </a>
@@ -355,13 +490,27 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">1</span>
+              <span class="site-state-item-count">2</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
 
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
           
 
         </nav>
