@@ -96,7 +96,7 @@
 获取list中的元素：
 123&amp;gt;&amp;gt;&amp;gt; list1 = [&apos;java&apos;, &apos;c&apos;, &apos;python&apos;]&amp;gt;&amp;gt;&amp;gt; list1[2]&apos;python&apos;
 也可以从后往前获取：">
-<meta property="og:updated_time" content="2016-05-22T07:44:42.000Z">
+<meta property="og:updated_time" content="2016-05-22T07:46:38.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python中的list和tuple">
 <meta name="twitter:description" content="List定义一个list123&amp;gt;&amp;gt;&amp;gt; list1 = [&apos;java&apos;, &apos;c&apos;, &apos;python&apos;]&amp;gt;&amp;gt;&amp;gt; list1[&apos;java&apos;, &apos;c&apos;, &apos;python&apos;]
@@ -352,7 +352,7 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>list1 = [<span class="string">'java'</span>, <span class="string">'c'</span>, [<span class="string">'oc'</span>, <span class="string">'swift'</span>] ,<span class="string">'python'</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>list1[<span class="number">2</span>][<span class="number">0</span>]</span><br><span class="line"><span class="string">'oc'</span></span><br></pre></td></tr></table></figure>
 <h3 id="改"><a href="#改" class="headerlink" title="改"></a>改</h3><p>修改任意位置元素：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>list1 = [<span class="string">'java'</span>, <span class="string">'c'</span>, [<span class="string">'oc'</span>, <span class="string">'swift'</span>] ,<span class="string">'python'</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>list1[<span class="number">2</span>][<span class="number">1</span>] = <span class="string">'c#'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>list1</span><br><span class="line">[<span class="string">'java'</span>, <span class="string">'c'</span>, [<span class="string">'oc'</span>, <span class="string">'c#'</span>], <span class="string">'python'</span>]</span><br></pre></td></tr></table></figure>
-<h2 id="tuple"><a href="#tuple" class="headerlink" title="tuple"></a>tuple</h2><p>tuple同样也是有序远足，与list非常类似：</p>
+<h2 id="tuple"><a href="#tuple" class="headerlink" title="tuple"></a>tuple</h2><p>tuple同样也是有序列表，叫元组，与list非常类似：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>tuple1 = (<span class="string">'java'</span>, <span class="string">'c'</span>, <span class="string">'python'</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>tuple1</span><br><span class="line">(<span class="string">'java'</span>, <span class="string">'c'</span>, <span class="string">'python'</span>)</span><br></pre></td></tr></table></figure>
 <p>但是tuple一经初始化就不能修改，因此没有<font color="red"><code>append()</code></font>和<font color="red"><code>insert()</code></font>方法，其他获取元素的方法与list相同。</p>
 <p>如果要定义一个空的tuple，可以写成<font color="red"><code>()</code></font>：</p>
