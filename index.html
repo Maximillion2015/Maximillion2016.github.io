@@ -253,6 +253,135 @@
             
               
                 
+                <a class="post-title-link" href="/2016/05/29/剑指offer/" itemprop="url">
+                  剑指offer
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-29T13:18:43+08:00" content="2016-05-29">
+              2016-05-29
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/面试/" itemprop="url" rel="index">
+                    <span itemprop="name">面试</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/29/剑指offer/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/29/剑指offer/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+       
+          
+
+         </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="面试题一：赋值运算符函数"><a href="#面试题一：赋值运算符函数" class="headerlink" title="面试题一：赋值运算符函数"></a>面试题一：赋值运算符函数</h2><p><strong>题目：如下为类型CMyString的声明，请为该类型添加赋值运算符函数。</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> CMyString</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    CMyString(<span class="keyword">char</span>* pData = <span class="literal">NULL</span>);</span><br><span class="line">    CMyString(<span class="keyword">const</span> CMyString&amp; str);</span><br><span class="line">    ~CMyString(<span class="keyword">void</span>);</span><br><span class="line">    </span><br><span class="line">    CMyString&amp; <span class="keyword">operator</span>=(const CMyString &amp;);</span><br><span class="line">    </span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="keyword">char</span>* m_pData;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>答案：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span><br><span class="line"> *  1. 返回值类型声明为该类型的引用，并且在函数结束前返回实例自身的引用。</span><br><span class="line"> *  2. 是否把传入的参数的类型声明为常量引用，如果传入的参数不是常量引用而是实例，那么从形参到实参会调用一次复制构造函数。</span><br><span class="line"> *  3. 是否释放实例自身已有的内存。</span><br><span class="line"> *  4. 是否判断传入的参数和当前实例（*this）是不是同一个实例。</span><br><span class="line"> */</span></span><br><span class="line">CMyString&amp; CMyString::<span class="keyword">operator</span>=(const CMyString &amp;str)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (this == &amp;str)</span><br><span class="line">    &#123;</span><br><span class="line">        return *<span class="keyword">this</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">delete</span> []m_pData;</span><br><span class="line">    m_pData = <span class="literal">NULL</span>;</span><br><span class="line">    </span><br><span class="line">    m_pData = new <span class="keyword">char</span>[<span class="built_in">strlen</span>(str.m_pData) + <span class="number">1</span>];</span><br><span class="line">    <span class="built_in">strcpy</span>(m_pData, str.m_pData);</span><br><span class="line">    </span><br><span class="line">    return *<span class="keyword">this</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="面试题二：二维数组中的查找"><a href="#面试题二：二维数组中的查找" class="headerlink" title="面试题二：二维数组中的查找"></a>面试题二：二维数组中的查找</h2><p><strong>题目：在一个二维数组中，每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。</strong></p>
+<p>答案：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">Find</span><span class="params">(<span class="keyword">int</span>* martrix, <span class="keyword">int</span> rows, <span class="keyword">int</span> columns, <span class="keyword">int</span> number)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">bool</span> isFind = <span class="literal">false</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">int</span> row = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> column = columns - <span class="number">1</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 判断传过来的参数是否合法</span></span><br><span class="line">    <span class="keyword">if</span> (martrix != <span class="literal">NULL</span> &amp;&amp; rows &gt; <span class="number">0</span> &amp;&amp; columns &gt; <span class="number">0</span>)\</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">while</span>(row &lt; rows &amp;&amp; column &gt;= <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (number == martrix[row * column + column])</span><br><span class="line">            &#123;</span><br><span class="line">                isFind = <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(number &lt; martrix[row * column + column])</span><br><span class="line">            &#123;</span><br><span class="line">                column--;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                row++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    return isFind;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/05/27/列表生成式/" itemprop="url">
                   列表生成式
                 </a>
@@ -1307,7 +1436,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-count">8</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1315,7 +1444,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -1324,7 +1453,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">18</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
