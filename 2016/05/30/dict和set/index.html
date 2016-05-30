@@ -92,7 +92,7 @@
 <meta property="og:site_name" content="ephon的技术博客">
 <meta property="og:description" content="如果你熟悉Java或者Objectiv-C等语言相信对字典都不会陌生，这是一种非常常用的数据结构，以key value模式保存。字典的优势就是是查找时是索引查找，所以不管字典中数据有多少，查找起来都非常快。
 定义一个dict如下:123&amp;gt;&amp;gt;&amp;gt; dict1 = &amp;#123;&apos;name&apos;:&apos;ephon&apos;, &apos;age&apos;: &apos;18&apos;&amp;#125;&amp;gt;&amp;gt;&amp;gt; dict1&amp;#12">
-<meta property="og:updated_time" content="2016-05-30T15:17:21.000Z">
+<meta property="og:updated_time" content="2016-05-30T15:19:05.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="dict和set">
 <meta name="twitter:description" content="如果你熟悉Java或者Objectiv-C等语言相信对字典都不会陌生，这是一种非常常用的数据结构，以key value模式保存。字典的优势就是是查找时是索引查找，所以不管字典中数据有多少，查找起来都非常快。
@@ -349,7 +349,7 @@
 <p>dict可以用在需要高速查找的很多地方，在Python代码中几乎无处不在，正确使用dict非常重要，需要牢记的第一条就是dict的key必须是不可变对象。</p>
 <p>这是因为<code>dict</code>根据<code>key</code>来计算<code>value</code>的存储位置，如果每次计算相同的<code>key</code>得出的结果不同，那<code>dict</code>内部就完全混乱了。这个通过<code>key</code>计算位置的算法称<code>为哈希算法（Hash）</code>。</p>
 <p>要保证hash的正确性，作为key的对象就不能变。在Python中，字符串、整数等都是不可变的，因此，可以放心地作为key。而list是可变的，就不能作为key：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>key = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>d[key] = <span class="string">'a list'</span></span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"&lt;stdin&gt;"</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">TypeError: unhashable type: <span class="string">'list'</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>key = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>dict1[key] = <span class="string">'a list'</span></span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"&lt;stdin&gt;"</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">TypeError: unhashable type: <span class="string">'list'</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
