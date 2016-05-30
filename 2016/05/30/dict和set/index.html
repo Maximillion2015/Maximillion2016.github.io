@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Python3,列表生成式," />
+  <meta name="keywords" content="Python3,dict,set," />
 
 
 
@@ -84,25 +84,19 @@
 
 
 
-<meta name="description" content="python中如果要得到[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]一般第一时间就能想到：
-12&amp;gt;&amp;gt;&amp;gt; list(range(10))[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-如果要得到[0x0, 1x1, 2x2, 3x3, 4x4, 5x5, 6x6, 7x7, 8x8, 9x9]呢？我们可以：
-12345678910&amp;gt;&amp;gt;&amp;gt">
+<meta name="description" content="如果你熟悉Java或者Objectiv-C等语言相信对字典都不会陌生，这是一种非常常用的数据结构，以key value模式保存。字典的优势就是是查找时是索引查找，所以不管字典中数据有多少，查找起来都非常快。
+定义一个dict如下:123&amp;gt;&amp;gt;&amp;gt; dict1 = &amp;#123;&apos;name&apos;:&apos;ephon&apos;, &apos;age&apos;: &apos;18&apos;&amp;#125;&amp;gt;&amp;gt;&amp;gt; dict1&amp;#12">
 <meta property="og:type" content="article">
-<meta property="og:title" content="列表生成式">
-<meta property="og:url" content="http://yoursite.com/2016/05/27/列表生成式/index.html">
+<meta property="og:title" content="dict和set">
+<meta property="og:url" content="http://yoursite.com/2016/05/30/dict和set/index.html">
 <meta property="og:site_name" content="ephon的技术博客">
-<meta property="og:description" content="python中如果要得到[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]一般第一时间就能想到：
-12&amp;gt;&amp;gt;&amp;gt; list(range(10))[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-如果要得到[0x0, 1x1, 2x2, 3x3, 4x4, 5x5, 6x6, 7x7, 8x8, 9x9]呢？我们可以：
-12345678910&amp;gt;&amp;gt;&amp;gt">
-<meta property="og:updated_time" content="2016-05-27T08:41:35.000Z">
+<meta property="og:description" content="如果你熟悉Java或者Objectiv-C等语言相信对字典都不会陌生，这是一种非常常用的数据结构，以key value模式保存。字典的优势就是是查找时是索引查找，所以不管字典中数据有多少，查找起来都非常快。
+定义一个dict如下:123&amp;gt;&amp;gt;&amp;gt; dict1 = &amp;#123;&apos;name&apos;:&apos;ephon&apos;, &apos;age&apos;: &apos;18&apos;&amp;#125;&amp;gt;&amp;gt;&amp;gt; dict1&amp;#12">
+<meta property="og:updated_time" content="2016-05-30T15:17:21.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="列表生成式">
-<meta name="twitter:description" content="python中如果要得到[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]一般第一时间就能想到：
-12&amp;gt;&amp;gt;&amp;gt; list(range(10))[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-如果要得到[0x0, 1x1, 2x2, 3x3, 4x4, 5x5, 6x6, 7x7, 8x8, 9x9]呢？我们可以：
-12345678910&amp;gt;&amp;gt;&amp;gt">
+<meta name="twitter:title" content="dict和set">
+<meta name="twitter:description" content="如果你熟悉Java或者Objectiv-C等语言相信对字典都不会陌生，这是一种非常常用的数据结构，以key value模式保存。字典的优势就是是查找时是索引查找，所以不管字典中数据有多少，查找起来都非常快。
+定义一个dict如下:123&amp;gt;&amp;gt;&amp;gt; dict1 = &amp;#123;&apos;name&apos;:&apos;ephon&apos;, &apos;age&apos;: &apos;18&apos;&amp;#125;&amp;gt;&amp;gt;&amp;gt; dict1&amp;#12">
 
 
 
@@ -120,7 +114,7 @@
   };
 </script>
 
-  <title> 列表生成式 | ephon的技术博客 </title>
+  <title> dict和set | ephon的技术博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -260,7 +254,7 @@
             
             
               
-                列表生成式
+                dict和set
               
             
           </h1>
@@ -272,8 +266,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-27T16:15:46+08:00" content="2016-05-27">
-              2016-05-27
+            <time itemprop="dateCreated" datetime="2016-05-30T22:49:00+08:00" content="2016-05-30">
+              2016-05-30
             </time>
           </span>
 
@@ -302,8 +296,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/05/27/列表生成式/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/27/列表生成式/" itemprop="commentsCount"></span>
+                <a href="/2016/05/30/dict和set/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/30/dict和set/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -331,24 +325,32 @@
       
 
       
-        <p>python中如果要得到<code>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</code>一般第一时间就能想到：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>list(range(<span class="number">10</span>))</span><br><span class="line">[<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]</span><br></pre></td></tr></table></figure>
-<p>如果要得到[0x0, 1x1, 2x2, 3x3, 4x4, 5x5, 6x6, 7x7, 8x8, 9x9]呢？我们可以：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>list(range(<span class="number">10</span>))</span><br><span class="line">[<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>list1 = list(range(<span class="number">10</span>))</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>list2 = []</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> x <span class="keyword">in</span> list1:</span><br><span class="line">	list2.append(x * x)</span><br><span class="line"></span><br><span class="line">	</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>list2</span><br><span class="line">[<span class="number">0</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">16</span>, <span class="number">25</span>, <span class="number">36</span>, <span class="number">49</span>, <span class="number">64</span>, <span class="number">81</span>]</span><br></pre></td></tr></table></figure>
-<p>然而Python作为一种那么优雅的语言，是否有简单的写法呢？答案必然是肯定的：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>list1 = list(range(<span class="number">10</span>))</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>list3 = [x*x <span class="keyword">for</span> x <span class="keyword">in</span> list1]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>list3</span><br><span class="line">[<span class="number">0</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">16</span>, <span class="number">25</span>, <span class="number">36</span>, <span class="number">49</span>, <span class="number">64</span>, <span class="number">81</span>]</span><br></pre></td></tr></table></figure>
-<p>是的，就是这么简单~</p>
-<p>列表生成式中也可以写多个语句：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>list1 = list(range(<span class="number">10</span>))</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>list3 = [x*x <span class="keyword">for</span> x <span class="keyword">in</span> list1 <span class="keyword">if</span> x % <span class="number">2</span> == <span class="number">0</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>list3</span><br><span class="line">[<span class="number">0</span>, <span class="number">4</span>, <span class="number">16</span>, <span class="number">36</span>, <span class="number">64</span>]</span><br></pre></td></tr></table></figure>
-<p>甚至还可以进行循环的嵌套：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>[m+n <span class="keyword">for</span> m <span class="keyword">in</span> <span class="string">'abc'</span> <span class="keyword">for</span> n <span class="keyword">in</span> <span class="string">'def'</span>]</span><br><span class="line">[<span class="string">'ad'</span>, <span class="string">'ae'</span>, <span class="string">'af'</span>, <span class="string">'bd'</span>, <span class="string">'be'</span>, <span class="string">'bf'</span>, <span class="string">'cd'</span>, <span class="string">'ce'</span>, <span class="string">'cf'</span>]</span><br></pre></td></tr></table></figure>
-<p>运用列表生成式，可以写出非常简洁的代码。例如，列出当前目录下的所有文件和目录名，可以通过一行代码实现：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> os <span class="comment"># 导入os模块，模块的概念后面讲到</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>[d <span class="keyword">for</span> d <span class="keyword">in</span> os.listdir(<span class="string">'.'</span>)] <span class="comment"># os.listdir可以列出文件和目录</span></span><br><span class="line">[<span class="string">'.emacs.d'</span>, <span class="string">'.ssh'</span>, <span class="string">'.Trash'</span>, <span class="string">'Adlm'</span>, <span class="string">'Applications'</span>, <span class="string">'Desktop'</span>, <span class="string">'Documents'</span>, <span class="string">'Downloads'</span>, <span class="string">'Library'</span>, <span class="string">'Movies'</span>, <span class="string">'Music'</span>, <span class="string">'Pictures'</span>, <span class="string">'Public'</span>, <span class="string">'VirtualBox VMs'</span>, <span class="string">'Workspace'</span>, <span class="string">'XCode'</span>]</span><br></pre></td></tr></table></figure>
-<p>下面写几个小例子吧：</p>
-<p><strong>1. 将字典转化为列表</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>d = &#123;<span class="string">'x'</span>: <span class="string">'A'</span>, <span class="string">'y'</span>: <span class="string">'B'</span>, <span class="string">'z'</span>: <span class="string">'C'</span> &#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>[k + <span class="string">'='</span> + v <span class="keyword">for</span> k, v <span class="keyword">in</span> d.items()]</span><br><span class="line">[<span class="string">'y=B'</span>, <span class="string">'x=A'</span>, <span class="string">'z=C'</span>]</span><br></pre></td></tr></table></figure>
-<p><strong>2. 将字符串中大写字母转化为小写</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>L = [<span class="string">'Hello'</span>, <span class="string">'World'</span>, <span class="string">'IBM'</span>, <span class="string">'Apple'</span>, <span class="number">18</span>, <span class="keyword">None</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>[s.lower() <span class="keyword">for</span> s <span class="keyword">in</span> L <span class="keyword">if</span> isinstance(s, str)]</span><br><span class="line">[<span class="string">'hello'</span>, <span class="string">'world'</span>, <span class="string">'ibm'</span>, <span class="string">'apple'</span>]</span><br></pre></td></tr></table></figure>
+        <p>如果你熟悉Java或者Objectiv-C等语言相信对<code>字典</code>都不会陌生，这是一种非常常用的数据结构，以<code>key</code> <code>value</code>模式保存。字典的优势就是是查找时是索引查找，所以不管字典中数据有多少，查找起来都非常快。</p>
+<h3 id="定义一个dict如下"><a href="#定义一个dict如下" class="headerlink" title="定义一个dict如下:"></a>定义一个<code>dict</code>如下:</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>dict1 = &#123;<span class="string">'name'</span>:<span class="string">'ephon'</span>, <span class="string">'age'</span>: <span class="string">'18'</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>dict1</span><br><span class="line">&#123;<span class="string">'age'</span>: <span class="string">'18'</span>, <span class="string">'name'</span>: <span class="string">'ephon'</span>&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>注意：每个<code>key</code>必须是唯一的，一个<code>key</code>对应一个<code>value</code>。</strong></p>
+<h3 id="增"><a href="#增" class="headerlink" title="增"></a>增</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>dict1[<span class="string">'sex'</span>] = <span class="string">'man'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>dict1</span><br><span class="line">&#123;<span class="string">'age'</span>: <span class="string">'18'</span>, <span class="string">'name'</span>: <span class="string">'ephon'</span>, <span class="string">'sex'</span>: <span class="string">'man'</span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="删"><a href="#删" class="headerlink" title="删"></a>删</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>dict1.pop(<span class="string">'name'</span>)</span><br><span class="line"><span class="string">'ephon'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>dict1</span><br><span class="line">&#123;<span class="string">'age'</span>: <span class="string">'18'</span>, <span class="string">'sex'</span>: <span class="string">'man'</span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="查"><a href="#查" class="headerlink" title="查"></a>查</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>dict1[<span class="string">'age'</span>]</span><br><span class="line"><span class="string">'18'</span></span><br></pre></td></tr></table></figure>
+<p>注意：当字典中不包含这个<code>key</code>时会报错，报错信息如下:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>dict1[<span class="string">'aga'</span>]</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"&lt;pyshell#16&gt;"</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    dict1[<span class="string">'aga'</span>]</span><br><span class="line">KeyError: <span class="string">'aga'</span></span><br></pre></td></tr></table></figure>
+<h3 id="改"><a href="#改" class="headerlink" title="改"></a>改</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>dict1[<span class="string">'age'</span>] = <span class="string">'20'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>dict1</span><br><span class="line">&#123;<span class="string">'age'</span>: <span class="string">'20'</span>, <span class="string">'sex'</span>: <span class="string">'man'</span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>请务必注意，dict内部存放的顺序和key放入的顺序是没有关系的。</p>
+<p>和list比较，dict有以下几个特点：</p>
+<ol>
+<li>查找和插入的速度极快，不会随着key的增加而变慢；</li>
+<li>需要占用大量的内存，内存浪费多。</li>
+</ol>
+<p>而list相反：</p>
+<ol>
+<li>查找和插入的时间随着元素的增加而增加；</li>
+<li>占用空间小，浪费内存很少。</li>
+</ol>
+<p>所以，dict是用空间来换取时间的一种方法。</p>
+<p>dict可以用在需要高速查找的很多地方，在Python代码中几乎无处不在，正确使用dict非常重要，需要牢记的第一条就是dict的key必须是不可变对象。</p>
+<p>这是因为<code>dict</code>根据<code>key</code>来计算<code>value</code>的存储位置，如果每次计算相同的<code>key</code>得出的结果不同，那<code>dict</code>内部就完全混乱了。这个通过<code>key</code>计算位置的算法称<code>为哈希算法（Hash）</code>。</p>
+<p>要保证hash的正确性，作为key的对象就不能变。在Python中，字符串、整数等都是不可变的，因此，可以放心地作为key。而list是可变的，就不能作为key：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>key = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>d[key] = <span class="string">'a list'</span></span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"&lt;stdin&gt;"</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">TypeError: unhashable type: <span class="string">'list'</span></span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -371,7 +373,9 @@
           
             <a href="/tags/Python3/" rel="tag">#Python3</a>
           
-            <a href="/tags/列表生成式/" rel="tag">#列表生成式</a>
+            <a href="/tags/dict/" rel="tag">#dict</a>
+          
+            <a href="/tags/set/" rel="tag">#set</a>
           
         </div>
       
@@ -380,17 +384,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/05/27/迭代/" rel="next" title="迭代">
-                <i class="fa fa-chevron-left"></i> 迭代
+              <a href="/2016/05/30/mac端无法使用密钥登录腾讯云/" rel="next" title="mac端无法使用密钥登录腾讯云">
+                <i class="fa fa-chevron-left"></i> mac端无法使用密钥登录腾讯云
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/05/29/剑指offer/" rel="prev" title="剑指offer">
-                剑指offer <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -416,8 +416,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/05/27/列表生成式/"
-           data-title="列表生成式" data-url="http://yoursite.com/2016/05/27/列表生成式/">
+      <div class="ds-thread" data-thread-key="2016/05/30/dict和set/"
+           data-title="dict和set" data-url="http://yoursite.com/2016/05/30/dict和set/">
       </div>
     
   </div>
@@ -528,7 +528,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义一个dict如下"><span class="nav-number">1.</span> <span class="nav-text">定义一个dict如下:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#增"><span class="nav-number">2.</span> <span class="nav-text">增</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删"><span class="nav-number">3.</span> <span class="nav-text">删</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查"><span class="nav-number">4.</span> <span class="nav-text">查</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#改"><span class="nav-number">5.</span> <span class="nav-text">改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">6.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
           </div>
         </section>
