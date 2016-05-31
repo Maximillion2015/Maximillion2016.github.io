@@ -85,18 +85,21 @@
 
 
 <meta name="description" content="如果你熟悉Java或者Objectiv-C等语言相信对字典都不会陌生，这是一种非常常用的数据结构，以key value模式保存。字典的优势就是是查找时是索引查找，所以不管字典中数据有多少，查找起来都非常快。
-定义一个dict如下:123&amp;gt;&amp;gt;&amp;gt; dict1 = &amp;#123;&apos;name&apos;:&apos;ephon&apos;, &apos;age&apos;: &apos;18&apos;&amp;#125;&amp;gt;&amp;gt;&amp;gt; dict1&amp;#12">
+定义一个dict如下:
+123&amp;gt;&amp;gt;&amp;gt; dict1 = &amp;#123;&apos;name&apos;:&apos;ephon&apos;, &apos;age&apos;: &apos;18&apos;&amp;#125;&amp;gt;&amp;gt;&amp;gt; dict1&amp;#1">
 <meta property="og:type" content="article">
 <meta property="og:title" content="dict和set">
 <meta property="og:url" content="http://yoursite.com/2016/05/30/dict和set/index.html">
 <meta property="og:site_name" content="ephon的技术博客">
 <meta property="og:description" content="如果你熟悉Java或者Objectiv-C等语言相信对字典都不会陌生，这是一种非常常用的数据结构，以key value模式保存。字典的优势就是是查找时是索引查找，所以不管字典中数据有多少，查找起来都非常快。
-定义一个dict如下:123&amp;gt;&amp;gt;&amp;gt; dict1 = &amp;#123;&apos;name&apos;:&apos;ephon&apos;, &apos;age&apos;: &apos;18&apos;&amp;#125;&amp;gt;&amp;gt;&amp;gt; dict1&amp;#12">
-<meta property="og:updated_time" content="2016-05-30T15:19:05.000Z">
+定义一个dict如下:
+123&amp;gt;&amp;gt;&amp;gt; dict1 = &amp;#123;&apos;name&apos;:&apos;ephon&apos;, &apos;age&apos;: &apos;18&apos;&amp;#125;&amp;gt;&amp;gt;&amp;gt; dict1&amp;#1">
+<meta property="og:updated_time" content="2016-05-30T15:50:01.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="dict和set">
 <meta name="twitter:description" content="如果你熟悉Java或者Objectiv-C等语言相信对字典都不会陌生，这是一种非常常用的数据结构，以key value模式保存。字典的优势就是是查找时是索引查找，所以不管字典中数据有多少，查找起来都非常快。
-定义一个dict如下:123&amp;gt;&amp;gt;&amp;gt; dict1 = &amp;#123;&apos;name&apos;:&apos;ephon&apos;, &apos;age&apos;: &apos;18&apos;&amp;#125;&amp;gt;&amp;gt;&amp;gt; dict1&amp;#12">
+定义一个dict如下:
+123&amp;gt;&amp;gt;&amp;gt; dict1 = &amp;#123;&apos;name&apos;:&apos;ephon&apos;, &apos;age&apos;: &apos;18&apos;&amp;#125;&amp;gt;&amp;gt;&amp;gt; dict1&amp;#1">
 
 
 
@@ -326,7 +329,8 @@
 
       
         <p>如果你熟悉Java或者Objectiv-C等语言相信对<code>字典</code>都不会陌生，这是一种非常常用的数据结构，以<code>key</code> <code>value</code>模式保存。字典的优势就是是查找时是索引查找，所以不管字典中数据有多少，查找起来都非常快。</p>
-<h3 id="定义一个dict如下"><a href="#定义一个dict如下" class="headerlink" title="定义一个dict如下:"></a>定义一个<code>dict</code>如下:</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>dict1 = &#123;<span class="string">'name'</span>:<span class="string">'ephon'</span>, <span class="string">'age'</span>: <span class="string">'18'</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>dict1</span><br><span class="line">&#123;<span class="string">'age'</span>: <span class="string">'18'</span>, <span class="string">'name'</span>: <span class="string">'ephon'</span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="定义一个dict"><a href="#定义一个dict" class="headerlink" title="定义一个dict"></a>定义一个<code>dict</code></h3><p><strong>如下:</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>dict1 = &#123;<span class="string">'name'</span>:<span class="string">'ephon'</span>, <span class="string">'age'</span>: <span class="string">'18'</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>dict1</span><br><span class="line">&#123;<span class="string">'age'</span>: <span class="string">'18'</span>, <span class="string">'name'</span>: <span class="string">'ephon'</span>&#125;</span><br></pre></td></tr></table></figure>
 <p><strong>注意：每个<code>key</code>必须是唯一的，一个<code>key</code>对应一个<code>value</code>。</strong></p>
 <h3 id="增"><a href="#增" class="headerlink" title="增"></a>增</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>dict1[<span class="string">'sex'</span>] = <span class="string">'man'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>dict1</span><br><span class="line">&#123;<span class="string">'age'</span>: <span class="string">'18'</span>, <span class="string">'name'</span>: <span class="string">'ephon'</span>, <span class="string">'sex'</span>: <span class="string">'man'</span>&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="删"><a href="#删" class="headerlink" title="删"></a>删</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>dict1.pop(<span class="string">'name'</span>)</span><br><span class="line"><span class="string">'ephon'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>dict1</span><br><span class="line">&#123;<span class="string">'age'</span>: <span class="string">'18'</span>, <span class="string">'sex'</span>: <span class="string">'man'</span>&#125;</span><br></pre></td></tr></table></figure>
@@ -391,6 +395,10 @@
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/05/31/Linux常用命令/" rel="prev" title="Linux常用命令">
+                Linux常用命令 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -462,7 +470,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">10</span>
+              <span class="site-state-item-count">11</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -470,7 +478,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -479,7 +487,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">22</span>
+                <span class="site-state-item-count">24</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -528,7 +536,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义一个dict如下"><span class="nav-number">1.</span> <span class="nav-text">定义一个dict如下:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#增"><span class="nav-number">2.</span> <span class="nav-text">增</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删"><span class="nav-number">3.</span> <span class="nav-text">删</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查"><span class="nav-number">4.</span> <span class="nav-text">查</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#改"><span class="nav-number">5.</span> <span class="nav-text">改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">6.</span> <span class="nav-text">总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义一个dict"><span class="nav-number">1.</span> <span class="nav-text">定义一个dict</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#增"><span class="nav-number">2.</span> <span class="nav-text">增</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删"><span class="nav-number">3.</span> <span class="nav-text">删</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查"><span class="nav-number">4.</span> <span class="nav-text">查</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#改"><span class="nav-number">5.</span> <span class="nav-text">改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">6.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
           </div>
         </section>

@@ -253,6 +253,263 @@
             
               
                 
+                <a class="post-title-link" href="/2016/05/31/Linux常用命令/" itemprop="url">
+                  Linux常用命令
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-31T15:08:52+08:00" content="2016-05-31">
+              2016-05-31
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/31/Linux常用命令/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/31/Linux常用命令/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+       
+          
+
+         </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h2><p>ls　　        显示文件或目录</p>
+<pre><code>-l           列出文件详细信息l(list)
+
+-a          列出当前目录下所有文件及目录，包括隐藏的a(all)
+</code></pre><p>mkdir         创建目录</p>
+<pre><code>-p           创建目录，若无父目录，则创建p(parent)
+</code></pre><p>cd               切换目录</p>
+<p>touch          创建空文件</p>
+<p>echo            创建带有内容的文件。</p>
+<p>cat              查看文件内容</p>
+<p>cp                拷贝</p>
+<p>mv               移动或重命名</p>
+<p>rm               删除文件</p>
+<pre><code>-r            递归删除，可删除子目录及文件
+
+-f            强制删除
+</code></pre><p>find              在文件系统中搜索某文件</p>
+<p>wc                统计文本中行数、字数、字符数</p>
+<p>grep             在文本文件中查找某个字符串</p>
+<p>rmdir           删除空目录</p>
+<p>tree             树形结构显示目录，需要安装tree包</p>
+<p>pwd              显示当前目录</p>
+<p>ln                  创建链接文件</p>
+<p>more、less  分页显示文本文件内容</p>
+<p>head、tail    显示文件头、尾内容</p>
+<p>ctrl+alt+F1  命令行全屏模式</p>
+<h2 id="系统管理命令"><a href="#系统管理命令" class="headerlink" title="系统管理命令"></a>系统管理命令</h2><p>stat              显示指定文件的详细信息，比ls更详细</p>
+<p>who               显示在线登陆用户</p>
+<p>whoami          显示当前操作用户</p>
+<p>hostname      显示主机名</p>
+<p>uname           显示系统信息</p>
+<p>top                动态显示当前耗费资源最多进程信息</p>
+<p>ps                  显示瞬间进程状态 ps -aux</p>
+<p>du                  查看目录大小 du -h /home带有单位显示目录信息</p>
+<p>df                  查看磁盘大小 df -h 带有单位显示磁盘信息</p>
+<p>ifconfig          查看网络情况</p>
+<p>ping                测试网络连通</p>
+<p>netstat          显示网络状态信息</p>
+<p>man                命令不会用了，找男人  如：man ls</p>
+<p>clear              清屏</p>
+<p>alias               对命令重命名 如：alias showmeit=”ps -aux” ，另外解除使用unaliax showmeit</p>
+<p>kill                 杀死进程，可以先用ps 或 top命令查看进程的id，然后再用kill命令杀死进程。</p>
+<h2 id="打包压缩相关命令"><a href="#打包压缩相关命令" class="headerlink" title="打包压缩相关命令"></a>打包压缩相关命令</h2><p>gzip：</p>
+<p>bzip2：</p>
+<p>tar:                打包压缩</p>
+<pre><code>-c              归档文件
+
+-x              压缩文件
+
+-z              gzip压缩文件
+
+-j              bzip2压缩文件
+
+-v              显示压缩或解压缩过程 v(view)
+
+-f              使用档名
+</code></pre><p>例：</p>
+<p>tar -cvf /home/abc.tar /home/abc              只打包，不压缩</p>
+<p>tar -zcvf /home/abc.tar.gz /home/abc        打包，并用gzip压缩</p>
+<p>tar -jcvf /home/abc.tar.bz2 /home/abc      打包，并用bzip2压缩</p>
+<p>当然，如果想解压缩，就直接替换上面的命令  tar -cvf  / tar -zcvf  / tar -jcvf 中的“c” 换成“x” 就可以了。</p>
+<h2 id="关机-重启机器"><a href="#关机-重启机器" class="headerlink" title="关机/重启机器"></a>关机/重启机器</h2><p>shutdown</p>
+<pre><code>-r             关机重启
+
+-h             关机不重启
+
+now          立刻关机
+</code></pre><p>halt               关机</p>
+<p>reboot          重启</p>
+<h2 id="Linux管道"><a href="#Linux管道" class="headerlink" title="Linux管道"></a>Linux管道</h2><p>将一个命令的标准输出作为另一个命令的标准输入。也就是把几个命令组合起来使用，后一个命令除以前一个命令的结果。</p>
+<blockquote>
+<p>例：grep -r “close” /home/* | more       在home目录下所有文件中查找，包括close的文件，并分页输出。</p>
+</blockquote>
+<h2 id="Linux软件包管理"><a href="#Linux软件包管理" class="headerlink" title="Linux软件包管理"></a>Linux软件包管理</h2><p>dpkg (Debian Package)管理工具，软件包名以.deb后缀。这种方法适合系统不能联网的情况下。</p>
+<p>比如安装tree命令的安装包，先将tree.deb传到Linux系统中。再使用如下命令安装。</p>
+<p>sudo dpkg -i tree_1.5.3-1_i386.deb                    <code>安装软件</code></p>
+<p>sudo dpkg -r tree                                     <code>卸载软件</code></p>
+<p><strong>注：将tree.deb传到Linux系统中，有多种方式。VMwareTool，使用挂载方式；使用winSCP工具等；</strong></p>
+<p>APT（Advanced Packaging Tool）高级软件工具。这种方法适合系统能够连接互联网的情况。</p>
+<p>依然以tree为例</p>
+<p>sudo apt-get install tree                         安装tree</p>
+<p>sudo apt-get remove tree                       卸载tree</p>
+<p>sudo apt-get update                                 更新软件</p>
+<p>sudo apt-get upgrade        </p>
+<p>将.rpm文件转为.deb文件</p>
+<p>.rpm为RedHat使用的软件格式。在Ubuntu下不能直接使用，所以需要转换一下。</p>
+<p>sudo alien abc.rpm</p>
+<h2 id="vim使用"><a href="#vim使用" class="headerlink" title="vim使用"></a>vim使用</h2><p>vim三种模式：命令模式、插入模式、编辑模式。使用ESC或i或：来切换模式。</p>
+<p>命令模式下：</p>
+<p>:q                      退出</p>
+<p>:q!                     强制退出</p>
+<p>:wq                   保存并退出</p>
+<p>:set number     显示行号</p>
+<p>:set nonumber  隐藏行号</p>
+<p>/apache            在文档中查找apache 按n跳到下一个，shift+n上一个</p>
+<p>yyp                   复制光标所在行，并粘贴</p>
+<p>h(左移一个字符←)、j(下一行↓)、k(上一行↑)、l(右移一个字符→)</p>
+<h2 id="用户及用户组管理"><a href="#用户及用户组管理" class="headerlink" title="用户及用户组管理"></a>用户及用户组管理</h2><p>/etc/passwd    存储用户账号</p>
+<p>/etc/group       存储组账号</p>
+<p>/etc/shadow    存储用户账号的密码</p>
+<p>/etc/gshadow  存储用户组账号的密码</p>
+<p>useradd 用户名</p>
+<p>userdel 用户名</p>
+<p>adduser 用户名</p>
+<p>groupadd 组名</p>
+<p>groupdel 组名</p>
+<p>passwd root     给root设置密码</p>
+<p>su root</p>
+<p>su - root </p>
+<p>/etc/profile     系统环境变量</p>
+<p>bash_profile     用户环境变量</p>
+<p>.bashrc              用户环境变量</p>
+<p>su user              切换用户，加载配置文件.bashrc</p>
+<p>su - user            切换用户，加载配置文件/etc/profile ，加载bash_profile</p>
+<h3 id="更改文件的用户及用户组"><a href="#更改文件的用户及用户组" class="headerlink" title="更改文件的用户及用户组"></a>更改文件的用户及用户组</h3><p>sudo chown [-R] owner[:group] {File|Directory}</p>
+<p>例如：还以jdk-7u21-linux-i586.tar.gz为例。属于用户hadoop，组hadoop</p>
+<p>要想切换此文件所属的用户及组。可以使用命令。</p>
+<p>sudo chown root:root jdk-7u21-linux-i586.tar.gz</p>
+<h2 id="文件权限管理"><a href="#文件权限管理" class="headerlink" title="文件权限管理"></a>文件权限管理</h2><p>三种基本权限</p>
+<p>R           读         数值表示为4</p>
+<p>W          写         数值表示为2</p>
+<p>X           可执行  数值表示为1</p>
+<p><img src="http://o7dejg5ls.bkt.clouddn.com/091549405142313.png" alt="pic1"></p>
+<p>如图所示，jdk-7u21-linux-i586.tar.gz文件的权限为-rw-rw-r–</p>
+<p>-rw-rw-r–一共十个字符，分成四段。</p>
+<p>第一个字符“-”表示普通文件；这个位置还可能会出现“l”链接；“d”表示目录</p>
+<p>第二三四个字符“rw-”表示当前所属用户的权限。   所以用数值表示为4+2=6</p>
+<p>第五六七个字符“rw-”表示当前所属组的权限。      所以用数值表示为4+2=6</p>
+<p>第八九十个字符“r–”表示其他用户权限。              所以用数值表示为2</p>
+<p>所以操作此文件的权限用数值表示为662 </p>
+<h3 id="更改权限"><a href="#更改权限" class="headerlink" title="更改权限"></a>更改权限</h3><p>sudo chmod [u所属用户  g所属组  o其他用户  a所有用户]  [+增加权限  -减少权限]  [r  w  x]   目录名 </p>
+<p>例如：有一个文件filename，权限为“-rw-r—-x” ,将权限值改为”-rwxrw-r-x”，用数值表示为765</p>
+<p>sudo chmod u+x g+w o+r  filename</p>
+<p>上面的例子可以用数值表示</p>
+<p>sudo chmod 765 filename</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/05/30/dict和set/" itemprop="url">
                   dict和set
                 </a>
@@ -327,7 +584,8 @@
         
           
             <p>如果你熟悉Java或者Objectiv-C等语言相信对<code>字典</code>都不会陌生，这是一种非常常用的数据结构，以<code>key</code> <code>value</code>模式保存。字典的优势就是是查找时是索引查找，所以不管字典中数据有多少，查找起来都非常快。</p>
-<h3 id="定义一个dict如下"><a href="#定义一个dict如下" class="headerlink" title="定义一个dict如下:"></a>定义一个<code>dict</code>如下:</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>dict1 = &#123;<span class="string">'name'</span>:<span class="string">'ephon'</span>, <span class="string">'age'</span>: <span class="string">'18'</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>dict1</span><br><span class="line">&#123;<span class="string">'age'</span>: <span class="string">'18'</span>, <span class="string">'name'</span>: <span class="string">'ephon'</span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="定义一个dict"><a href="#定义一个dict" class="headerlink" title="定义一个dict"></a>定义一个<code>dict</code></h3><p><strong>如下:</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>dict1 = &#123;<span class="string">'name'</span>:<span class="string">'ephon'</span>, <span class="string">'age'</span>: <span class="string">'18'</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>dict1</span><br><span class="line">&#123;<span class="string">'age'</span>: <span class="string">'18'</span>, <span class="string">'name'</span>: <span class="string">'ephon'</span>&#125;</span><br></pre></td></tr></table></figure>
 <p><strong>注意：每个<code>key</code>必须是唯一的，一个<code>key</code>对应一个<code>value</code>。</strong></p>
 <h3 id="增"><a href="#增" class="headerlink" title="增"></a>增</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>dict1[<span class="string">'sex'</span>] = <span class="string">'man'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>dict1</span><br><span class="line">&#123;<span class="string">'age'</span>: <span class="string">'18'</span>, <span class="string">'name'</span>: <span class="string">'ephon'</span>, <span class="string">'sex'</span>: <span class="string">'man'</span>&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="删"><a href="#删" class="headerlink" title="删"></a>删</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>dict1.pop(<span class="string">'name'</span>)</span><br><span class="line"><span class="string">'ephon'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>dict1</span><br><span class="line">&#123;<span class="string">'age'</span>: <span class="string">'18'</span>, <span class="string">'sex'</span>: <span class="string">'man'</span>&#125;</span><br></pre></td></tr></table></figure>
@@ -1525,154 +1783,13 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/05/19/多态出现在成员上调用的特点/" itemprop="url">
-                  多态出现在成员上调用的特点
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-19T20:48:01+08:00" content="2016-05-19">
-              2016-05-19
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/JAVASE/" itemprop="url" rel="index">
-                    <span itemprop="name">JAVASE</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/05/19/多态出现在成员上调用的特点/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/19/多态出现在成员上调用的特点/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-       
-          
-
-         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ol>
-<li><p>成员变量：</p>
-<ul>
-<li>编译时期：参考的是引用型变量所属类中是否有可调用的成员变量，如果有编译成功，如果没有，编译失败。</li>
-<li>运行时期：调用的也是引用型变量所属类中的成员变量。</li>
-<li>简单说编译运行都看=左边，其实这种情况不常见。<br> <br></li>
-</ul>
-</li>
-<li><p>成员函数：</p>
-<ul>
-<li>编译时期：参考的是引用型变量所属类中是否有调用的方法，如果有，编译成功，如果没有，编译失败。</li>
-<li>运行时期：参考的是对象所属的类中是否有调用的方法，如果有，调用子类的方法是，如果没有，调用父类的方法。</li>
-<li>简单说编译时期看左边，运行时期看右边。<br> <br></li>
-</ul>
-</li>
-<li><p>静态函数：</p>
-<ul>
-<li>编译时期：参考的是引用型变量所属类中是否有调用的方法。</li>
-<li>运行时期：参考的是引用型变量所属类中的方法。</li>
-<li>简单说：编译运行都看左边，因为静态函数是不所属于对象而是所属于类。<br> <br></li>
-</ul>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
 
 
           </div>
@@ -1711,7 +1828,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">10</span>
+              <span class="site-state-item-count">11</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1719,7 +1836,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -1728,7 +1845,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">22</span>
+                <span class="site-state-item-count">24</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
