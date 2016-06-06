@@ -90,7 +90,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/05/21/Python中的字符编码/index.html">
 <meta property="og:site_name" content="ephon的技术博客">
 <meta property="og:description" content="ASCII、Unicode、UTF-8简介因为计算机只能处理数字，如果要处理文本，就必须先把文本转换为数字才能处理。最早的计算机在设计时采用8个比特（bit）作为一个字节（byte），所以，一个字节能表示的最大的整数就是255（二进制11111111=十进制255），如果要表示更大的整数，就必须用更多的字节。比如两个字节可以表示的最大整数是65535，4个字节可以表示的最大整数是429496729">
-<meta property="og:updated_time" content="2016-05-21T11:35:14.000Z">
+<meta property="og:updated_time" content="2016-06-06T05:58:38.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python中的字符编码">
 <meta name="twitter:description" content="ASCII、Unicode、UTF-8简介因为计算机只能处理数字，如果要处理文本，就必须先把文本转换为数字才能处理。最早的计算机在设计时采用8个比特（bit）作为一个字节（byte），所以，一个字节能表示的最大的整数就是255（二进制11111111=十进制255），如果要表示更大的整数，就必须用更多的字节。比如两个字节可以表示的最大整数是65535，4个字节可以表示的最大整数是429496729">
@@ -323,6 +323,7 @@
 
       
         <h2 id="ASCII、Unicode、UTF-8简介"><a href="#ASCII、Unicode、UTF-8简介" class="headerlink" title="ASCII、Unicode、UTF-8简介"></a>ASCII、Unicode、UTF-8简介</h2><p>因为计算机只能处理数字，如果要处理文本，就必须先把文本转换为数字才能处理。最早的计算机在设计时采用8个比特（bit）作为一个字节（byte），所以，一个字节能表示的最大的整数就是255（二进制11111111=十进制255），如果要表示更大的整数，就必须用更多的字节。比如两个字节可以表示的最大整数是<code>65535</code>，4个字节可以表示的最大整数是<code>4294967295</code>。</p>
+<a id="more"></a>
 <p>由于计算机是美国人发明的，因此，最早只有127个字母被编码到计算机里，也就是大小写英文字母、数字和一些符号，这个编码表被称为<code>ASCII</code>编码，比如大写字母<code>A</code>的编码是<code>65</code>，小写字母<code>z</code>的编码是<code>122</code>。</p>
 <p>但是要处理中文显然一个字节是不够的，至少需要两个字节，而且还不能和ASCII编码冲突，所以，中国制定了<code>GB2312</code>编码，用来把中文编进去。</p>
 <p>因此，<code>Unicode</code>应运而生。<code>Unicode</code>把所有语言都统一到一套编码里，这样就不会再有乱码问题了。</p>

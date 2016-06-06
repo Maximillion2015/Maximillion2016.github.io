@@ -92,7 +92,7 @@
 <meta property="og:site_name" content="ephon的技术博客">
 <meta property="og:description" content="我们先用python写一个汉诺塔：
 1234567891011121314#!/usr/bin/env python3# -*- coding: utf-8 -*-def move(n, a, b, c):    if n == 1:        print(a, &amp;apos;-----&amp;gt;&amp;apos;, c)        return    move(n-1, a, c, b)    p">
-<meta property="og:updated_time" content="2016-06-05T07:04:48.000Z">
+<meta property="og:updated_time" content="2016-06-06T05:58:23.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python递归函数和尾递归优化">
 <meta name="twitter:description" content="我们先用python写一个汉诺塔：
@@ -327,6 +327,7 @@
       
         <p>我们先用python写一个汉诺塔：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/env python3</span><br><span class="line"># -*- coding: utf-8 -*-</span><br><span class="line"></span><br><span class="line">def move(n, a, b, c):</span><br><span class="line"></span><br><span class="line">    if n == 1:</span><br><span class="line">        print(a, &apos;-----&gt;&apos;, c)</span><br><span class="line">        return</span><br><span class="line"></span><br><span class="line">    move(n-1, a, c, b)</span><br><span class="line">    print(a, &apos;-----&gt;&apos;, c)</span><br><span class="line">    move(n-1, b, a, c)</span><br><span class="line"></span><br><span class="line">move(3, &apos;A&apos;, &apos;B&apos;, &apos;C&apos;)</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <p>运用递归时要注意，如果递归层数太多会导致栈溢出：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fact</span><span class="params">(n)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> n == <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> n * fact(n<span class="number">-1</span>)</span><br><span class="line"></span><br><span class="line">print(fact(<span class="number">1000</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 报错：RecursionError: maximum recursion depth exceeded in comparison</span></span><br></pre></td></tr></table></figure>
 <p>解决递归调用栈溢出的方法是通过<code>尾递归优化</code>，事实上尾递归和循环的效果是一样的，所以，把循环看成是一种特殊的尾递归函数也是可以的。</p>

@@ -85,24 +85,18 @@
 
 
 <meta name="description" content="python中如果要得到[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]一般第一时间就能想到：
-12&amp;gt;&amp;gt;&amp;gt; list(range(10))[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-如果要得到[0x0, 1x1, 2x2, 3x3, 4x4, 5x5, 6x6, 7x7, 8x8, 9x9]呢？我们可以：
-12345678910&amp;gt;&amp;gt;&amp;gt">
+12&amp;gt;&amp;gt;&amp;gt; list(range(10))[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]">
 <meta property="og:type" content="article">
 <meta property="og:title" content="列表生成式">
 <meta property="og:url" content="http://yoursite.com/2016/05/27/列表生成式/index.html">
 <meta property="og:site_name" content="ephon的技术博客">
 <meta property="og:description" content="python中如果要得到[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]一般第一时间就能想到：
-12&amp;gt;&amp;gt;&amp;gt; list(range(10))[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-如果要得到[0x0, 1x1, 2x2, 3x3, 4x4, 5x5, 6x6, 7x7, 8x8, 9x9]呢？我们可以：
-12345678910&amp;gt;&amp;gt;&amp;gt">
-<meta property="og:updated_time" content="2016-05-27T08:41:35.000Z">
+12&amp;gt;&amp;gt;&amp;gt; list(range(10))[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]">
+<meta property="og:updated_time" content="2016-06-06T05:57:33.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="列表生成式">
 <meta name="twitter:description" content="python中如果要得到[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]一般第一时间就能想到：
-12&amp;gt;&amp;gt;&amp;gt; list(range(10))[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-如果要得到[0x0, 1x1, 2x2, 3x3, 4x4, 5x5, 6x6, 7x7, 8x8, 9x9]呢？我们可以：
-12345678910&amp;gt;&amp;gt;&amp;gt">
+12&amp;gt;&amp;gt;&amp;gt; list(range(10))[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]">
 
 
 
@@ -333,6 +327,7 @@
       
         <p>python中如果要得到<code>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</code>一般第一时间就能想到：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>list(range(<span class="number">10</span>))</span><br><span class="line">[<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <p>如果要得到[0x0, 1x1, 2x2, 3x3, 4x4, 5x5, 6x6, 7x7, 8x8, 9x9]呢？我们可以：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>list(range(<span class="number">10</span>))</span><br><span class="line">[<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>list1 = list(range(<span class="number">10</span>))</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>list2 = []</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> x <span class="keyword">in</span> list1:</span><br><span class="line">	list2.append(x * x)</span><br><span class="line"></span><br><span class="line">	</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>list2</span><br><span class="line">[<span class="number">0</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">16</span>, <span class="number">25</span>, <span class="number">36</span>, <span class="number">49</span>, <span class="number">64</span>, <span class="number">81</span>]</span><br></pre></td></tr></table></figure>
 <p>然而Python作为一种那么优雅的语言，是否有简单的写法呢？答案必然是肯定的：</p>
