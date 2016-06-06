@@ -85,24 +85,18 @@
 
 
 <meta name="description" content="凡是可以用for来进行循环的我们称为迭代器Iterable。
-123&amp;gt;&amp;gt;&amp;gt; from collections import Iterable&amp;gt;&amp;gt;&amp;gt; isinstance(&apos;abc&apos;, Iterable)True
-根据上面的定义，生成器也是一种特殊的迭代器：
-123&amp;gt;&amp;gt;&amp;gt; f = (x for x in range(5))&amp;gt;&amp;gt;&amp;gt;">
+123&amp;gt;&amp;gt;&amp;gt; from collections import Iterable&amp;gt;&amp;gt;&amp;gt; isinstance(&apos;abc&apos;, Iterable)True">
 <meta property="og:type" content="article">
 <meta property="og:title" content="迭代器">
 <meta property="og:url" content="http://yoursite.com/2016/06/05/迭代器/index.html">
 <meta property="og:site_name" content="ephon的技术博客">
 <meta property="og:description" content="凡是可以用for来进行循环的我们称为迭代器Iterable。
-123&amp;gt;&amp;gt;&amp;gt; from collections import Iterable&amp;gt;&amp;gt;&amp;gt; isinstance(&apos;abc&apos;, Iterable)True
-根据上面的定义，生成器也是一种特殊的迭代器：
-123&amp;gt;&amp;gt;&amp;gt; f = (x for x in range(5))&amp;gt;&amp;gt;&amp;gt;">
-<meta property="og:updated_time" content="2016-06-05T12:18:44.000Z">
+123&amp;gt;&amp;gt;&amp;gt; from collections import Iterable&amp;gt;&amp;gt;&amp;gt; isinstance(&apos;abc&apos;, Iterable)True">
+<meta property="og:updated_time" content="2016-06-06T05:54:50.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="迭代器">
 <meta name="twitter:description" content="凡是可以用for来进行循环的我们称为迭代器Iterable。
-123&amp;gt;&amp;gt;&amp;gt; from collections import Iterable&amp;gt;&amp;gt;&amp;gt; isinstance(&apos;abc&apos;, Iterable)True
-根据上面的定义，生成器也是一种特殊的迭代器：
-123&amp;gt;&amp;gt;&amp;gt; f = (x for x in range(5))&amp;gt;&amp;gt;&amp;gt;">
+123&amp;gt;&amp;gt;&amp;gt; from collections import Iterable&amp;gt;&amp;gt;&amp;gt; isinstance(&apos;abc&apos;, Iterable)True">
 
 
 
@@ -333,6 +327,7 @@
       
         <p>凡是可以用<code>for</code>来进行循环的我们称为迭代器<code>Iterable</code>。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> collections <span class="keyword">import</span> Iterable</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>isinstance(<span class="string">'abc'</span>, Iterable)</span><br><span class="line"><span class="keyword">True</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <p>根据上面的定义，<code>生成器</code>也是一种特殊的<code>迭代器</code>：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>f = (x <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">5</span>))</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>isinstance(f, Iterable)</span><br><span class="line"><span class="keyword">True</span></span><br></pre></td></tr></table></figure>
 <p><code>生成器</code>不但可以作用于<code>for</code>循环，还可以被<code>next()</code>函数不断调用并返回下一个值，直到最后抛出<code>StopIteration</code>错误表示无法继续返回下一个值了。<br>因此<code>迭代器</code>并不一定是<code>生成器</code>哦:</p>
