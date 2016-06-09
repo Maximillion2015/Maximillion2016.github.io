@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Python3,数据类型,变量," />
+  <meta name="keywords" content="Python3,StringIO," />
 
 
 
@@ -84,19 +84,16 @@
 
 
 
-<meta name="description" content="整数型Python中整数没有大小限制
-浮点型Python中浮点数也没有大小限制，但是超过一定范围，就默认为inf（无限大）">
+<meta name="description" content="很多时候数据读写不一定是文件，也有可能是在内存中读写。StringIO顾名思义就是在内存中读写str。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python中的数据类型">
-<meta property="og:url" content="http://yoursite.com/2016/05/21/Python中的数据类型/index.html">
+<meta property="og:title" content="StringIO">
+<meta property="og:url" content="http://yoursite.com/2016/06/09/StringIO/index.html">
 <meta property="og:site_name" content="ephon的技术博客">
-<meta property="og:description" content="整数型Python中整数没有大小限制
-浮点型Python中浮点数也没有大小限制，但是超过一定范围，就默认为inf（无限大）">
-<meta property="og:updated_time" content="2016-06-06T05:58:31.000Z">
+<meta property="og:description" content="很多时候数据读写不一定是文件，也有可能是在内存中读写。StringIO顾名思义就是在内存中读写str。">
+<meta property="og:updated_time" content="2016-06-09T11:39:14.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python中的数据类型">
-<meta name="twitter:description" content="整数型Python中整数没有大小限制
-浮点型Python中浮点数也没有大小限制，但是超过一定范围，就默认为inf（无限大）">
+<meta name="twitter:title" content="StringIO">
+<meta name="twitter:description" content="很多时候数据读写不一定是文件，也有可能是在内存中读写。StringIO顾名思义就是在内存中读写str。">
 
 
 
@@ -114,7 +111,7 @@
   };
 </script>
 
-  <title> Python中的数据类型 | ephon的技术博客 </title>
+  <title> StringIO | ephon的技术博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -254,7 +251,7 @@
             
             
               
-                Python中的数据类型
+                StringIO
               
             
           </h1>
@@ -266,8 +263,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-21T15:22:59+08:00" content="2016-05-21">
-              2016-05-21
+            <time itemprop="dateCreated" datetime="2016-06-09T19:20:48+08:00" content="2016-06-09">
+              2016-06-09
             </time>
           </span>
 
@@ -296,8 +293,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/05/21/Python中的数据类型/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/21/Python中的数据类型/" itemprop="commentsCount"></span>
+                <a href="/2016/06/09/StringIO/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/09/StringIO/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -325,19 +322,20 @@
       
 
       
-        <h2 id="整数型"><a href="#整数型" class="headerlink" title="整数型"></a>整数型</h2><p>Python中整数没有大小限制</p>
-<h2 id="浮点型"><a href="#浮点型" class="headerlink" title="浮点型"></a>浮点型</h2><p>Python中浮点数也没有大小限制，但是超过一定范围，就默认为inf（无限大）</p>
+        <p>很多时候数据读写不一定是文件，也有可能是在内存中读写。<br>StringIO顾名思义就是在内存中读写str。</p>
 <a id="more"></a>
-<h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><p>在字符串中<code>&#39;</code>与<code>&quot;</code>可以相互嵌套，都能够表示字符串。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 结果为:</span></span><br><span class="line"><span class="comment"># he"l""lo</span></span><br><span class="line">print(<span class="string">'he"l""lo'</span>)</span><br></pre></td></tr></table></figure>
-<p><code>\</code>可以转义很多符号，例如<code>\t</code> <code>\n</code> <code>\&quot;</code> <code>\\</code></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 结果为:</span></span><br><span class="line"><span class="comment"># \</span></span><br><span class="line"><span class="comment"># \</span></span><br><span class="line">print(<span class="string">'\\\n\\'</span>)</span><br></pre></td></tr></table></figure>
-<p><code>r</code>可以让<code>\</code> <code>%</code>等转义字符不转义</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 结果为：</span></span><br><span class="line"><span class="comment"># \\\n\\</span></span><br><span class="line">print(<span class="string">r"\\\n\\"</span>)</span><br></pre></td></tr></table></figure>
-<p><code>&#39;&#39;&#39;</code>可以输出多行字符串</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 结果为：</span></span><br><span class="line"><span class="comment"># line1</span></span><br><span class="line"><span class="comment"># line2</span></span><br><span class="line"><span class="comment"># line3</span></span><br><span class="line"><span class="comment"># r只对转义符\起作用，对其他符号无效</span></span><br><span class="line">print(<span class="string">r'''line1</span><br><span class="line">line2</span><br><span class="line">line3'''</span>)</span><br></pre></td></tr></table></figure>
-<h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><p>Pyhton中除法有两种<code>/</code>和<code>//</code>，前者结果是浮点数（哪怕是两个整数相除），后者相除是整数（取整，<strong><em>不是四舍五入</em></strong>）</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 结果是：3.0</span></span><br><span class="line">print(<span class="number">9</span>/<span class="number">3</span>)</span><br><span class="line"><span class="comment"># 结果是：3</span></span><br><span class="line">print(<span class="number">11</span>//<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+<p>在内存中写str有两种方法，一个是在<code>定义时</code>直接赋值，一个是用<code>write()</code>:</p>
+<p><strong>定义时</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> io <span class="keyword">import</span> StringIO</span><br><span class="line"></span><br><span class="line">f = StringIO(<span class="string">'nihao123'</span>)</span><br><span class="line"></span><br><span class="line">print(f.read())</span><br><span class="line">print(f.getvalue())</span><br><span class="line"></span><br><span class="line">----------------------------</span><br><span class="line">nihao123</span><br><span class="line">nihao123</span><br></pre></td></tr></table></figure>
+<p><strong>write</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> io <span class="keyword">import</span> StringIO</span><br><span class="line"></span><br><span class="line">f = StringIO()</span><br><span class="line"></span><br><span class="line">f.write(<span class="string">'Hello'</span>)</span><br><span class="line"></span><br><span class="line">f.write(<span class="string">' '</span>)</span><br><span class="line"></span><br><span class="line">f.write(<span class="string">'World!'</span>)</span><br><span class="line"></span><br><span class="line">---------------------------------</span><br><span class="line"></span><br><span class="line">Hello World!</span><br></pre></td></tr></table></figure>
+<p>这时奇怪的事情发生了，为什么第二段程序使用<code>read()</code>会输出空呢？</p>
+<p>原来是<code>stream position</code>搞的鬼，我们可以通过<code>tell()</code>方法来查看，通过<code>seek()</code>方法来修改：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">f = StringIO(<span class="string">'nihao123'</span>)</span><br><span class="line"></span><br><span class="line">print(f.tell())</span><br><span class="line"></span><br><span class="line">f.write(<span class="string">'Hello'</span>)</span><br><span class="line"></span><br><span class="line">print(f.tell())</span><br><span class="line"></span><br><span class="line">print(f.read())</span><br><span class="line">print(f.getvalue())</span><br><span class="line"></span><br><span class="line">---------------------------</span><br><span class="line"><span class="number">0</span></span><br><span class="line"><span class="number">5</span></span><br><span class="line"><span class="number">123</span></span><br><span class="line">Hello123</span><br></pre></td></tr></table></figure>
+<p>可以看到在初试化时写入，<code>stream position</code>是不变的，依然为<code>0</code>，而用<code>write()</code>写入时<code>stream position</code>会变，而<code>read()</code>方法是从当前的<code>stream position</code>向后读，<code>getvalue()</code>则是从<code>0</code>开始读，我们修改一下程序：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">f = StringIO(<span class="string">'nihao123'</span>)</span><br><span class="line"></span><br><span class="line">print(f.tell())</span><br><span class="line"></span><br><span class="line">f.write(<span class="string">'Hello'</span>)</span><br><span class="line"></span><br><span class="line">print(f.tell())</span><br><span class="line"></span><br><span class="line">f.seek(<span class="number">0</span>)</span><br><span class="line">print(f.tell())</span><br><span class="line"></span><br><span class="line">print(f.read())</span><br><span class="line">print(f.getvalue())</span><br><span class="line"></span><br><span class="line">--------------------------------</span><br><span class="line"><span class="number">0</span></span><br><span class="line"><span class="number">5</span></span><br><span class="line"><span class="number">0</span></span><br><span class="line">Hello123</span><br><span class="line">Hello123</span><br></pre></td></tr></table></figure>
+<p>哈哈，这下终于得到我们想要的啦~</p>
+
       
     </div>
 
@@ -360,9 +358,7 @@
           
             <a href="/tags/Python3/" rel="tag">#Python3</a>
           
-            <a href="/tags/数据类型/" rel="tag">#数据类型</a>
-          
-            <a href="/tags/变量/" rel="tag">#变量</a>
+            <a href="/tags/StringIO/" rel="tag">#StringIO</a>
           
         </div>
       
@@ -371,17 +367,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/05/19/多态出现在成员上调用的特点/" rel="next" title="多态出现在成员上调用的特点">
-                <i class="fa fa-chevron-left"></i> 多态出现在成员上调用的特点
+              <a href="/2016/06/09/文件读写/" rel="next" title="文件读写">
+                <i class="fa fa-chevron-left"></i> 文件读写
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/05/21/Python中的字符编码/" rel="prev" title="Python中的字符编码">
-                Python中的字符编码 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -407,8 +399,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/05/21/Python中的数据类型/"
-           data-title="Python中的数据类型" data-url="http://yoursite.com/2016/05/21/Python中的数据类型/">
+      <div class="ds-thread" data-thread-key="2016/06/09/StringIO/"
+           data-title="StringIO" data-url="http://yoursite.com/2016/06/09/StringIO/">
       </div>
     
   </div>
@@ -519,7 +511,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#整数型"><span class="nav-number">1.</span> <span class="nav-text">整数型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#浮点型"><span class="nav-number">2.</span> <span class="nav-text">浮点型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串"><span class="nav-number">3.</span> <span class="nav-text">字符串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常量"><span class="nav-number">4.</span> <span class="nav-text">常量</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
         </section>

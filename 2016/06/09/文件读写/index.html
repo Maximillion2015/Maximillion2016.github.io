@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Python3,数据类型,变量," />
+  <meta name="keywords" content="Python3,文件读写," />
 
 
 
@@ -84,19 +84,16 @@
 
 
 
-<meta name="description" content="整数型Python中整数没有大小限制
-浮点型Python中浮点数也没有大小限制，但是超过一定范围，就默认为inf（无限大）">
+<meta name="description" content="在编程中往往需要涉及到文件的读写，Python中的读写操作与其他语言相差不大，但是更加的简便，符合Python的核心思想。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python中的数据类型">
-<meta property="og:url" content="http://yoursite.com/2016/05/21/Python中的数据类型/index.html">
+<meta property="og:title" content="文件读写">
+<meta property="og:url" content="http://yoursite.com/2016/06/09/文件读写/index.html">
 <meta property="og:site_name" content="ephon的技术博客">
-<meta property="og:description" content="整数型Python中整数没有大小限制
-浮点型Python中浮点数也没有大小限制，但是超过一定范围，就默认为inf（无限大）">
-<meta property="og:updated_time" content="2016-06-06T05:58:31.000Z">
+<meta property="og:description" content="在编程中往往需要涉及到文件的读写，Python中的读写操作与其他语言相差不大，但是更加的简便，符合Python的核心思想。">
+<meta property="og:updated_time" content="2016-06-09T11:20:02.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python中的数据类型">
-<meta name="twitter:description" content="整数型Python中整数没有大小限制
-浮点型Python中浮点数也没有大小限制，但是超过一定范围，就默认为inf（无限大）">
+<meta name="twitter:title" content="文件读写">
+<meta name="twitter:description" content="在编程中往往需要涉及到文件的读写，Python中的读写操作与其他语言相差不大，但是更加的简便，符合Python的核心思想。">
 
 
 
@@ -114,7 +111,7 @@
   };
 </script>
 
-  <title> Python中的数据类型 | ephon的技术博客 </title>
+  <title> 文件读写 | ephon的技术博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -254,7 +251,7 @@
             
             
               
-                Python中的数据类型
+                文件读写
               
             
           </h1>
@@ -266,8 +263,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-21T15:22:59+08:00" content="2016-05-21">
-              2016-05-21
+            <time itemprop="dateCreated" datetime="2016-06-09T18:53:49+08:00" content="2016-06-09">
+              2016-06-09
             </time>
           </span>
 
@@ -296,8 +293,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/05/21/Python中的数据类型/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/21/Python中的数据类型/" itemprop="commentsCount"></span>
+                <a href="/2016/06/09/文件读写/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/09/文件读写/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -325,19 +322,29 @@
       
 
       
-        <h2 id="整数型"><a href="#整数型" class="headerlink" title="整数型"></a>整数型</h2><p>Python中整数没有大小限制</p>
-<h2 id="浮点型"><a href="#浮点型" class="headerlink" title="浮点型"></a>浮点型</h2><p>Python中浮点数也没有大小限制，但是超过一定范围，就默认为inf（无限大）</p>
+        <p>在编程中往往需要涉及到文件的读写，Python中的读写操作与其他语言相差不大，但是更加的简便，符合Python的核心思想。</p>
 <a id="more"></a>
-<h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><p>在字符串中<code>&#39;</code>与<code>&quot;</code>可以相互嵌套，都能够表示字符串。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 结果为:</span></span><br><span class="line"><span class="comment"># he"l""lo</span></span><br><span class="line">print(<span class="string">'he"l""lo'</span>)</span><br></pre></td></tr></table></figure>
-<p><code>\</code>可以转义很多符号，例如<code>\t</code> <code>\n</code> <code>\&quot;</code> <code>\\</code></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 结果为:</span></span><br><span class="line"><span class="comment"># \</span></span><br><span class="line"><span class="comment"># \</span></span><br><span class="line">print(<span class="string">'\\\n\\'</span>)</span><br></pre></td></tr></table></figure>
-<p><code>r</code>可以让<code>\</code> <code>%</code>等转义字符不转义</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 结果为：</span></span><br><span class="line"><span class="comment"># \\\n\\</span></span><br><span class="line">print(<span class="string">r"\\\n\\"</span>)</span><br></pre></td></tr></table></figure>
-<p><code>&#39;&#39;&#39;</code>可以输出多行字符串</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 结果为：</span></span><br><span class="line"><span class="comment"># line1</span></span><br><span class="line"><span class="comment"># line2</span></span><br><span class="line"><span class="comment"># line3</span></span><br><span class="line"><span class="comment"># r只对转义符\起作用，对其他符号无效</span></span><br><span class="line">print(<span class="string">r'''line1</span><br><span class="line">line2</span><br><span class="line">line3'''</span>)</span><br></pre></td></tr></table></figure>
-<h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><p>Pyhton中除法有两种<code>/</code>和<code>//</code>，前者结果是浮点数（哪怕是两个整数相除），后者相除是整数（取整，<strong><em>不是四舍五入</em></strong>）</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 结果是：3.0</span></span><br><span class="line">print(<span class="number">9</span>/<span class="number">3</span>)</span><br><span class="line"><span class="comment"># 结果是：3</span></span><br><span class="line">print(<span class="number">11</span>//<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+<p>首先先写一个<code>test.txt</code>的目标文件：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ephon123</span><br><span class="line">jack</span><br><span class="line">tom</span><br></pre></td></tr></table></figure>
+<h2 id="读"><a href="#读" class="headerlink" title="读"></a>读</h2><p>那么如何读这个文件呢？我们有<code>read()</code>, <code>readline()/readlines()</code>, <code>read(n)</code>三种方法！</p>
+<p><strong>read()</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">f = open(<span class="string">'test.txt'</span>, <span class="string">'r'</span>)</span><br><span class="line">print(f.read())</span><br><span class="line">f.close()</span><br><span class="line"></span><br><span class="line">-----------------------------</span><br><span class="line">ephon123</span><br><span class="line">jack</span><br><span class="line">tom</span><br></pre></td></tr></table></figure>
+<p><strong>readline()/readlines()</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">f = open(<span class="string">'test.txt'</span>, <span class="string">'r'</span>)</span><br><span class="line">print(f.readline())</span><br><span class="line">f.close()</span><br><span class="line"></span><br><span class="line">-------------------------------</span><br><span class="line">ephon123</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">f = open(<span class="string">'test.txt'</span>, <span class="string">'r'</span>)</span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> f.readlines():</span><br><span class="line">    print(line.strip())</span><br><span class="line">f.close()</span><br><span class="line"></span><br><span class="line">--------------------------------</span><br><span class="line">ephon123</span><br><span class="line">jack</span><br><span class="line">tom</span><br></pre></td></tr></table></figure>
+<p><strong>注意：<code>readline()/readlines()</code>会将<code>\n</code>读进去的，而<code>print</code>也会换行，所以如果不加<code>strip()</code>，会输出多余的空行。</strong></p>
+<p><strong>read(n)</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">f = open(<span class="string">'test.txt'</span>, <span class="string">'r'</span>)</span><br><span class="line"><span class="comment"># \n也会占一个字节哦</span></span><br><span class="line">print(f.read(<span class="number">10</span>))</span><br><span class="line">f.close()</span><br><span class="line"></span><br><span class="line">-----------------------------------</span><br><span class="line">ephon123</span><br><span class="line">j</span><br></pre></td></tr></table></figure>
+<p>通过上面的代码我们可以发现，文件被打开后就要关闭，但是如果考虑没有这个文件的话，打开操作就无法做到，更何况是关闭文件呢，因此我们应该这样写：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    f = open(<span class="string">'test.txt'</span>, <span class="string">'r'</span>)</span><br><span class="line">	 print(f.read())</span><br><span class="line"><span class="keyword">finally</span>:</span><br><span class="line">    <span class="keyword">if</span> f:</span><br><span class="line">        f.close()</span><br></pre></td></tr></table></figure>
+<p>Python中提供了更加简便的写法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> open(<span class="string">'test.txt'</span>, <span class="string">'r'</span>) <span class="keyword">as</span> f:</span><br><span class="line">    print(f.read())</span><br></pre></td></tr></table></figure>
+<p>这两种写法效果是一样的。</p>
+<h2 id="写"><a href="#写" class="headerlink" title="写"></a>写</h2><p>写的话与读类似：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> open(<span class="string">'test.txt'</span>, <span class="string">'w'</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.write(<span class="string">'123\nabc\nxyz'</span>)</span><br></pre></td></tr></table></figure>
+<p>打开<code>test.txt</code>文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">123</span><br><span class="line">abc</span><br><span class="line">xyz</span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -360,9 +367,7 @@
           
             <a href="/tags/Python3/" rel="tag">#Python3</a>
           
-            <a href="/tags/数据类型/" rel="tag">#数据类型</a>
-          
-            <a href="/tags/变量/" rel="tag">#变量</a>
+            <a href="/tags/文件读写/" rel="tag">#文件读写</a>
           
         </div>
       
@@ -371,16 +376,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/05/19/多态出现在成员上调用的特点/" rel="next" title="多态出现在成员上调用的特点">
-                <i class="fa fa-chevron-left"></i> 多态出现在成员上调用的特点
+              <a href="/2016/06/07/Python中元类的使用/" rel="next" title="Python中元类的使用">
+                <i class="fa fa-chevron-left"></i> Python中元类的使用
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/05/21/Python中的字符编码/" rel="prev" title="Python中的字符编码">
-                Python中的字符编码 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/06/09/StringIO/" rel="prev" title="StringIO">
+                StringIO <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -407,8 +412,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/05/21/Python中的数据类型/"
-           data-title="Python中的数据类型" data-url="http://yoursite.com/2016/05/21/Python中的数据类型/">
+      <div class="ds-thread" data-thread-key="2016/06/09/文件读写/"
+           data-title="文件读写" data-url="http://yoursite.com/2016/06/09/文件读写/">
       </div>
     
   </div>
@@ -519,7 +524,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#整数型"><span class="nav-number">1.</span> <span class="nav-text">整数型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#浮点型"><span class="nav-number">2.</span> <span class="nav-text">浮点型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串"><span class="nav-number">3.</span> <span class="nav-text">字符串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常量"><span class="nav-number">4.</span> <span class="nav-text">常量</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#读"><span class="nav-number">1.</span> <span class="nav-text">读</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#写"><span class="nav-number">2.</span> <span class="nav-text">写</span></a></li></ol></div>
             
           </div>
         </section>
