@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Python3,装饰器," />
+  <meta name="keywords" content="Python3,装饰器,property," />
 
 
 
@@ -84,16 +84,16 @@
 
 
 
-<meta name="description" content="女朋友一直喊我程序猿猴">
+<meta name="description" content="@property是什么相信很多搞过iOS开发的同学会对@property比较熟悉，python中@property的作用类似。在python中@表示装饰器——在不修改原函数的基础上丰富该函数的功能。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="@property">
 <meta property="og:url" content="http://yoursite.com/2016/08/29/property/index.html">
 <meta property="og:site_name" content="ephon的技术博客">
-<meta property="og:description" content="女朋友一直喊我程序猿猴">
-<meta property="og:updated_time" content="2016-08-29T09:21:26.000Z">
+<meta property="og:description" content="@property是什么相信很多搞过iOS开发的同学会对@property比较熟悉，python中@property的作用类似。在python中@表示装饰器——在不修改原函数的基础上丰富该函数的功能。">
+<meta property="og:updated_time" content="2016-08-29T11:44:03.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="@property">
-<meta name="twitter:description" content="女朋友一直喊我程序猿猴">
+<meta name="twitter:description" content="@property是什么相信很多搞过iOS开发的同学会对@property比较熟悉，python中@property的作用类似。在python中@表示装饰器——在不修改原函数的基础上丰富该函数的功能。">
 
 
 
@@ -322,7 +322,21 @@
       
 
       
-        
+        <h2 id="property是什么"><a href="#property是什么" class="headerlink" title="@property是什么"></a>@property是什么</h2><p>相信很多搞过iOS开发的同学会对<code>@property</code>比较熟悉，python中<code>@property</code>的作用类似。在python中<code>@</code>表示装饰器——在不修改原函数的基础上丰富该函数的功能。</p>
+<a id="more"></a>
+<p>##装饰器<br>随便google了一下，装饰器并没有确切的定义，姑且认为就是在不改变原函数的基础上丰富了该函数的功能，下面我们来举个例子：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">log</span><span class="params">(func)</span>:</span></span><br><span class="line">    <span class="comment"># 如果不加这句,那么就now.__name__就变成了wrapper</span></span><br><span class="line"><span class="meta">    @functools.wraps(func)</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">wrapper</span><span class="params">(*args, **kw)</span>:</span></span><br><span class="line">        print(<span class="string">'calls %s'</span> % func.__name__)</span><br><span class="line">        <span class="keyword">return</span> func(*args, **kw)</span><br><span class="line">    <span class="keyword">return</span> wrapper</span><br><span class="line"></span><br><span class="line"><span class="meta">@log</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">now</span><span class="params">()</span>:</span></span><br><span class="line">    print(time.strftime(<span class="string">'%Y-%m-%d'</span>, time.localtime()))</span><br><span class="line"></span><br><span class="line">now()</span><br><span class="line">print(now.__name__)</span><br><span class="line">---------------------------</span><br><span class="line">calls now</span><br><span class="line"><span class="number">2016</span><span class="number">-08</span><span class="number">-29</span></span><br><span class="line">now</span><br></pre></td></tr></table></figure>
+<p>这里<code>@log</code>可以为<code>now()</code>函数输出函数名称。</p>
+<p>甚至，我们还可以添加更加复杂的装饰器：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> functools</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">log</span><span class="params">(text)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">decorator</span><span class="params">(func)</span>:</span></span><br><span class="line"><span class="meta">        @functools.wraps(func)</span></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">wrapper</span><span class="params">(*args, **kw)</span>:</span></span><br><span class="line">            print(<span class="string">'start call----%s'</span> % test)</span><br><span class="line">            f = func(*args, **kw)</span><br><span class="line">            print(<span class="string">'end call'</span>)</span><br><span class="line">            <span class="keyword">return</span> f</span><br><span class="line">        <span class="keyword">return</span> wrapper</span><br><span class="line">    <span class="keyword">return</span> decorator</span><br><span class="line"></span><br><span class="line"><span class="meta">@log(‘excute’)</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">now</span><span class="params">()</span>:</span></span><br><span class="line">    print(time.strftime(<span class="string">'%Y-%m-%d'</span>, time.localtime()))</span><br><span class="line"></span><br><span class="line">now()</span><br><span class="line"></span><br><span class="line">------------------------------</span><br><span class="line"></span><br><span class="line">start call-------excute</span><br><span class="line"><span class="number">2016</span><span class="number">-08</span><span class="number">-29</span></span><br><span class="line">end call</span><br></pre></td></tr></table></figure>
+<p>以上代码实现了给函数上下都加上一条消息的功能。</p>
+<p>##property<br><code>@property</code>也是一个装饰器，那么它可以实现什么功能呢？</p>
+<p>我们如果想要封装一个类中的变量，使他不会暴露在外，我们可以写出如下代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">getName</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self._name</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">setName</span><span class="params">(self, value)</span>:</span></span><br><span class="line">        self._name = value</span><br><span class="line"></span><br><span class="line">s = Student()</span><br><span class="line"></span><br><span class="line">s.setName(<span class="string">'ephon'</span>)</span><br><span class="line"></span><br><span class="line">print(s.getName())</span><br><span class="line"></span><br><span class="line">-------------------------</span><br><span class="line"></span><br><span class="line">ephon</span><br></pre></td></tr></table></figure>
+<p>Java就是这么做的，但是生来简单的python还可以更简单：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"><span class="meta">    @property</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">name</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self._name</span><br><span class="line"><span class="meta">    @name.setter</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">name</span><span class="params">(self, value)</span>:</span></span><br><span class="line">        self._name = value</span><br><span class="line"></span><br><span class="line">s = Student()</span><br><span class="line">s.name = <span class="string">'ephon'</span></span><br><span class="line">print(s.name)</span><br><span class="line"></span><br><span class="line">---------------------------</span><br><span class="line">ephon</span><br></pre></td></tr></table></figure>
+<p>开发过iOS的同学一定会很眼熟，因为iOS貌似也是这样，而且连<code>getter</code> <code>setter</code>方法都不用写了，虽然不太清楚iOS的具体原理，但是应该是殊途同归的，希望了解的同学留言指教。</p>
+
       
     </div>
 
@@ -346,6 +360,8 @@
             <a href="/tags/Python3/" rel="tag">#Python3</a>
           
             <a href="/tags/装饰器/" rel="tag">#装饰器</a>
+          
+            <a href="/tags/property/" rel="tag">#property</a>
           
         </div>
       
@@ -449,7 +465,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">37</span>
+                <span class="site-state-item-count">38</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -498,7 +514,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#property是什么"><span class="nav-number">1.</span> <span class="nav-text">@property是什么</span></a></li></ol></div>
             
           </div>
         </section>
