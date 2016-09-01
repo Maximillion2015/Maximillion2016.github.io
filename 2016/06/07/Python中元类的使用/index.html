@@ -94,7 +94,7 @@
 <meta property="og:description" content="type()动态语言和静态语言最大的不同，就是函数和类的定义，不是编译时定义的，而是运行时动态创建的。
 如果我们有一个say.py模块：
 123class Say(object):    def say(self, name = &apos;World&apos;):        print(&quot;Hello %s&quot; % name)">
-<meta property="og:updated_time" content="2016-06-07T13:25:21.000Z">
+<meta property="og:updated_time" content="2016-09-01T05:55:37.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python中元类的使用">
 <meta name="twitter:description" content="type()动态语言和静态语言最大的不同，就是函数和类的定义，不是编译时定义的，而是运行时动态创建的。
@@ -345,6 +345,9 @@
 <li>class的方法名称与函数绑定，这里我们把函数<code>fn</code>绑定到方法名<code>Say</code>上。</li>
 </ol>
 <p>通过<code>type()</code>函数创建的类和直接写class是完全一样的，因为Python解释器遇到class定义时，仅仅是扫描一下class定义的语法，然后调用<code>type()</code>函数创建出class。</p>
+<p>有的同学可能不太明白<code>type</code>的第一个参数和返回值之间的关系，到底那个是类名，下面我举个例子：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!usr/bin/env python</span></span><br><span class="line"><span class="comment">#-*-coding:utf-8-*-</span></span><br><span class="line">__author__ = <span class="string">'ephon'</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fn</span><span class="params">(self, name=<span class="string">'world'</span>)</span>:</span> <span class="comment"># 先定义函数</span></span><br><span class="line">     print(<span class="string">'Hello, %s.'</span> % name)</span><br><span class="line"></span><br><span class="line">Hello = type(<span class="string">'Hello1'</span>, (object,), dict(hello=fn))  <span class="comment"># 创建Hello class</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Hello是类名，创建类用Hello</span></span><br><span class="line">h = Hello()</span><br><span class="line"></span><br><span class="line">h.hello()</span><br><span class="line"></span><br><span class="line"><span class="comment"># type()的第一个参数是类的__name__属性</span></span><br><span class="line">print(Hello.__name__)</span><br><span class="line"></span><br><span class="line">------------------------------------</span><br><span class="line"></span><br><span class="line">Hello, world.</span><br><span class="line">Hello1</span><br></pre></td></tr></table></figure>
+<p>我的理解就是返回值<code>Hello</code>是我们需要创建类时使用的类名，是面向程序员的；但是计算机中存储的类名是<code>type()</code>的第一个参数<code>Hello1</code>。</p>
 <p>正常情况下，我们都用<code>class xxx...</code>来定义类，但是，<code>type()</code>函数也允许我们动态创建出类来，也就是说，动态语言本身支持运行期动态创建类，这和静态语言有非常大的不同，要在静态语言运行期创建类，必须构造源代码字符串再调用编译器，或者借助一些工具生成字节码实现，本质上都是动态编译，会非常复杂。</p>
 <h2 id="metaclass"><a href="#metaclass" class="headerlink" title="metaclass"></a>metaclass</h2><p>类是对象的抽象，那元组大致就相当于所有类的抽象，我们可以根据<code>metaclass</code>创建出类。</p>
 <p>我对于元类的理解实在是太浅薄了，有兴趣的朋友可以去<a href="http://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/0014319106919344c4ef8b1e04c48778bb45796e0335839000" target="_blank" rel="external"><strong>廖雪峰大大的博客</strong></a>去看!</p>
@@ -466,7 +469,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">21</span>
+              <span class="site-state-item-count">20</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
