@@ -84,19 +84,17 @@
 
 
 
-<meta name="description" content="凡是可以用for来进行循环的我们称为迭代器Iterable。
-123&amp;gt;&amp;gt;&amp;gt; from collections import Iterable&amp;gt;&amp;gt;&amp;gt; isinstance(&apos;abc&apos;, Iterable)True">
+<meta name="description" content="凡是可以用for来进行循环的我们称为迭代器Iterable。 123&amp;gt;&amp;gt;&amp;gt; from collections import Iterable&amp;gt;&amp;gt;&amp;gt; isinstance(&apos;abc&apos;, Iterable)True">
+<meta name="keywords" content="Python3,迭代器">
 <meta property="og:type" content="article">
 <meta property="og:title" content="迭代器">
 <meta property="og:url" content="http://yoursite.com/2016/06/05/迭代器/index.html">
 <meta property="og:site_name" content="ephon的技术博客">
-<meta property="og:description" content="凡是可以用for来进行循环的我们称为迭代器Iterable。
-123&amp;gt;&amp;gt;&amp;gt; from collections import Iterable&amp;gt;&amp;gt;&amp;gt; isinstance(&apos;abc&apos;, Iterable)True">
+<meta property="og:description" content="凡是可以用for来进行循环的我们称为迭代器Iterable。 123&amp;gt;&amp;gt;&amp;gt; from collections import Iterable&amp;gt;&amp;gt;&amp;gt; isinstance(&apos;abc&apos;, Iterable)True">
 <meta property="og:updated_time" content="2016-06-06T05:54:50.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="迭代器">
-<meta name="twitter:description" content="凡是可以用for来进行循环的我们称为迭代器Iterable。
-123&amp;gt;&amp;gt;&amp;gt; from collections import Iterable&amp;gt;&amp;gt;&amp;gt; isinstance(&apos;abc&apos;, Iterable)True">
+<meta name="twitter:description" content="凡是可以用for来进行循环的我们称为迭代器Iterable。 123&amp;gt;&amp;gt;&amp;gt; from collections import Iterable&amp;gt;&amp;gt;&amp;gt; isinstance(&apos;abc&apos;, Iterable)True">
 
 
 
@@ -326,20 +324,20 @@
 
       
         <p>凡是可以用<code>for</code>来进行循环的我们称为迭代器<code>Iterable</code>。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> collections <span class="keyword">import</span> Iterable</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>isinstance(<span class="string">'abc'</span>, Iterable)</span><br><span class="line"><span class="keyword">True</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> collections <span class="keyword">import</span> Iterable</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>isinstance(<span class="string">'abc'</span>, Iterable)</div><div class="line"><span class="keyword">True</span></div></pre></td></tr></table></figure>
 <a id="more"></a>
 <p>根据上面的定义，<code>生成器</code>也是一种特殊的<code>迭代器</code>：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>f = (x <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">5</span>))</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>isinstance(f, Iterable)</span><br><span class="line"><span class="keyword">True</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>f = (x <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">5</span>))</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>isinstance(f, Iterable)</div><div class="line"><span class="keyword">True</span></div></pre></td></tr></table></figure>
 <p><code>生成器</code>不但可以作用于<code>for</code>循环，还可以被<code>next()</code>函数不断调用并返回下一个值，直到最后抛出<code>StopIteration</code>错误表示无法继续返回下一个值了。<br>因此<code>迭代器</code>并不一定是<code>生成器</code>哦:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> collections <span class="keyword">import</span> Iterator</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>isinstance(f, Iterator)</span><br><span class="line"><span class="keyword">True</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>isinstance([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], Iterator)</span><br><span class="line"><span class="keyword">False</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> collections <span class="keyword">import</span> Iterator</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>isinstance(f, Iterator)</div><div class="line"><span class="keyword">True</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>isinstance([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], Iterator)</div><div class="line"><span class="keyword">False</span></div></pre></td></tr></table></figure>
 <h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>凡是可作用于<code>for</code>循环的对象都是<code>Iterable</code>类型；</p>
 <p>凡是可作用于<code>next()</code>函数的对象都是Iterator类型，它们表示一个惰性计算的序列；</p>
 <p>集合数据类型如<code>list</code>、<code>dict</code>、<code>str</code>等是<code>Iterable</code>但不是<code>Iterator</code>，不过可以通过<code>iter()</code>函数获得一个<code>Iterator</code>对象:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>L = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>it = iter(L)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>next(it)</span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>next(it)</span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>next(it)</span><br><span class="line"><span class="number">3</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>next(it)</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"&lt;pyshell#88&gt;"</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    next(it)</span><br><span class="line">StopIteration</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>L = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>it = iter(L)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>next(it)</div><div class="line"><span class="number">1</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>next(it)</div><div class="line"><span class="number">2</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>next(it)</div><div class="line"><span class="number">3</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>next(it)</div><div class="line">Traceback (most recent call last):</div><div class="line">  File <span class="string">"&lt;pyshell#88&gt;"</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</div><div class="line">    next(it)</div><div class="line">StopIteration</div></pre></td></tr></table></figure>
 <p>Python的<code>for</code>循环本质上就是通过不断调用<code>next()</code>函数实现的，例如：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]:</span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> x <span class="keyword">in</span> [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]:</div><div class="line">    <span class="keyword">pass</span></div></pre></td></tr></table></figure>
 <p>实际上等价于：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 首先获得Iterator对象:</span></span><br><span class="line">it = iter([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>])</span><br><span class="line"><span class="comment"># 循环:</span></span><br><span class="line"><span class="keyword">while</span> <span class="keyword">True</span>:</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        <span class="comment"># 获得下一个值:</span></span><br><span class="line">        x = next(it)</span><br><span class="line">    <span class="keyword">except</span> StopIteration:</span><br><span class="line">        <span class="comment"># 遇到StopIteration就退出循环</span></span><br><span class="line">        <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 首先获得Iterator对象:</span></div><div class="line">it = iter([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>])</div><div class="line"><span class="comment"># 循环:</span></div><div class="line"><span class="keyword">while</span> <span class="keyword">True</span>:</div><div class="line">    <span class="keyword">try</span>:</div><div class="line">        <span class="comment"># 获得下一个值:</span></div><div class="line">        x = next(it)</div><div class="line">    <span class="keyword">except</span> StopIteration:</div><div class="line">        <span class="comment"># 遇到StopIteration就退出循环</span></div><div class="line">        <span class="keyword">break</span></div></pre></td></tr></table></figure>
       
     </div>
 
@@ -371,16 +369,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/06/05/生成器/" rel="next" title="生成器">
-                <i class="fa fa-chevron-left"></i> 生成器
+              <a href="/2016/06/07/Python中的枚举类/" rel="next" title="Python中的枚举类">
+                <i class="fa fa-chevron-left"></i> Python中的枚举类
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/06/07/Python中的枚举类/" rel="prev" title="Python中的枚举类">
-                Python中的枚举类 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/06/05/生成器/" rel="prev" title="生成器">
+                生成器 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>

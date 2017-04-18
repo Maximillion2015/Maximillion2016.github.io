@@ -84,19 +84,17 @@
 
 
 
-<meta name="description" content="整数型Python中整数没有大小限制
-浮点型Python中浮点数也没有大小限制，但是超过一定范围，就默认为inf（无限大）">
+<meta name="description" content="整数型Python中整数没有大小限制 浮点型Python中浮点数也没有大小限制，但是超过一定范围，就默认为inf（无限大）">
+<meta name="keywords" content="Python3,数据类型,变量">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python中的数据类型">
 <meta property="og:url" content="http://yoursite.com/2016/05/21/Python中的数据类型/index.html">
 <meta property="og:site_name" content="ephon的技术博客">
-<meta property="og:description" content="整数型Python中整数没有大小限制
-浮点型Python中浮点数也没有大小限制，但是超过一定范围，就默认为inf（无限大）">
+<meta property="og:description" content="整数型Python中整数没有大小限制 浮点型Python中浮点数也没有大小限制，但是超过一定范围，就默认为inf（无限大）">
 <meta property="og:updated_time" content="2016-06-06T05:58:31.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python中的数据类型">
-<meta name="twitter:description" content="整数型Python中整数没有大小限制
-浮点型Python中浮点数也没有大小限制，但是超过一定范围，就默认为inf（无限大）">
+<meta name="twitter:description" content="整数型Python中整数没有大小限制 浮点型Python中浮点数也没有大小限制，但是超过一定范围，就默认为inf（无限大）">
 
 
 
@@ -329,15 +327,15 @@
 <h2 id="浮点型"><a href="#浮点型" class="headerlink" title="浮点型"></a>浮点型</h2><p>Python中浮点数也没有大小限制，但是超过一定范围，就默认为inf（无限大）</p>
 <a id="more"></a>
 <h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><p>在字符串中<code>&#39;</code>与<code>&quot;</code>可以相互嵌套，都能够表示字符串。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 结果为:</span></span><br><span class="line"><span class="comment"># he"l""lo</span></span><br><span class="line">print(<span class="string">'he"l""lo'</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 结果为:</span></div><div class="line"><span class="comment"># he"l""lo</span></div><div class="line">print(<span class="string">'he"l""lo'</span>)</div></pre></td></tr></table></figure>
 <p><code>\</code>可以转义很多符号，例如<code>\t</code> <code>\n</code> <code>\&quot;</code> <code>\\</code></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 结果为:</span></span><br><span class="line"><span class="comment"># \</span></span><br><span class="line"><span class="comment"># \</span></span><br><span class="line">print(<span class="string">'\\\n\\'</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 结果为:</span></div><div class="line"><span class="comment"># \</span></div><div class="line"><span class="comment"># \</span></div><div class="line">print(<span class="string">'\\\n\\'</span>)</div></pre></td></tr></table></figure>
 <p><code>r</code>可以让<code>\</code> <code>%</code>等转义字符不转义</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 结果为：</span></span><br><span class="line"><span class="comment"># \\\n\\</span></span><br><span class="line">print(<span class="string">r"\\\n\\"</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 结果为：</span></div><div class="line"><span class="comment"># \\\n\\</span></div><div class="line">print(<span class="string">r"\\\n\\"</span>)</div></pre></td></tr></table></figure>
 <p><code>&#39;&#39;&#39;</code>可以输出多行字符串</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 结果为：</span></span><br><span class="line"><span class="comment"># line1</span></span><br><span class="line"><span class="comment"># line2</span></span><br><span class="line"><span class="comment"># line3</span></span><br><span class="line"><span class="comment"># r只对转义符\起作用，对其他符号无效</span></span><br><span class="line">print(<span class="string">r'''line1</span><br><span class="line">line2</span><br><span class="line">line3'''</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 结果为：</span></div><div class="line"><span class="comment"># line1</span></div><div class="line"><span class="comment"># line2</span></div><div class="line"><span class="comment"># line3</span></div><div class="line"><span class="comment"># r只对转义符\起作用，对其他符号无效</span></div><div class="line">print(<span class="string">r'''line1</span></div><div class="line">line2</div><div class="line">line3''')</div></pre></td></tr></table></figure>
 <h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><p>Pyhton中除法有两种<code>/</code>和<code>//</code>，前者结果是浮点数（哪怕是两个整数相除），后者相除是整数（取整，<strong><em>不是四舍五入</em></strong>）</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 结果是：3.0</span></span><br><span class="line">print(<span class="number">9</span>/<span class="number">3</span>)</span><br><span class="line"><span class="comment"># 结果是：3</span></span><br><span class="line">print(<span class="number">11</span>//<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 结果是：3.0</span></div><div class="line">print(<span class="number">9</span>/<span class="number">3</span>)</div><div class="line"><span class="comment"># 结果是：3</span></div><div class="line">print(<span class="number">11</span>//<span class="number">3</span>)</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -371,16 +369,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/05/19/多态出现在成员上调用的特点/" rel="next" title="多态出现在成员上调用的特点">
-                <i class="fa fa-chevron-left"></i> 多态出现在成员上调用的特点
+              <a href="/2016/05/21/Python中的字符编码/" rel="next" title="Python中的字符编码">
+                <i class="fa fa-chevron-left"></i> Python中的字符编码
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/05/21/Python中的字符编码/" rel="prev" title="Python中的字符编码">
-                Python中的字符编码 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/05/19/多态出现在成员上调用的特点/" rel="prev" title="多态出现在成员上调用的特点">
+                多态出现在成员上调用的特点 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>

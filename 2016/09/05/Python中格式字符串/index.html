@@ -84,19 +84,17 @@
 
 
 
-<meta name="description" content="在Python中如果想打印一个字符串，我们可以如此写：
-12&amp;gt;&amp;gt;&amp;gt; print(&apos;Hello World!&apos;)Hello World!">
+<meta name="description" content="在Python中如果想打印一个字符串，我们可以如此写： 12&amp;gt;&amp;gt;&amp;gt; print(&apos;Hello World!&apos;)Hello World!">
+<meta name="keywords" content="Python3,格式字符串">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python中格式字符串">
 <meta property="og:url" content="http://yoursite.com/2016/09/05/Python中格式字符串/index.html">
 <meta property="og:site_name" content="ephon的技术博客">
-<meta property="og:description" content="在Python中如果想打印一个字符串，我们可以如此写：
-12&amp;gt;&amp;gt;&amp;gt; print(&apos;Hello World!&apos;)Hello World!">
+<meta property="og:description" content="在Python中如果想打印一个字符串，我们可以如此写： 12&amp;gt;&amp;gt;&amp;gt; print(&apos;Hello World!&apos;)Hello World!">
 <meta property="og:updated_time" content="2016-09-06T02:31:07.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python中格式字符串">
-<meta name="twitter:description" content="在Python中如果想打印一个字符串，我们可以如此写：
-12&amp;gt;&amp;gt;&amp;gt; print(&apos;Hello World!&apos;)Hello World!">
+<meta name="twitter:description" content="在Python中如果想打印一个字符串，我们可以如此写： 12&amp;gt;&amp;gt;&amp;gt; print(&apos;Hello World!&apos;)Hello World!">
 
 
 
@@ -326,13 +324,13 @@
 
       
         <p>在Python中如果想打印一个字符串，我们可以如此写：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'Hello World!'</span>)</span><br><span class="line">Hello World!</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'Hello World!'</span>)</div><div class="line">Hello World!</div></pre></td></tr></table></figure>
 <a id="more"></a>
 <p>但是通常我们都是要自己拼接字符的，例如：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>w = <span class="string">'World!'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'Hello %s'</span> % w)</span><br><span class="line">Hello World!</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>w = <span class="string">'World!'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'Hello %s'</span> % w)</div><div class="line">Hello World!</div></pre></td></tr></table></figure>
 <p>这里<code>%s</code>就代替了一个字符串，那么大家肯定会有疑问，那整型、浮点型、布尔型都用什么代替呢？</p>
 <p>整型用<code>%d</code><br>浮点型用<code>%f</code><br>布尔型用我们通常用<code>%r</code>，但是<code>%r</code>又不仅仅局限于布尔型，我们通常说<strong>万能的<code>%r</code></strong>,我们来看用<code>%r</code>输出字符串会怎样：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>w = <span class="string">'World!'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'Hello %r'</span> % w)</span><br><span class="line">Hello <span class="string">'World!'</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>w = <span class="string">'World!'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'Hello %r'</span> % w)</div><div class="line">Hello <span class="string">'World!'</span></div></pre></td></tr></table></figure>
 <p>这里可以看到，输出字符串时多出了一个引号，其实<code>%r</code>的作用就是替代的东西是什么就输出什么，大家可以试试看它在输出浮点型<code>%f</code>时和<code>%r</code>的区别~</p>
 
       
@@ -366,16 +364,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/08/29/property/" rel="next" title="@property">
-                <i class="fa fa-chevron-left"></i> @property
+              <a href="/2017/02/23/继承的隐藏和覆盖/" rel="next" title="继承的隐藏和覆盖">
+                <i class="fa fa-chevron-left"></i> 继承的隐藏和覆盖
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/02/23/继承的隐藏和覆盖/" rel="prev" title="继承的隐藏和覆盖">
-                继承的隐藏和覆盖 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/08/29/property/" rel="prev" title="@property">
+                @property <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>

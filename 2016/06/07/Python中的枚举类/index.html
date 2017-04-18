@@ -84,19 +84,17 @@
 
 
 
-<meta name="description" content="当我们需要定义一些不变的常量时，通常会用大写表示自己不能被随意更改，但是本质上其还是一个变量，例如性别：
-12MAN = 0WOMAN = 1">
+<meta name="description" content="当我们需要定义一些不变的常量时，通常会用大写表示自己不能被随意更改，但是本质上其还是一个变量，例如性别： 12MAN = 0WOMAN = 1">
+<meta name="keywords" content="Python3,枚举类">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python中的枚举类">
 <meta property="og:url" content="http://yoursite.com/2016/06/07/Python中的枚举类/index.html">
 <meta property="og:site_name" content="ephon的技术博客">
-<meta property="og:description" content="当我们需要定义一些不变的常量时，通常会用大写表示自己不能被随意更改，但是本质上其还是一个变量，例如性别：
-12MAN = 0WOMAN = 1">
+<meta property="og:description" content="当我们需要定义一些不变的常量时，通常会用大写表示自己不能被随意更改，但是本质上其还是一个变量，例如性别： 12MAN = 0WOMAN = 1">
 <meta property="og:updated_time" content="2016-06-07T12:34:58.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python中的枚举类">
-<meta name="twitter:description" content="当我们需要定义一些不变的常量时，通常会用大写表示自己不能被随意更改，但是本质上其还是一个变量，例如性别：
-12MAN = 0WOMAN = 1">
+<meta name="twitter:description" content="当我们需要定义一些不变的常量时，通常会用大写表示自己不能被随意更改，但是本质上其还是一个变量，例如性别： 12MAN = 0WOMAN = 1">
 
 
 
@@ -326,16 +324,16 @@
 
       
         <p>当我们需要定义一些不变的常量时，通常会用大写表示自己不能被随意更改，但是本质上其还是一个变量，例如性别：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">MAN = <span class="number">0</span></span><br><span class="line">WOMAN = <span class="number">1</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">MAN = <span class="number">0</span></div><div class="line">WOMAN = <span class="number">1</span></div></pre></td></tr></table></figure>
 <a id="more"></a>
 <p>更好的办法是我们为这样的枚举类型定义一个class类型，然后每个常量都是class的唯一实例，python中通过Enum实现：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> enum <span class="keyword">import</span> Enum</span><br><span class="line"></span><br><span class="line">Sex = Enum(<span class="string">'Sex'</span>, (<span class="string">'Man'</span>, <span class="string">'Woman'</span>))</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> name, member <span class="keyword">in</span> Sex.__members__.items():</span><br><span class="line">    print(name, <span class="string">'=&gt;'</span>, member, member.value)</span><br><span class="line">    </span><br><span class="line">----------------------------------------------</span><br><span class="line">Man =&gt; Sex.Man <span class="number">1</span></span><br><span class="line">Woman =&gt; Sex.Woman <span class="number">2</span></span><br><span class="line">Sex.Man</span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">from enum import Enum</div><div class="line"></div><div class="line">Sex = Enum('Sex', ('Man', 'Woman'))</div><div class="line"></div><div class="line">for name, member in Sex.__members__.items():</div><div class="line">    print(name, '=&gt;', member, member.value)</div><div class="line">    </div><div class="line">----------------------------------------------</div><div class="line">Man =&gt; Sex.Man 1</div><div class="line">Woman =&gt; Sex.Woman 2</div><div class="line">Sex.Man</div></pre></td></tr></table></figure>
 <p>其中，<code>value</code>属性是自动赋给成员的<code>int</code>常量，默认从<code>1</code>开始。</p>
 <p>自定义<code>Enum</code>派生类可以更精确的控制美剧类型：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> enum <span class="keyword">import</span> Enum, unique</span><br><span class="line"></span><br><span class="line"><span class="meta">@unique</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Sex</span><span class="params">(Enum)</span>:</span></span><br><span class="line">    Man = <span class="number">0</span></span><br><span class="line">    Woman = <span class="number">2</span></span><br><span class="line"></span><br><span class="line">print(Sex.Man.value)</span><br><span class="line">print(Sex.Woman.value)</span><br><span class="line"></span><br><span class="line">------------------------------</span><br><span class="line"><span class="number">0</span></span><br><span class="line"><span class="number">2</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> enum <span class="keyword">import</span> Enum, unique</div><div class="line"></div><div class="line"><span class="meta">@unique</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Sex</span><span class="params">(Enum)</span>:</span></div><div class="line">    Man = <span class="number">0</span></div><div class="line">    Woman = <span class="number">2</span></div><div class="line"></div><div class="line">print(Sex.Man.value)</div><div class="line">print(Sex.Woman.value)</div><div class="line"></div><div class="line">------------------------------</div><div class="line"><span class="number">0</span></div><div class="line"><span class="number">2</span></div></pre></td></tr></table></figure>
 <p><code>@unique</code>装饰器可以帮助我们检查保证没有重复值。</p>
 <p>枚举类型的输出方法很随意：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> enum <span class="keyword">import</span> Enum, unique</span><br><span class="line"></span><br><span class="line"><span class="meta">@unique</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Sex</span><span class="params">(Enum)</span>:</span></span><br><span class="line">    Man = <span class="number">0</span></span><br><span class="line">    Woman = <span class="number">2</span></span><br><span class="line"></span><br><span class="line">print(Sex.Man)</span><br><span class="line">print(Sex[<span class="string">'Man'</span>])</span><br><span class="line">print(Sex(<span class="number">2</span>))</span><br><span class="line"></span><br><span class="line">------------------------------------</span><br><span class="line">Sex.Man</span><br><span class="line">Sex.Man</span><br><span class="line">Sex.Woman</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> enum <span class="keyword">import</span> Enum, unique</div><div class="line"></div><div class="line"><span class="meta">@unique</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Sex</span><span class="params">(Enum)</span>:</span></div><div class="line">    Man = <span class="number">0</span></div><div class="line">    Woman = <span class="number">2</span></div><div class="line"></div><div class="line">print(Sex.Man)</div><div class="line">print(Sex[<span class="string">'Man'</span>])</div><div class="line">print(Sex(<span class="number">2</span>))</div><div class="line"></div><div class="line">------------------------------------</div><div class="line">Sex.Man</div><div class="line">Sex.Man</div><div class="line">Sex.Woman</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -367,16 +365,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/06/05/迭代器/" rel="next" title="迭代器">
-                <i class="fa fa-chevron-left"></i> 迭代器
+              <a href="/2016/06/07/Python中元类的使用/" rel="next" title="Python中元类的使用">
+                <i class="fa fa-chevron-left"></i> Python中元类的使用
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/06/07/Python中元类的使用/" rel="prev" title="Python中元类的使用">
-                Python中元类的使用 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/06/05/迭代器/" rel="prev" title="迭代器">
+                迭代器 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
