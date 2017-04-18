@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Python3,数据类型,变量," />
+  <meta name="keywords" content="Java,leetcode,算法," />
 
 
 
@@ -84,19 +84,16 @@
 
 
 
-<meta name="description" content="整数型Python中整数没有大小限制
-浮点型Python中浮点数也没有大小限制，但是超过一定范围，就默认为inf（无限大）">
+<meta name="description" content="Given two words (start and end), and a dictionary, find the length of shortest transformation sequence from start to end, such that:Only one letter can be changed at a timeEach intermediate word must">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python中的数据类型">
-<meta property="og:url" content="http://yoursite.com/2016/05/21/Python中的数据类型/index.html">
+<meta property="og:title" content="Word-Ladder">
+<meta property="og:url" content="http://yoursite.com/2017/04/18/Word-Ladder/index.html">
 <meta property="og:site_name" content="ephon的技术博客">
-<meta property="og:description" content="整数型Python中整数没有大小限制
-浮点型Python中浮点数也没有大小限制，但是超过一定范围，就默认为inf（无限大）">
-<meta property="og:updated_time" content="2016-06-06T05:58:31.000Z">
+<meta property="og:description" content="Given two words (start and end), and a dictionary, find the length of shortest transformation sequence from start to end, such that:Only one letter can be changed at a timeEach intermediate word must">
+<meta property="og:updated_time" content="2017-04-18T13:08:50.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python中的数据类型">
-<meta name="twitter:description" content="整数型Python中整数没有大小限制
-浮点型Python中浮点数也没有大小限制，但是超过一定范围，就默认为inf（无限大）">
+<meta name="twitter:title" content="Word-Ladder">
+<meta name="twitter:description" content="Given two words (start and end), and a dictionary, find the length of shortest transformation sequence from start to end, such that:Only one letter can be changed at a timeEach intermediate word must">
 
 
 
@@ -114,7 +111,7 @@
   };
 </script>
 
-  <title> Python中的数据类型 | ephon的技术博客 </title>
+  <title> Word-Ladder | ephon的技术博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -254,7 +251,7 @@
             
             
               
-                Python中的数据类型
+                Word-Ladder
               
             
           </h1>
@@ -266,8 +263,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-21T15:22:59+08:00" content="2016-05-21">
-              2016-05-21
+            <time itemprop="dateCreated" datetime="2017-04-18T21:07:49+08:00" content="2017-04-18">
+              2017-04-18
             </time>
           </span>
 
@@ -280,8 +277,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Python3/" itemprop="url" rel="index">
-                    <span itemprop="name">Python3</span>
+                  <a href="/categories/leetcode/" itemprop="url" rel="index">
+                    <span itemprop="name">leetcode</span>
                   </a>
                 </span>
 
@@ -296,8 +293,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/05/21/Python中的数据类型/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/21/Python中的数据类型/" itemprop="commentsCount"></span>
+                <a href="/2017/04/18/Word-Ladder/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/18/Word-Ladder/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -325,19 +322,12 @@
       
 
       
-        <h2 id="整数型"><a href="#整数型" class="headerlink" title="整数型"></a>整数型</h2><p>Python中整数没有大小限制</p>
-<h2 id="浮点型"><a href="#浮点型" class="headerlink" title="浮点型"></a>浮点型</h2><p>Python中浮点数也没有大小限制，但是超过一定范围，就默认为inf（无限大）</p>
+        <blockquote>
+<p>Given two words (start and end), and a dictionary, find the length of shortest transformation sequence from start to end, such that:<br>Only one letter can be changed at a time<br>Each intermediate word must exist in the dictionary<br>For example,<br>Given:<br>start =”hit”<br>end =”cog”<br>dict =[“hot”,”dot”,”dog”,”lot”,”log”]<br>As one shortest transformation is”hit” -&gt; “hot” -&gt; “dot” -&gt; “dog” -&gt; “cog”,<br>return its length5.</p>
+<p><strong>Note</strong>:<br>Return 0 if there is no such transformation sequence.<br>All words have the same length.<br>All words contain only lowercase alphabetic characters.</p>
+</blockquote>
 <a id="more"></a>
-<h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><p>在字符串中<code>&#39;</code>与<code>&quot;</code>可以相互嵌套，都能够表示字符串。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 结果为:</span></span><br><span class="line"><span class="comment"># he"l""lo</span></span><br><span class="line">print(<span class="string">'he"l""lo'</span>)</span><br></pre></td></tr></table></figure>
-<p><code>\</code>可以转义很多符号，例如<code>\t</code> <code>\n</code> <code>\&quot;</code> <code>\\</code></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 结果为:</span></span><br><span class="line"><span class="comment"># \</span></span><br><span class="line"><span class="comment"># \</span></span><br><span class="line">print(<span class="string">'\\\n\\'</span>)</span><br></pre></td></tr></table></figure>
-<p><code>r</code>可以让<code>\</code> <code>%</code>等转义字符不转义</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 结果为：</span></span><br><span class="line"><span class="comment"># \\\n\\</span></span><br><span class="line">print(<span class="string">r"\\\n\\"</span>)</span><br></pre></td></tr></table></figure>
-<p><code>&#39;&#39;&#39;</code>可以输出多行字符串</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 结果为：</span></span><br><span class="line"><span class="comment"># line1</span></span><br><span class="line"><span class="comment"># line2</span></span><br><span class="line"><span class="comment"># line3</span></span><br><span class="line"><span class="comment"># r只对转义符\起作用，对其他符号无效</span></span><br><span class="line">print(<span class="string">r'''line1</span><br><span class="line">line2</span><br><span class="line">line3'''</span>)</span><br></pre></td></tr></table></figure>
-<h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><p>Pyhton中除法有两种<code>/</code>和<code>//</code>，前者结果是浮点数（哪怕是两个整数相除），后者相除是整数（取整，<strong><em>不是四舍五入</em></strong>）</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 结果是：3.0</span></span><br><span class="line">print(<span class="number">9</span>/<span class="number">3</span>)</span><br><span class="line"><span class="comment"># 结果是：3</span></span><br><span class="line">print(<span class="number">11</span>//<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.HashSet;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WordLadder</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">ladderLength</span><span class="params">(String start, String end, HashSet&lt;String&gt; dict)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (dict == <span class="keyword">null</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span> (start == end) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span> (isTransform(start, end)) <span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">int</span> minRace = <span class="number">1</span>;</span><br><span class="line">        ArrayList &lt; String &gt; al = <span class="keyword">new</span> ArrayList();</span><br><span class="line">        al.add(start);</span><br><span class="line">        <span class="keyword">int</span> dictLength = dict.size();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; dictLength; i++) &#123;</span><br><span class="line">            minRace++;</span><br><span class="line">            <span class="keyword">int</span> alLength = al.size();</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; alLength; j++) &#123;</span><br><span class="line">                String a = al.get(<span class="number">0</span>);</span><br><span class="line">                ArrayList del = <span class="keyword">new</span> ArrayList();</span><br><span class="line">                <span class="keyword">for</span> (String b : dict) &#123;</span><br><span class="line">                    <span class="keyword">if</span> (isTransform(a, b)) &#123;</span><br><span class="line">                        <span class="keyword">if</span> (isTransform(b, end))</span><br><span class="line">                            <span class="keyword">return</span> minRace+<span class="number">1</span>;</span><br><span class="line">                        al.add(b);</span><br><span class="line">                        del.add(b);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                dict.removeAll(del);</span><br><span class="line">                al.remove(<span class="number">0</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isTransform</span><span class="params">(String a, String b)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> length = a.length();</span><br><span class="line">        <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; length; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (a.charAt(i) != b.charAt(i))</span><br><span class="line">                count++;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> count==<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -358,11 +348,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Python3/" rel="tag">#Python3</a>
+            <a href="/tags/Java/" rel="tag">#Java</a>
           
-            <a href="/tags/数据类型/" rel="tag">#数据类型</a>
+            <a href="/tags/leetcode/" rel="tag">#leetcode</a>
           
-            <a href="/tags/变量/" rel="tag">#变量</a>
+            <a href="/tags/算法/" rel="tag">#算法</a>
           
         </div>
       
@@ -371,17 +361,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/05/19/多态出现在成员上调用的特点/" rel="next" title="多态出现在成员上调用的特点">
-                <i class="fa fa-chevron-left"></i> 多态出现在成员上调用的特点
+              <a href="/2017/04/17/Pascals-Triangle/" rel="next" title="Pascals-Triangle">
+                <i class="fa fa-chevron-left"></i> Pascals-Triangle
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/05/21/Python中的字符编码/" rel="prev" title="Python中的字符编码">
-                Python中的字符编码 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -407,8 +393,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/05/21/Python中的数据类型/"
-           data-title="Python中的数据类型" data-url="http://yoursite.com/2016/05/21/Python中的数据类型/">
+      <div class="ds-thread" data-thread-key="2017/04/18/Word-Ladder/"
+           data-title="Word-Ladder" data-url="http://yoursite.com/2017/04/18/Word-Ladder/">
       </div>
     
   </div>
@@ -519,7 +505,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#整数型"><span class="nav-number">1.</span> <span class="nav-text">整数型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#浮点型"><span class="nav-number">2.</span> <span class="nav-text">浮点型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串"><span class="nav-number">3.</span> <span class="nav-text">字符串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常量"><span class="nav-number">4.</span> <span class="nav-text">常量</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
         </section>
