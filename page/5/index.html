@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="leetcode,Java,算法," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -84,16 +84,15 @@
 
 
 
-<meta name="keywords" content="leetcode,Java,算法">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Validate-Binary-Search-Tree">
-<meta property="og:url" content="http://yoursite.com/2017/04/27/Validate-Binary-Search-Tree/index.html">
+<meta name="description" content="女朋友一直喊我程序猿猴">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ephon的技术博客">
+<meta property="og:url" content="http://yoursite.com/page/5/index.html">
 <meta property="og:site_name" content="ephon的技术博客">
-<meta property="og:image" content="http://oon3lk745.bkt.clouddn.com/ValidateBinarySearchTree.png">
-<meta property="og:updated_time" content="2017-04-27T14:14:59.000Z">
+<meta property="og:description" content="女朋友一直喊我程序猿猴">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Validate-Binary-Search-Tree">
-<meta name="twitter:image" content="http://oon3lk745.bkt.clouddn.com/ValidateBinarySearchTree.png">
+<meta name="twitter:title" content="ephon的技术博客">
+<meta name="twitter:description" content="女朋友一直喊我程序猿猴">
 
 
 
@@ -111,7 +110,7 @@
   };
 </script>
 
-  <title> Validate-Binary-Search-Tree | ephon的技术博客 </title>
+  <title> ephon的技术博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -132,7 +131,9 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container one-collumn sidebar-position-left 
+   page-home 
+ ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -229,9 +230,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-
-  <div id="posts" class="posts-expand">
+  <section id="posts" class="posts-expand">
     
+      
 
   
   
@@ -251,7 +252,10 @@
             
             
               
-                Validate-Binary-Search-Tree
+                
+                <a class="post-title-link" href="/2016/05/19/多态出现在成员上调用的特点/" itemprop="url">
+                  多态出现在成员上调用的特点
+                </a>
               
             
           </h1>
@@ -263,8 +267,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-04-27T22:13:48+08:00" content="2017-04-27">
-              2017-04-27
+            <time itemprop="dateCreated" datetime="2016-05-19T20:48:01+08:00" content="2016-05-19">
+              2016-05-19
             </time>
           </span>
 
@@ -277,8 +281,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/leetcode/" itemprop="url" rel="index">
-                    <span itemprop="name">leetcode</span>
+                  <a href="/categories/JAVASE/" itemprop="url" rel="index">
+                    <span itemprop="name">JAVASE</span>
                   </a>
                 </span>
 
@@ -293,8 +297,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/04/27/Validate-Binary-Search-Tree/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/27/Validate-Binary-Search-Tree/" itemprop="commentsCount"></span>
+                <a href="/2016/05/19/多态出现在成员上调用的特点/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/19/多态出现在成员上调用的特点/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -308,8 +312,6 @@
           
        
           
-          <span id="busuanzi_container_page_pv">  |  阅读量 <span id="busuanzi_value_page_pv"></span> 次</span>
-          
 
          </div>
       </header>
@@ -322,70 +324,53 @@
       
 
       
-        <p><img src="http://oon3lk745.bkt.clouddn.com/ValidateBinarySearchTree.png" alt="avator"></p>
-<a id="more"></a>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * Definition for binary tree</div><div class="line"> * public class TreeNode &#123;</div><div class="line"> *     int val;</div><div class="line"> *     TreeNode left;</div><div class="line"> *     TreeNode right;</div><div class="line"> *     TreeNode(int x) &#123; val = x; &#125;</div><div class="line"> * &#125;</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ValidateBinarySearchTree</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isValidBST</span><span class="params">(TreeNode root)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span> (root == <span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line"></div><div class="line">        <span class="keyword">boolean</span> judge = <span class="keyword">true</span>;</div><div class="line">        TreeNode leftMaxNode;</div><div class="line">        TreeNode rightMinNode;</div><div class="line">        <span class="keyword">if</span> (root.left != <span class="keyword">null</span>) &#123;</div><div class="line">            leftMaxNode = root.left;</div><div class="line">            <span class="keyword">while</span> (leftMaxNode.right != <span class="keyword">null</span>) &#123;</div><div class="line">                leftMaxNode = leftMaxNode.right;</div><div class="line">            &#125;</div><div class="line">            judge = judge &amp;&amp; (leftMaxNode.val &lt; root.val);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">if</span> (root.right != <span class="keyword">null</span>) &#123;</div><div class="line">            rightMinNode = root.right;</div><div class="line">            <span class="keyword">while</span> (rightMinNode.left != <span class="keyword">null</span>) &#123;</div><div class="line">                rightMinNode = rightMinNode.left;</div><div class="line">            &#125;</div><div class="line">            judge = judge &amp;&amp; (rightMinNode.val &gt; root.val);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">return</span> judge &amp;&amp; isValidBST(root.left) &amp;&amp; isValidBST(root.right);</div><div class="line"></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    <div>
-      
+        
+          <ol>
+<li>成员变量：<ul>
+<li>编译时期：参考的是引用型变量所属类中是否有可调用的成员变量，如果有编译成功，如果没有，编译失败。</li>
+<li>运行时期：调用的也是引用型变量所属类中的成员变量。</li>
+<li>简单说编译运行都看=左边，其实这种情况不常见。</br> </br></li>
+</ul>
+</li>
+</ol>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/05/19/多态出现在成员上调用的特点/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
 
     <div>
       
-        
+    </div>
 
+    <div>
       
     </div>
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/leetcode/" rel="tag">#leetcode</a>
-          
-            <a href="/tags/Java/" rel="tag">#Java</a>
-          
-            <a href="/tags/算法/" rel="tag">#算法</a>
-          
-        </div>
+
       
 
       
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2017/04/27/Climbing-Stairs/" rel="next" title="Climbing-Stairs">
-                <i class="fa fa-chevron-left"></i> Climbing-Stairs
-              </a>
-            
-          </div>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/04/26/Symmetric-Tree/" rel="prev" title="Symmetric-Tree">
-                Symmetric-Tree <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
       
-
-      
+        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
+    
+  </section>
 
-    <div class="post-spread">
-      
-    </div>
-  </div>
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span>
+  </nav>
+
 
 
           </div>
@@ -393,14 +378,6 @@
 
 
           
-  <div class="comments" id="comments">
-    
-      <div class="ds-thread" data-thread-key="2017/04/27/Validate-Binary-Search-Tree/"
-           data-title="Validate-Binary-Search-Tree" data-url="http://yoursite.com/2017/04/27/Validate-Binary-Search-Tree/">
-      </div>
-    
-  </div>
-
 
         </div>
         
@@ -420,17 +397,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel ">
+      <section class="site-overview sidebar-panel  sidebar-panel-active ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://o7dejg5ls.bkt.clouddn.com/image%3Ajpg%3Aicon.jpg"
@@ -500,17 +468,6 @@
 
       </section>
 
-      
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-            
-              
-            
-            
-              <p class="post-toc-empty">此文章未包含目录</p>
-            
-          </div>
-        </section>
       
 
     </div>
@@ -604,10 +561,6 @@
   
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
-
-
 
   
 

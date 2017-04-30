@@ -86,14 +86,14 @@
 
 <meta name="keywords" content="leetcode,Java,算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Validate-Binary-Search-Tree">
-<meta property="og:url" content="http://yoursite.com/2017/04/27/Validate-Binary-Search-Tree/index.html">
+<meta property="og:title" content="Construct-Binary-Tree-From-Preorder-And-Inorder-Traversal">
+<meta property="og:url" content="http://yoursite.com/2017/04/30/Construct-Binary-Tree-From-Preorder-And-Inorder-Traversal/index.html">
 <meta property="og:site_name" content="ephon的技术博客">
-<meta property="og:image" content="http://oon3lk745.bkt.clouddn.com/ValidateBinarySearchTree.png">
-<meta property="og:updated_time" content="2017-04-27T14:14:59.000Z">
+<meta property="og:image" content="http://oon3lk745.bkt.clouddn.com/ConstructBinaryTreeFromPreorderAndInorderTraversal.png">
+<meta property="og:updated_time" content="2017-04-30T06:04:36.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Validate-Binary-Search-Tree">
-<meta name="twitter:image" content="http://oon3lk745.bkt.clouddn.com/ValidateBinarySearchTree.png">
+<meta name="twitter:title" content="Construct-Binary-Tree-From-Preorder-And-Inorder-Traversal">
+<meta name="twitter:image" content="http://oon3lk745.bkt.clouddn.com/ConstructBinaryTreeFromPreorderAndInorderTraversal.png">
 
 
 
@@ -111,7 +111,7 @@
   };
 </script>
 
-  <title> Validate-Binary-Search-Tree | ephon的技术博客 </title>
+  <title> Construct-Binary-Tree-From-Preorder-And-Inorder-Traversal | ephon的技术博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -251,7 +251,7 @@
             
             
               
-                Validate-Binary-Search-Tree
+                Construct-Binary-Tree-From-Preorder-And-Inorder-Traversal
               
             
           </h1>
@@ -263,8 +263,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-04-27T22:13:48+08:00" content="2017-04-27">
-              2017-04-27
+            <time itemprop="dateCreated" datetime="2017-04-30T14:03:56+08:00" content="2017-04-30">
+              2017-04-30
             </time>
           </span>
 
@@ -293,8 +293,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/04/27/Validate-Binary-Search-Tree/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/27/Validate-Binary-Search-Tree/" itemprop="commentsCount"></span>
+                <a href="/2017/04/30/Construct-Binary-Tree-From-Preorder-And-Inorder-Traversal/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/30/Construct-Binary-Tree-From-Preorder-And-Inorder-Traversal/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -322,10 +322,9 @@
       
 
       
-        <p><img src="http://oon3lk745.bkt.clouddn.com/ValidateBinarySearchTree.png" alt="avator"></p>
+        <p><img src="http://oon3lk745.bkt.clouddn.com/ConstructBinaryTreeFromPreorderAndInorderTraversal.png" alt="avator"></p>
 <a id="more"></a>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * Definition for binary tree</div><div class="line"> * public class TreeNode &#123;</div><div class="line"> *     int val;</div><div class="line"> *     TreeNode left;</div><div class="line"> *     TreeNode right;</div><div class="line"> *     TreeNode(int x) &#123; val = x; &#125;</div><div class="line"> * &#125;</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ValidateBinarySearchTree</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isValidBST</span><span class="params">(TreeNode root)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span> (root == <span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line"></div><div class="line">        <span class="keyword">boolean</span> judge = <span class="keyword">true</span>;</div><div class="line">        TreeNode leftMaxNode;</div><div class="line">        TreeNode rightMinNode;</div><div class="line">        <span class="keyword">if</span> (root.left != <span class="keyword">null</span>) &#123;</div><div class="line">            leftMaxNode = root.left;</div><div class="line">            <span class="keyword">while</span> (leftMaxNode.right != <span class="keyword">null</span>) &#123;</div><div class="line">                leftMaxNode = leftMaxNode.right;</div><div class="line">            &#125;</div><div class="line">            judge = judge &amp;&amp; (leftMaxNode.val &lt; root.val);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">if</span> (root.right != <span class="keyword">null</span>) &#123;</div><div class="line">            rightMinNode = root.right;</div><div class="line">            <span class="keyword">while</span> (rightMinNode.left != <span class="keyword">null</span>) &#123;</div><div class="line">                rightMinNode = rightMinNode.left;</div><div class="line">            &#125;</div><div class="line">            judge = judge &amp;&amp; (rightMinNode.val &gt; root.val);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">return</span> judge &amp;&amp; isValidBST(root.left) &amp;&amp; isValidBST(root.right);</div><div class="line"></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * Definition for binary tree</div><div class="line"> * public class TreeNode &#123;</div><div class="line"> *     int val;</div><div class="line"> *     TreeNode left;</div><div class="line"> *     TreeNode right;</div><div class="line"> *     TreeNode(int x) &#123; val = x; &#125;</div><div class="line"> * &#125;</div><div class="line"> */</div><div class="line"><span class="keyword">import</span> java.util.Arrays;</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> TreeNode <span class="title">buildTree</span><span class="params">(<span class="keyword">int</span>[] preorder, <span class="keyword">int</span>[] inorder)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span> (preorder.length != inorder.length || preorder.length &lt;= <span class="number">0</span>) <span class="keyword">return</span> <span class="keyword">null</span>;</div><div class="line">        TreeNode root = <span class="keyword">new</span> TreeNode(preorder[<span class="number">0</span>]);</div><div class="line">        <span class="keyword">int</span> count = <span class="number">0</span>;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; inorder[i] != preorder[<span class="number">0</span>]; i++) &#123;</div><div class="line">            count++;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">if</span> (count != <span class="number">0</span>) &#123;</div><div class="line">            <span class="keyword">int</span>[] leftPreorder = <span class="keyword">new</span> <span class="keyword">int</span>[count];</div><div class="line">            <span class="keyword">int</span>[] leftInorder = <span class="keyword">new</span> <span class="keyword">int</span>[count];</div><div class="line">            leftPreorder = Arrays.copyOfRange(preorder, <span class="number">1</span>, count+<span class="number">1</span>);</div><div class="line">            leftInorder = Arrays.copyOfRange(inorder, <span class="number">0</span>, count);</div><div class="line"></div><div class="line">            root.left = buildTree(leftPreorder, leftInorder);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">int</span> araryLength = preorder.length;</div><div class="line">        <span class="keyword">int</span> rightArrayCount = araryLength - count - <span class="number">1</span>;</div><div class="line">        <span class="keyword">if</span> (rightArrayCount != <span class="number">0</span>) &#123;</div><div class="line">            <span class="keyword">int</span>[] rightPreorder = <span class="keyword">new</span> <span class="keyword">int</span>[rightArrayCount];</div><div class="line">            <span class="keyword">int</span>[] rightInorder = <span class="keyword">new</span> <span class="keyword">int</span>[rightArrayCount];</div><div class="line">            rightPreorder = Arrays.copyOfRange(preorder, count+<span class="number">1</span>, araryLength);</div><div class="line">            rightInorder = Arrays.copyOfRange(inorder, count+<span class="number">1</span>, araryLength);</div><div class="line"></div><div class="line">            root.right = buildTree(rightPreorder, rightInorder);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">return</span> root;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -359,16 +358,12 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/27/Climbing-Stairs/" rel="next" title="Climbing-Stairs">
-                <i class="fa fa-chevron-left"></i> Climbing-Stairs
-              </a>
-            
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/04/26/Symmetric-Tree/" rel="prev" title="Symmetric-Tree">
-                Symmetric-Tree <i class="fa fa-chevron-right"></i>
+              <a href="/2017/04/30/Reverse-Linked-List-II/" rel="prev" title="Reverse-Linked-List-II">
+                Reverse-Linked-List-II <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -395,8 +390,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/04/27/Validate-Binary-Search-Tree/"
-           data-title="Validate-Binary-Search-Tree" data-url="http://yoursite.com/2017/04/27/Validate-Binary-Search-Tree/">
+      <div class="ds-thread" data-thread-key="2017/04/30/Construct-Binary-Tree-From-Preorder-And-Inorder-Traversal/"
+           data-title="Construct-Binary-Tree-From-Preorder-And-Inorder-Traversal" data-url="http://yoursite.com/2017/04/30/Construct-Binary-Tree-From-Preorder-And-Inorder-Traversal/">
       </div>
     
   </div>
