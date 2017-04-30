@@ -86,14 +86,14 @@
 
 <meta name="keywords" content="leetcode,Java,算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Binary-Tree-Inorder-Traversal">
-<meta property="og:url" content="http://yoursite.com/2017/04/24/Binary-Tree-Inorder-Traversal/index.html">
+<meta property="og:title" content="Reverse-Linked-List-II">
+<meta property="og:url" content="http://yoursite.com/2017/04/30/Reverse-Linked-List-II/index.html">
 <meta property="og:site_name" content="ephon的技术博客">
-<meta property="og:image" content="http://oon3lk745.bkt.clouddn.com/BinaryTreeInorderTraversal.png">
-<meta property="og:updated_time" content="2017-04-24T10:44:02.000Z">
+<meta property="og:image" content="http://oon3lk745.bkt.clouddn.com/ReverseLinkedListII.png">
+<meta property="og:updated_time" content="2017-04-30T05:29:54.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Binary-Tree-Inorder-Traversal">
-<meta name="twitter:image" content="http://oon3lk745.bkt.clouddn.com/BinaryTreeInorderTraversal.png">
+<meta name="twitter:title" content="Reverse-Linked-List-II">
+<meta name="twitter:image" content="http://oon3lk745.bkt.clouddn.com/ReverseLinkedListII.png">
 
 
 
@@ -111,7 +111,7 @@
   };
 </script>
 
-  <title> Binary-Tree-Inorder-Traversal | ephon的技术博客 </title>
+  <title> Reverse-Linked-List-II | ephon的技术博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -251,7 +251,7 @@
             
             
               
-                Binary-Tree-Inorder-Traversal
+                Reverse-Linked-List-II
               
             
           </h1>
@@ -263,8 +263,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-04-24T18:42:45+08:00" content="2017-04-24">
-              2017-04-24
+            <time itemprop="dateCreated" datetime="2017-04-30T13:29:08+08:00" content="2017-04-30">
+              2017-04-30
             </time>
           </span>
 
@@ -293,8 +293,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/04/24/Binary-Tree-Inorder-Traversal/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/24/Binary-Tree-Inorder-Traversal/" itemprop="commentsCount"></span>
+                <a href="/2017/04/30/Reverse-Linked-List-II/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/30/Reverse-Linked-List-II/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -322,9 +322,9 @@
       
 
       
-        <p><img src="http://oon3lk745.bkt.clouddn.com/BinaryTreeInorderTraversal.png" alt="avator"></p>
+        <p><img src="http://oon3lk745.bkt.clouddn.com/ReverseLinkedListII.png" alt="avator"></p>
 <a id="more"></a>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.util.ArrayList;</div><div class="line"><span class="keyword">import</span> java.util.Stack;</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="keyword">public</span> ArrayList &lt; Integer &gt; al = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">    <span class="function"><span class="keyword">public</span> ArrayList&lt;Integer&gt; <span class="title">inorderTraversal</span><span class="params">(TreeNode root)</span> </span>&#123;</div><div class="line">        inorderTraversalHelper(root);</div><div class="line">        </div><div class="line">        <span class="keyword">return</span> al;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">inorderTraversalHelper</span><span class="params">(TreeNode root)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span> (root == <span class="keyword">null</span>) <span class="keyword">return</span>;</div><div class="line">        <span class="keyword">if</span> (root.left != <span class="keyword">null</span>) inorderTraversalHelper(root.left);</div><div class="line">        al.add(root.val);</div><div class="line">        <span class="keyword">if</span> (root.right != <span class="keyword">null</span>) inorderTraversalHelper(root.right);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * Definition for singly-linked list.</div><div class="line"> * public class ListNode &#123;</div><div class="line"> *     int val;</div><div class="line"> *     ListNode next;</div><div class="line"> *     ListNode(int x) &#123;</div><div class="line"> *         val = x;</div><div class="line"> *         next = null;</div><div class="line"> *     &#125;</div><div class="line"> * &#125;</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">     <span class="function"><span class="keyword">public</span> ListNode <span class="title">reverseBetween</span><span class="params">(ListNode head, <span class="keyword">int</span> m, <span class="keyword">int</span> n)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span> (head == <span class="keyword">null</span> || head.next == <span class="keyword">null</span>) <span class="keyword">return</span> head;</div><div class="line">        <span class="keyword">if</span> (m == n) <span class="keyword">return</span> head;</div><div class="line">        ListNode indexone = head;</div><div class="line">        ListNode foreNode = head;</div><div class="line">        <span class="keyword">int</span> count = <span class="number">1</span>;</div><div class="line"></div><div class="line">        <span class="keyword">if</span> (m != <span class="number">1</span>) &#123;</div><div class="line">            <span class="keyword">while</span> (count != m - <span class="number">1</span>) &#123;</div><div class="line">                indexone = indexone.next;</div><div class="line">                foreNode = foreNode.next;</div><div class="line">                count++;</div><div class="line">            &#125;</div><div class="line"></div><div class="line">            indexone = indexone.next;</div><div class="line"></div><div class="line">            ListNode first = indexone;</div><div class="line"></div><div class="line">            count++;</div><div class="line"></div><div class="line">            <span class="keyword">while</span> (count != n) &#123;</div><div class="line">                ListNode indexNext = indexone.next;</div><div class="line">                indexone.next = indexone.next.next;</div><div class="line">                indexNext.next = first;</div><div class="line">                first = indexNext;</div><div class="line">                count++;</div><div class="line">            &#125;</div><div class="line"></div><div class="line">            foreNode.next = first;</div><div class="line"></div><div class="line">            <span class="keyword">return</span> head;</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            ListNode first = indexone;</div><div class="line">            <span class="keyword">while</span> (count != n) &#123;</div><div class="line">                ListNode indexNext = indexone.next;</div><div class="line">                indexone.next = indexone.next.next;</div><div class="line">                indexNext.next = first;</div><div class="line">                first = indexNext;</div><div class="line">                indexone = head;</div><div class="line">                count++;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">return</span> first;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -358,16 +358,12 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/24/Binary-Tree-Level-Order-Traversal-II/" rel="next" title="Binary-Tree-Level-Order-Traversal-II">
-                <i class="fa fa-chevron-left"></i> Binary-Tree-Level-Order-Traversal-II
-              </a>
-            
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/04/23/Same-Tree/" rel="prev" title="Same-Tree">
-                Same-Tree <i class="fa fa-chevron-right"></i>
+              <a href="/2017/04/29/Unique-Binary-Search-Tree/" rel="prev" title="Unique-Binary-Search-Tree">
+                Unique-Binary-Search-Tree <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -394,8 +390,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/04/24/Binary-Tree-Inorder-Traversal/"
-           data-title="Binary-Tree-Inorder-Traversal" data-url="http://yoursite.com/2017/04/24/Binary-Tree-Inorder-Traversal/">
+      <div class="ds-thread" data-thread-key="2017/04/30/Reverse-Linked-List-II/"
+           data-title="Reverse-Linked-List-II" data-url="http://yoursite.com/2017/04/30/Reverse-Linked-List-II/">
       </div>
     
   </div>
