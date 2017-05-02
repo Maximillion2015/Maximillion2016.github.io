@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Java,leetcode,算法," />
+  <meta name="keywords" content="leetcode,算法,C++," />
 
 
 
@@ -84,16 +84,16 @@
 
 
 
-<meta name="keywords" content="Java,leetcode,算法">
+<meta name="keywords" content="leetcode,算法,C++">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Climbing-Stairs">
-<meta property="og:url" content="http://yoursite.com/2017/04/27/Climbing-Stairs/index.html">
+<meta property="og:title" content="Evaluate-Reverse-Polish-Notation">
+<meta property="og:url" content="http://yoursite.com/2017/05/02/Evaluate-Reverse-Polish-Notation/index.html">
 <meta property="og:site_name" content="ephon的技术博客">
-<meta property="og:image" content="http://oon3lk745.bkt.clouddn.com/ClimbingStairs.png">
-<meta property="og:updated_time" content="2017-04-27T14:48:23.000Z">
+<meta property="og:image" content="http://oon3lk745.bkt.clouddn.com/EvaluateReversePolishNotation.png">
+<meta property="og:updated_time" content="2017-05-02T08:42:05.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Climbing-Stairs">
-<meta name="twitter:image" content="http://oon3lk745.bkt.clouddn.com/ClimbingStairs.png">
+<meta name="twitter:title" content="Evaluate-Reverse-Polish-Notation">
+<meta name="twitter:image" content="http://oon3lk745.bkt.clouddn.com/EvaluateReversePolishNotation.png">
 
 
 
@@ -111,7 +111,7 @@
   };
 </script>
 
-  <title> Climbing-Stairs | ephon的技术博客 </title>
+  <title> Evaluate-Reverse-Polish-Notation | ephon的技术博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -251,7 +251,7 @@
             
             
               
-                Climbing-Stairs
+                Evaluate-Reverse-Polish-Notation
               
             
           </h1>
@@ -263,8 +263,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-04-27T22:47:27+08:00" content="2017-04-27">
-              2017-04-27
+            <time itemprop="dateCreated" datetime="2017-05-02T16:41:25+08:00" content="2017-05-02">
+              2017-05-02
             </time>
           </span>
 
@@ -293,8 +293,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/04/27/Climbing-Stairs/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/27/Climbing-Stairs/" itemprop="commentsCount"></span>
+                <a href="/2017/05/02/Evaluate-Reverse-Polish-Notation/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/05/02/Evaluate-Reverse-Polish-Notation/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -322,9 +322,10 @@
       
 
       
-        <p><img src="http://oon3lk745.bkt.clouddn.com/ClimbingStairs.png" alt="avator"></p>
+        <p><img src="http://oon3lk745.bkt.clouddn.com/EvaluateReversePolishNotation.png" alt="avator"></p>
 <a id="more"></a>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ClimbingStairs</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">climbStairs</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span> (n == <span class="number">1</span>) <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">        <span class="keyword">if</span> (n == <span class="number">2</span>) <span class="keyword">return</span> <span class="number">2</span>;</div><div class="line">        <span class="keyword">int</span>[] steps = <span class="keyword">new</span> <span class="keyword">int</span>[n];</div><div class="line">        steps[<span class="number">0</span>] = <span class="number">1</span>;</div><div class="line">        steps[<span class="number">1</span>] = <span class="number">2</span>;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt; n; i++) &#123;</div><div class="line">            steps[i] = steps[i-<span class="number">1</span>] + steps[i-<span class="number">2</span>];</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> steps[n - <span class="number">1</span>];</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stack&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">class</span> Solution &#123;</div><div class="line"><span class="keyword">public</span>:</div><div class="line">    <span class="function"><span class="keyword">int</span> <span class="title">evalRPN</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; &amp;tokens)</span> </span>&#123;</div><div class="line">        <span class="built_in">stack</span>&lt;<span class="built_in">string</span>&gt; values;</div><div class="line">        <span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt;::iterator it;</div><div class="line">        <span class="keyword">for</span> (it = tokens.begin(); it != tokens.end(); it++)</div><div class="line">        &#123;</div><div class="line">            <span class="keyword">if</span> (*it != <span class="string">"+"</span> &amp;&amp; *it != <span class="string">"-"</span> &amp;&amp; *it != <span class="string">"*"</span> &amp;&amp; *it != <span class="string">"/"</span>)</div><div class="line">            &#123;</div><div class="line">                values.push(*it);</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">else</span></div><div class="line">            &#123;</div><div class="line">                <span class="keyword">int</span> num1 = atoi(values.top().c_str());</div><div class="line">                values.pop();</div><div class="line">                <span class="keyword">int</span> num2 = atoi(values.top().c_str());</div><div class="line">                values.pop();</div><div class="line">                </div><div class="line">                <span class="keyword">if</span> (*it == <span class="string">"+"</span>)</div><div class="line">                &#123;</div><div class="line">                    values.push(to_string(num1+num2));</div><div class="line">                &#125;</div><div class="line">                <span class="keyword">else</span> <span class="keyword">if</span> (*it == <span class="string">"-"</span>)</div><div class="line">                &#123;</div><div class="line">                    values.push(to_string(num2-num1));</div><div class="line">                &#125;</div><div class="line">                <span class="keyword">else</span> <span class="keyword">if</span> (*it == <span class="string">"*"</span>)</div><div class="line">                &#123;</div><div class="line">                    values.push(to_string(num1*num2));</div><div class="line">                &#125;</div><div class="line">                <span class="keyword">else</span> <span class="keyword">if</span> (*it == <span class="string">"/"</span>)</div><div class="line">                &#123;</div><div class="line">                    values.push(to_string(num2/num1));</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        </div><div class="line">        <span class="keyword">return</span> atoi(values.top().c_str());</div><div class="line">    </div><div class="line"></div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -345,11 +346,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Java/" rel="tag">#Java</a>
-          
             <a href="/tags/leetcode/" rel="tag">#leetcode</a>
           
             <a href="/tags/算法/" rel="tag">#算法</a>
+          
+            <a href="/tags/C/" rel="tag">#C++</a>
           
         </div>
       
@@ -358,16 +359,12 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/29/Convert-Sorted-Array-To-Binary-Search-Tree/" rel="next" title="Convert-Sorted-Array-To-Binary-Search-Tree">
-                <i class="fa fa-chevron-left"></i> Convert-Sorted-Array-To-Binary-Search-Tree
-              </a>
-            
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/04/27/Validate-Binary-Search-Tree/" rel="prev" title="Validate-Binary-Search-Tree">
-                Validate-Binary-Search-Tree <i class="fa fa-chevron-right"></i>
+              <a href="/2017/05/02/Minimum-Depth-Of-Binary-Tree/" rel="prev" title="Minimum-Depth-Of-Binary-Tree">
+                Minimum-Depth-Of-Binary-Tree <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -394,8 +391,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/04/27/Climbing-Stairs/"
-           data-title="Climbing-Stairs" data-url="http://yoursite.com/2017/04/27/Climbing-Stairs/">
+      <div class="ds-thread" data-thread-key="2017/05/02/Evaluate-Reverse-Polish-Notation/"
+           data-title="Evaluate-Reverse-Polish-Notation" data-url="http://yoursite.com/2017/05/02/Evaluate-Reverse-Polish-Notation/">
       </div>
     
   </div>
