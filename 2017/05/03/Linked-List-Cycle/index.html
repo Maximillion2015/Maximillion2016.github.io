@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Python3,type(),metaclass,元类," />
+  <meta name="keywords" content="Java,leetcode,算法," />
 
 
 
@@ -84,17 +84,16 @@
 
 
 
-<meta name="description" content="type()动态语言和静态语言最大的不同，就是函数和类的定义，不是编译时定义的，而是运行时动态创建的。 如果我们有一个say.py模块： 123class Say(object):    def say(self, name = &apos;World&apos;):        print(&quot;Hello %s&quot; % name)">
-<meta name="keywords" content="Python3,type(),metaclass,元类">
+<meta name="keywords" content="Java,leetcode,算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python中元类的使用">
-<meta property="og:url" content="http://yoursite.com/2016/06/07/Python中元类的使用/index.html">
+<meta property="og:title" content="Linked-List-Cycle">
+<meta property="og:url" content="http://yoursite.com/2017/05/03/Linked-List-Cycle/index.html">
 <meta property="og:site_name" content="ephon的技术博客">
-<meta property="og:description" content="type()动态语言和静态语言最大的不同，就是函数和类的定义，不是编译时定义的，而是运行时动态创建的。 如果我们有一个say.py模块： 123class Say(object):    def say(self, name = &apos;World&apos;):        print(&quot;Hello %s&quot; % name)">
-<meta property="og:updated_time" content="2016-09-01T05:55:37.000Z">
+<meta property="og:image" content="http://oon3lk745.bkt.clouddn.com/LinkedListCycle.png">
+<meta property="og:updated_time" content="2017-05-03T14:20:33.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python中元类的使用">
-<meta name="twitter:description" content="type()动态语言和静态语言最大的不同，就是函数和类的定义，不是编译时定义的，而是运行时动态创建的。 如果我们有一个say.py模块： 123class Say(object):    def say(self, name = &apos;World&apos;):        print(&quot;Hello %s&quot; % name)">
+<meta name="twitter:title" content="Linked-List-Cycle">
+<meta name="twitter:image" content="http://oon3lk745.bkt.clouddn.com/LinkedListCycle.png">
 
 
 
@@ -112,7 +111,7 @@
   };
 </script>
 
-  <title> Python中元类的使用 | ephon的技术博客 </title>
+  <title> Linked-List-Cycle | ephon的技术博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -252,7 +251,7 @@
             
             
               
-                Python中元类的使用
+                Linked-List-Cycle
               
             
           </h1>
@@ -264,8 +263,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-07T20:51:00+08:00" content="2016-06-07">
-              2016-06-07
+            <time itemprop="dateCreated" datetime="2017-05-03T22:19:43+08:00" content="2017-05-03">
+              2017-05-03
             </time>
           </span>
 
@@ -278,8 +277,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Python3/" itemprop="url" rel="index">
-                    <span itemprop="name">Python3</span>
+                  <a href="/categories/leetcode/" itemprop="url" rel="index">
+                    <span itemprop="name">leetcode</span>
                   </a>
                 </span>
 
@@ -294,8 +293,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/06/07/Python中元类的使用/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/07/Python中元类的使用/" itemprop="commentsCount"></span>
+                <a href="/2017/05/03/Linked-List-Cycle/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/05/03/Linked-List-Cycle/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -323,30 +322,9 @@
       
 
       
-        <h2 id="type"><a href="#type" class="headerlink" title="type()"></a>type()</h2><p>动态语言和静态语言最大的不同，就是函数和类的定义，不是编译时定义的，而是运行时动态创建的。</p>
-<p>如果我们有一个<code>say.py</code>模块：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Say</span><span class="params">(object)</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">say</span><span class="params">(self, name = <span class="string">'World'</span>)</span>:</span></div><div class="line">        print(<span class="string">"Hello %s"</span> % name)</div></pre></td></tr></table></figure>
+        <p><img src="http://oon3lk745.bkt.clouddn.com/LinkedListCycle.png" alt="avator"></p>
 <a id="more"></a>
-<p>我们如果想使用这个模块：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">from say import Say</div><div class="line"></div><div class="line">s = Say()</div><div class="line">s.say()</div><div class="line"></div><div class="line">print(type(Say))</div><div class="line">print(type(s))</div><div class="line"></div><div class="line">-----------------------------------</div><div class="line">Hello World</div><div class="line">&lt;class 'type'&gt;</div><div class="line">&lt;class 'say.Say'&gt;</div></pre></td></tr></table></figure>
-<p><code>type()</code>函数可以查看一个类型或变量的类型，<code>Say</code>是一个class，它的类型就是<code>type</code>，而<code>h</code>是一个实例，它的类型就是class <code>Hello</code>。</p>
-<p>我们说class的定义是运行时动态创建的，而创建class的方法就是使用<code>type()</code>函数。</p>
-<p><code>type()</code>函数既可以返回一个对象的类型，又可以创建出新的类型，比如，我们可以通过<code>type()</code>函数创建出<code>Say</code>类，而无需通过<code>class Say(object)...</code>的定义：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">fn</span><span class="params">(self, name = <span class="string">'World'</span>)</span>:</span></div><div class="line">    print(<span class="string">'Hello %s'</span> % name)</div><div class="line"></div><div class="line"></div><div class="line">Say = type(<span class="string">'Say'</span>, (object,), dict(say = fn))</div><div class="line"></div><div class="line"></div><div class="line">s = Say()</div><div class="line"></div><div class="line">s.say()</div><div class="line"></div><div class="line">------------------------------------------------</div><div class="line">Hello World</div></pre></td></tr></table></figure>
-<p>要创建一个class对象，<code>type()</code>函数依次传入3个参数：</p>
-<ol>
-<li>class的名称；</li>
-<li>继承的父类集合，注意Python支持多重继承，如果只有一个父类，别忘了tuple的单元素写法；</li>
-<li>class的方法名称与函数绑定，这里我们把函数<code>fn</code>绑定到方法名<code>Say</code>上。</li>
-</ol>
-<p>通过<code>type()</code>函数创建的类和直接写class是完全一样的，因为Python解释器遇到class定义时，仅仅是扫描一下class定义的语法，然后调用<code>type()</code>函数创建出class。</p>
-<p>有的同学可能不太明白<code>type</code>的第一个参数和返回值之间的关系，到底那个是类名，下面我举个例子：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!usr/bin/env python</span></div><div class="line"><span class="comment">#-*-coding:utf-8-*-</span></div><div class="line">__author__ = <span class="string">'ephon'</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">fn</span><span class="params">(self, name=<span class="string">'world'</span>)</span>:</span> <span class="comment"># 先定义函数</span></div><div class="line">     print(<span class="string">'Hello, %s.'</span> % name)</div><div class="line"></div><div class="line">Hello = type(<span class="string">'Hello1'</span>, (object,), dict(hello=fn))  <span class="comment"># 创建Hello class</span></div><div class="line"></div><div class="line"><span class="comment"># Hello是类名，创建类用Hello</span></div><div class="line">h = Hello()</div><div class="line"></div><div class="line">h.hello()</div><div class="line"></div><div class="line"><span class="comment"># type()的第一个参数是类的__name__属性</span></div><div class="line">print(Hello.__name__)</div><div class="line"></div><div class="line">------------------------------------</div><div class="line"></div><div class="line">Hello, world.</div><div class="line">Hello1</div></pre></td></tr></table></figure>
-<p>我的理解就是返回值<code>Hello</code>是我们需要创建类时使用的类名，是面向程序员的；但是计算机中存储的类名是<code>type()</code>的第一个参数<code>Hello1</code>。</p>
-<p>正常情况下，我们都用<code>class xxx...</code>来定义类，但是，<code>type()</code>函数也允许我们动态创建出类来，也就是说，动态语言本身支持运行期动态创建类，这和静态语言有非常大的不同，要在静态语言运行期创建类，必须构造源代码字符串再调用编译器，或者借助一些工具生成字节码实现，本质上都是动态编译，会非常复杂。</p>
-<h2 id="metaclass"><a href="#metaclass" class="headerlink" title="metaclass"></a>metaclass</h2><p>类是对象的抽象，那元组大致就相当于所有类的抽象，我们可以根据<code>metaclass</code>创建出类。</p>
-<p>我对于元类的理解实在是太浅薄了，有兴趣的朋友可以去<a href="http://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/0014319106919344c4ef8b1e04c48778bb45796e0335839000" target="_blank" rel="external"><strong>廖雪峰大大的博客</strong></a>去看!</p>
-
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * Definition for singly-linked list.</div><div class="line"> * class ListNode &#123;</div><div class="line"> *     int val;</div><div class="line"> *     ListNode next;</div><div class="line"> *     ListNode(int x) &#123;</div><div class="line"> *         val = x;</div><div class="line"> *         next = null;</div><div class="line"> *     &#125;</div><div class="line"> * &#125;</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">hasCycle</span><span class="params">(ListNode head)</span> </span>&#123;</div><div class="line">        ListNode oneStep = head;</div><div class="line">        ListNode twoStep = head;</div><div class="line">        <span class="keyword">while</span> (twoStep != <span class="keyword">null</span> &amp;&amp; twoStep.next != <span class="keyword">null</span>) &#123;</div><div class="line">            oneStep = oneStep.next;</div><div class="line">            twoStep = twoStep.next.next;</div><div class="line"></div><div class="line">            <span class="keyword">if</span> (oneStep == twoStep) <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">        &#125;</div><div class="line">        </div><div class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -367,13 +345,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Python3/" rel="tag">#Python3</a>
+            <a href="/tags/Java/" rel="tag">#Java</a>
           
-            <a href="/tags/type/" rel="tag">#type()</a>
+            <a href="/tags/leetcode/" rel="tag">#leetcode</a>
           
-            <a href="/tags/metaclass/" rel="tag">#metaclass</a>
-          
-            <a href="/tags/元类/" rel="tag">#元类</a>
+            <a href="/tags/算法/" rel="tag">#算法</a>
           
         </div>
       
@@ -382,16 +358,12 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/06/09/文件读写/" rel="next" title="文件读写">
-                <i class="fa fa-chevron-left"></i> 文件读写
-              </a>
-            
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/06/07/Python中的枚举类/" rel="prev" title="Python中的枚举类">
-                Python中的枚举类 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/05/03/Reorder-List/" rel="prev" title="Reorder-List">
+                Reorder-List <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -418,8 +390,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/06/07/Python中元类的使用/"
-           data-title="Python中元类的使用" data-url="http://yoursite.com/2016/06/07/Python中元类的使用/">
+      <div class="ds-thread" data-thread-key="2017/05/03/Linked-List-Cycle/"
+           data-title="Linked-List-Cycle" data-url="http://yoursite.com/2017/05/03/Linked-List-Cycle/">
       </div>
     
   </div>
@@ -530,7 +502,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#type"><span class="nav-number">1.</span> <span class="nav-text">type()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#metaclass"><span class="nav-number">2.</span> <span class="nav-text">metaclass</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
         </section>
