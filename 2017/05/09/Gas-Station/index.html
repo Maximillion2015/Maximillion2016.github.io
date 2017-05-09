@@ -86,14 +86,14 @@
 
 <meta name="keywords" content="Java,leetcode,算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Binary-Tree-Level-Order-Traversal">
-<meta property="og:url" content="http://yoursite.com/2017/04/25/Binary-Tree-Level-Order-Traversal/index.html">
+<meta property="og:title" content="Gas-Station">
+<meta property="og:url" content="http://yoursite.com/2017/05/09/Gas-Station/index.html">
 <meta property="og:site_name" content="ephon的技术博客">
-<meta property="og:image" content="http://oon3lk745.bkt.clouddn.com/BinaryTreeLevelOrderTraversal.png">
-<meta property="og:updated_time" content="2017-04-25T11:26:22.000Z">
+<meta property="og:image" content="http://oon3lk745.bkt.clouddn.com/GasStation.png">
+<meta property="og:updated_time" content="2017-05-09T02:13:01.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Binary-Tree-Level-Order-Traversal">
-<meta name="twitter:image" content="http://oon3lk745.bkt.clouddn.com/BinaryTreeLevelOrderTraversal.png">
+<meta name="twitter:title" content="Gas-Station">
+<meta name="twitter:image" content="http://oon3lk745.bkt.clouddn.com/GasStation.png">
 
 
 
@@ -111,7 +111,7 @@
   };
 </script>
 
-  <title> Binary-Tree-Level-Order-Traversal | ephon的技术博客 </title>
+  <title> Gas-Station | ephon的技术博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -251,7 +251,7 @@
             
             
               
-                Binary-Tree-Level-Order-Traversal
+                Gas-Station
               
             
           </h1>
@@ -263,8 +263,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-04-25T19:21:50+08:00" content="2017-04-25">
-              2017-04-25
+            <time itemprop="dateCreated" datetime="2017-05-09T10:12:21+08:00" content="2017-05-09">
+              2017-05-09
             </time>
           </span>
 
@@ -293,8 +293,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/04/25/Binary-Tree-Level-Order-Traversal/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/25/Binary-Tree-Level-Order-Traversal/" itemprop="commentsCount"></span>
+                <a href="/2017/05/09/Gas-Station/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/05/09/Gas-Station/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -322,10 +322,9 @@
       
 
       
-        <p><img src="http://oon3lk745.bkt.clouddn.com/BinaryTreeLevelOrderTraversal.png" alt="avator"></p>
+        <p><img src="http://oon3lk745.bkt.clouddn.com/GasStation.png" alt="avator"></p>
 <a id="more"></a>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BinaryTreeLevelOrderTraversal</span> </span>&#123;</div><div class="line">    <span class="keyword">public</span> ArrayList&lt;ArrayList&lt;Integer&gt;&gt; zigzagLevelOrder(TreeNode root) &#123;</div><div class="line">        ArrayList&lt;ArrayList&lt;Integer&gt;&gt; result = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">        <span class="keyword">if</span> (root == <span class="keyword">null</span>) <span class="keyword">return</span> result;</div><div class="line"></div><div class="line">        Queue&lt;TreeNode&gt; oldQueue = <span class="keyword">new</span> LinkedList&lt;&gt;();</div><div class="line">        Queue&lt;TreeNode&gt; newQueue = <span class="keyword">new</span> LinkedList&lt;&gt;();</div><div class="line">        oldQueue.add(root);</div><div class="line">        ArrayList&lt;Integer&gt; tempList = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">        <span class="keyword">boolean</span> isreverse = <span class="keyword">true</span>;</div><div class="line"></div><div class="line">        <span class="keyword">while</span> (!oldQueue.isEmpty() || !newQueue.isEmpty()) &#123;</div><div class="line">            <span class="keyword">while</span> (!oldQueue.isEmpty()) &#123;</div><div class="line">                TreeNode node = oldQueue.peek();</div><div class="line">                <span class="keyword">if</span> (isreverse) &#123;</div><div class="line">                    tempList.add(node.val);</div><div class="line">                &#125; <span class="keyword">else</span> &#123;</div><div class="line">                    tempList.add(<span class="number">0</span>, node.val);</div><div class="line">                &#125;</div><div class="line">                <span class="keyword">if</span> (node.left != <span class="keyword">null</span>) newQueue.add(node.left);</div><div class="line">                <span class="keyword">if</span> (node.right != <span class="keyword">null</span>) newQueue.add(node.right);</div><div class="line">                oldQueue.remove(oldQueue.peek());</div><div class="line">            &#125;</div><div class="line">            result.add(tempList);</div><div class="line">            tempList = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">            oldQueue.addAll(newQueue);</div><div class="line">            newQueue.clear();</div><div class="line">            isreverse = !isreverse;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">return</span> result;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">GasStation</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">canCompleteCircuit</span><span class="params">(<span class="keyword">int</span>[] gas, <span class="keyword">int</span>[] cost)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span> (gas.length != cost.length || gas.length &lt; <span class="number">0</span> || cost.length &lt; <span class="number">0</span>) &#123;</div><div class="line">            <span class="keyword">return</span> -<span class="number">1</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">int</span> gasCount = gas.length;</div><div class="line">        <span class="keyword">int</span> i, j;</div><div class="line">        <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; gasCount; i++) &#123;</div><div class="line">            <span class="keyword">int</span> totleGas = <span class="number">0</span>;</div><div class="line">            <span class="keyword">int</span> totleCost = <span class="number">0</span>;</div><div class="line">            <span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; gasCount; j++) &#123;</div><div class="line">                totleGas += gas[(i + j) % gasCount];</div><div class="line">                totleCost += cost[(i + j) % gasCount];</div><div class="line">                <span class="keyword">if</span> (totleGas &lt; totleCost) <span class="keyword">break</span>;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">if</span> (j == gasCount) &#123;</div><div class="line">                <span class="keyword">return</span>  i;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -363,8 +362,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/04/24/Binary-Tree-Level-Order-Traversal-II/" rel="prev" title="Binary-Tree-Level-Order-Traversal-II">
-                Binary-Tree-Level-Order-Traversal-II <i class="fa fa-chevron-right"></i>
+              <a href="/2017/05/08/Candy/" rel="prev" title="Candy">
+                Candy <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -391,8 +390,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/04/25/Binary-Tree-Level-Order-Traversal/"
-           data-title="Binary-Tree-Level-Order-Traversal" data-url="http://yoursite.com/2017/04/25/Binary-Tree-Level-Order-Traversal/">
+      <div class="ds-thread" data-thread-key="2017/05/09/Gas-Station/"
+           data-title="Gas-Station" data-url="http://yoursite.com/2017/05/09/Gas-Station/">
       </div>
     
   </div>
@@ -437,7 +436,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">30</span>
+              <span class="site-state-item-count">59</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -445,7 +444,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -454,7 +453,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">42</span>
+                <span class="site-state-item-count">44</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
