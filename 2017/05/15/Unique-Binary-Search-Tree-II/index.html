@@ -86,14 +86,14 @@
 
 <meta name="keywords" content="Java,leetcode,算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Palindrome-Partitioning-II">
-<meta property="og:url" content="http://yoursite.com/2017/05/12/Palindrome-Partitioning-II/index.html">
+<meta property="og:title" content="Unique-Binary-Search-Tree-II">
+<meta property="og:url" content="http://yoursite.com/2017/05/15/Unique-Binary-Search-Tree-II/index.html">
 <meta property="og:site_name" content="ephon的技术博客">
-<meta property="og:image" content="http://oon3lk745.bkt.clouddn.com/PalindromePartitioningII.png">
-<meta property="og:updated_time" content="2017-05-12T02:47:11.000Z">
+<meta property="og:image" content="http://oon3lk745.bkt.clouddn.com/UniqueBinarySearchTreeII.png">
+<meta property="og:updated_time" content="2017-05-15T12:29:33.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Palindrome-Partitioning-II">
-<meta name="twitter:image" content="http://oon3lk745.bkt.clouddn.com/PalindromePartitioningII.png">
+<meta name="twitter:title" content="Unique-Binary-Search-Tree-II">
+<meta name="twitter:image" content="http://oon3lk745.bkt.clouddn.com/UniqueBinarySearchTreeII.png">
 
 
 
@@ -111,7 +111,7 @@
   };
 </script>
 
-  <title> Palindrome-Partitioning-II | ephon的技术博客 </title>
+  <title> Unique-Binary-Search-Tree-II | ephon的技术博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -251,7 +251,7 @@
             
             
               
-                Palindrome-Partitioning-II
+                Unique-Binary-Search-Tree-II
               
             
           </h1>
@@ -263,8 +263,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-05-12T10:45:06+08:00" content="2017-05-12">
-              2017-05-12
+            <time itemprop="dateCreated" datetime="2017-05-15T20:28:49+08:00" content="2017-05-15">
+              2017-05-15
             </time>
           </span>
 
@@ -293,8 +293,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/05/12/Palindrome-Partitioning-II/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/05/12/Palindrome-Partitioning-II/" itemprop="commentsCount"></span>
+                <a href="/2017/05/15/Unique-Binary-Search-Tree-II/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/05/15/Unique-Binary-Search-Tree-II/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -322,9 +322,9 @@
       
 
       
-        <p><img src="http://oon3lk745.bkt.clouddn.com/PalindromePartitioningII.png" alt="avator"></p>
+        <p><img src="http://oon3lk745.bkt.clouddn.com/UniqueBinarySearchTreeII.png" alt="avator"></p>
 <a id="more"></a>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.util.*;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">	<span class="comment">// 使用map存储已经计算过的字符串的最小回文个数</span></div><div class="line">    <span class="keyword">public</span> Map&lt;String, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">minCut</span><span class="params">(String s)</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> minCutHelper(s) - <span class="number">1</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">minCutHelper</span><span class="params">(String s)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span> (s.length() == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line"></div><div class="line">        <span class="keyword">int</span> min = Integer.MAX_VALUE;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; s.length(); i++) &#123;</div><div class="line">            String sub = s.substring(i + <span class="number">1</span>);</div><div class="line">            <span class="keyword">if</span> (isPalindrome(s.substring(<span class="number">0</span>, i + <span class="number">1</span>))) &#123;</div><div class="line">                <span class="keyword">int</span> tempMin;</div><div class="line">                <span class="keyword">if</span> (map.containsKey(sub)) &#123;</div><div class="line">                    tempMin = map.get(sub) + <span class="number">1</span>;</div><div class="line">                &#125; <span class="keyword">else</span> &#123;</div><div class="line">                    tempMin = minCutHelper(sub) + <span class="number">1</span>;</div><div class="line">                    map.put(sub, tempMin-<span class="number">1</span>);</div><div class="line">                &#125;</div><div class="line">                min = min &gt; tempMin ? tempMin : min;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> min;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isPalindrome</span><span class="params">(String s)</span> </span>&#123;</div><div class="line">        StringBuffer sb = <span class="keyword">new</span> StringBuffer(s);</div><div class="line"></div><div class="line">        <span class="keyword">return</span> s.equals(sb.reverse().toString());</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> leetcode;</div><div class="line"></div><div class="line"><span class="keyword">import</span> java.util.ArrayList;</div><div class="line"><span class="keyword">import</span> java.util.HashMap;</div><div class="line"><span class="keyword">import</span> java.util.Map;</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UniqueBinarySearchTreeII</span> </span>&#123;</div><div class="line">    <span class="keyword">public</span> Map&lt;Integer, Map&lt;Integer, ArrayList&lt;TreeNode&gt;&gt;&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</div><div class="line">    <span class="function"><span class="keyword">public</span> ArrayList&lt;TreeNode&gt; <span class="title">generateTrees</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</div><div class="line">        ArrayList&lt;TreeNode&gt; result = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">        <span class="keyword">if</span> (n == <span class="number">0</span>) &#123;</div><div class="line">            result.add(<span class="keyword">null</span>);</div><div class="line">            <span class="keyword">return</span> result;</div><div class="line">        &#125;</div><div class="line">        ArrayList&lt;Integer&gt; al = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</div><div class="line">            al.add(i);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        result =  generateTreesHelper(al);</div><div class="line">        <span class="keyword">return</span> result;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> ArrayList&lt;TreeNode&gt; <span class="title">generateTreesHelper</span><span class="params">(ArrayList&lt;Integer&gt; al)</span> </span>&#123;</div><div class="line">        ArrayList&lt;TreeNode&gt; result = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; al.size(); i++) &#123;</div><div class="line">            ArrayList&lt;Integer&gt; leftAl = <span class="keyword">new</span> ArrayList&lt;&gt;(al.subList(<span class="number">0</span>, i));</div><div class="line">            ArrayList&lt;Integer&gt; rightAl = <span class="keyword">new</span> ArrayList&lt;&gt;(al.subList(i+<span class="number">1</span>, al.size()));</div><div class="line">            ArrayList&lt;TreeNode&gt; leftChild;</div><div class="line">            ArrayList&lt;TreeNode&gt; rightChild;</div><div class="line">            <span class="keyword">if</span> (i &gt;= <span class="number">1</span> &amp;&amp; map.containsKey(al.get(<span class="number">0</span>))) &#123;</div><div class="line">                Map&lt;Integer, ArrayList&lt;TreeNode&gt;&gt; innerMap = map.get(al.get(<span class="number">0</span>));</div><div class="line">                <span class="keyword">if</span> (innerMap.containsKey(al.get(i-<span class="number">1</span>))) &#123;</div><div class="line">                    leftChild = innerMap.get(al.get(i-<span class="number">1</span>));</div><div class="line">                &#125; <span class="keyword">else</span>&#123;</div><div class="line">                    leftChild = generateTreesHelper(leftAl);</div><div class="line">                    innerMap.put(al.get(i-<span class="number">1</span>), leftChild);</div><div class="line">                    map.put(al.get(<span class="number">0</span>), innerMap);</div><div class="line">                &#125;</div><div class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (i &gt;= <span class="number">1</span>)&#123;</div><div class="line">                leftChild = generateTreesHelper(leftAl);</div><div class="line">                <span class="keyword">if</span> (leftChild != <span class="keyword">null</span>) &#123;</div><div class="line">                    Map&lt;Integer, ArrayList&lt;TreeNode&gt;&gt; innerMap = <span class="keyword">new</span> HashMap&lt;&gt;();</div><div class="line">                    innerMap.put(al.get(i-<span class="number">1</span>), leftChild);</div><div class="line">                    map.put(al.get(<span class="number">0</span>), innerMap);</div><div class="line">                &#125;</div><div class="line">            &#125; <span class="keyword">else</span></div><div class="line">                leftChild = <span class="keyword">null</span>;</div><div class="line"></div><div class="line">            <span class="keyword">if</span> (i &lt; al.size() - <span class="number">1</span> &amp;&amp; map.containsKey(al.get(i+<span class="number">1</span>))) &#123;</div><div class="line">                Map&lt;Integer, ArrayList&lt;TreeNode&gt;&gt; innerMap = map.get(al.get(i+<span class="number">1</span>));</div><div class="line">                <span class="keyword">if</span> (innerMap.containsKey(al.get(al.size()-<span class="number">1</span>))) &#123;</div><div class="line">                    rightChild = innerMap.get(al.get(al.size()-<span class="number">1</span>));</div><div class="line">                &#125; <span class="keyword">else</span> &#123;</div><div class="line">                    rightChild = generateTreesHelper(rightAl);</div><div class="line">                    innerMap.put(al.get(al.size()-<span class="number">1</span>), rightChild);</div><div class="line">                    map.put(al.get(i+<span class="number">1</span>), innerMap);</div><div class="line">                &#125;</div><div class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (i &lt; al.size() - <span class="number">1</span>)&#123;</div><div class="line">                rightChild = generateTreesHelper(rightAl);</div><div class="line">                <span class="keyword">if</span> (rightChild != <span class="keyword">null</span>) &#123;</div><div class="line">                    Map&lt;Integer, ArrayList&lt;TreeNode&gt;&gt; innerMap = <span class="keyword">new</span> HashMap&lt;&gt;();</div><div class="line">                    innerMap.put(al.get(al.size()-<span class="number">1</span>), rightChild);</div><div class="line">                    map.put(al.get(i+<span class="number">1</span>), innerMap);</div><div class="line">                &#125;</div><div class="line">            &#125; <span class="keyword">else</span> rightChild = <span class="keyword">null</span>;</div><div class="line"></div><div class="line">            <span class="keyword">int</span> leftNumTree = leftChild == <span class="keyword">null</span> ? <span class="number">1</span> : leftChild.size();</div><div class="line">            <span class="keyword">int</span> rightNumTree = rightChild == <span class="keyword">null</span> ? <span class="number">1</span> : rightChild.size();</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; leftNumTree; j++) &#123;</div><div class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> p = <span class="number">0</span>; p &lt; rightNumTree; p++) &#123;</div><div class="line">                    TreeNode root = <span class="keyword">new</span> TreeNode(al.get(i));</div><div class="line">                    root.left = leftChild != <span class="keyword">null</span> ? leftChild.get(j) : <span class="keyword">null</span>;</div><div class="line">                    root.right = rightChild != <span class="keyword">null</span> ? rightChild.get(p) : <span class="keyword">null</span>;</div><div class="line">                    result.add(root);</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> result;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -358,16 +358,12 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/05/15/Unique-Binary-Search-Tree-II/" rel="next" title="Unique-Binary-Search-Tree-II">
-                <i class="fa fa-chevron-left"></i> Unique-Binary-Search-Tree-II
-              </a>
-            
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/05/10/palindrome-partitioning/" rel="prev" title="palindrome-partitioning">
-                palindrome-partitioning <i class="fa fa-chevron-right"></i>
+              <a href="/2017/05/12/Palindrome-Partitioning-II/" rel="prev" title="Palindrome-Partitioning-II">
+                Palindrome-Partitioning-II <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -394,8 +390,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/05/12/Palindrome-Partitioning-II/"
-           data-title="Palindrome-Partitioning-II" data-url="http://yoursite.com/2017/05/12/Palindrome-Partitioning-II/">
+      <div class="ds-thread" data-thread-key="2017/05/15/Unique-Binary-Search-Tree-II/"
+           data-title="Unique-Binary-Search-Tree-II" data-url="http://yoursite.com/2017/05/15/Unique-Binary-Search-Tree-II/">
       </div>
     
   </div>
