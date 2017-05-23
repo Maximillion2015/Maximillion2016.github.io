@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Python3,列表生成式," />
+  <meta name="keywords" content="Java,leetcode,算法," />
 
 
 
@@ -84,17 +84,16 @@
 
 
 
-<meta name="description" content="python中如果要得到[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]一般第一时间就能想到： 12&amp;gt;&amp;gt;&amp;gt; list(range(10))[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]">
-<meta name="keywords" content="Python3,列表生成式">
+<meta name="keywords" content="Java,leetcode,算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="列表生成式">
-<meta property="og:url" content="http://yoursite.com/2016/05/27/列表生成式/index.html">
+<meta property="og:title" content="Recover-Binary-Search-Tree">
+<meta property="og:url" content="http://yoursite.com/2017/05/23/Recover-Binary-Search-Tree/index.html">
 <meta property="og:site_name" content="ephon的技术博客">
-<meta property="og:description" content="python中如果要得到[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]一般第一时间就能想到： 12&amp;gt;&amp;gt;&amp;gt; list(range(10))[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]">
-<meta property="og:updated_time" content="2016-06-06T05:57:33.000Z">
+<meta property="og:image" content="http://oon3lk745.bkt.clouddn.com/RecoverBinarySearchTree.png">
+<meta property="og:updated_time" content="2017-05-23T01:24:03.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="列表生成式">
-<meta name="twitter:description" content="python中如果要得到[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]一般第一时间就能想到： 12&amp;gt;&amp;gt;&amp;gt; list(range(10))[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]">
+<meta name="twitter:title" content="Recover-Binary-Search-Tree">
+<meta name="twitter:image" content="http://oon3lk745.bkt.clouddn.com/RecoverBinarySearchTree.png">
 
 
 
@@ -112,7 +111,7 @@
   };
 </script>
 
-  <title> 列表生成式 | ephon的技术博客 </title>
+  <title> Recover-Binary-Search-Tree | ephon的技术博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -252,7 +251,7 @@
             
             
               
-                列表生成式
+                Recover-Binary-Search-Tree
               
             
           </h1>
@@ -264,8 +263,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-27T16:15:46+08:00" content="2016-05-27">
-              2016-05-27
+            <time itemprop="dateCreated" datetime="2017-05-23T09:22:59+08:00" content="2017-05-23">
+              2017-05-23
             </time>
           </span>
 
@@ -278,8 +277,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Python3/" itemprop="url" rel="index">
-                    <span itemprop="name">Python3</span>
+                  <a href="/categories/leetcode/" itemprop="url" rel="index">
+                    <span itemprop="name">leetcode</span>
                   </a>
                 </span>
 
@@ -294,8 +293,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/05/27/列表生成式/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/27/列表生成式/" itemprop="commentsCount"></span>
+                <a href="/2017/05/23/Recover-Binary-Search-Tree/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/05/23/Recover-Binary-Search-Tree/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -323,25 +322,10 @@
       
 
       
-        <p>python中如果要得到<code>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</code>一般第一时间就能想到：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>list(range(<span class="number">10</span>))</div><div class="line">[<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]</div></pre></td></tr></table></figure>
+        <p><img src="http://oon3lk745.bkt.clouddn.com/RecoverBinarySearchTree.png" alt="avator"></p>
 <a id="more"></a>
-<p>如果要得到[0x0, 1x1, 2x2, 3x3, 4x4, 5x5, 6x6, 7x7, 8x8, 9x9]呢？我们可以：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>list(range(<span class="number">10</span>))</div><div class="line">[<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>list1 = list(range(<span class="number">10</span>))</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>list2 = []</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> x <span class="keyword">in</span> list1:</div><div class="line">	list2.append(x * x)</div><div class="line"></div><div class="line">	</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>list2</div><div class="line">[<span class="number">0</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">16</span>, <span class="number">25</span>, <span class="number">36</span>, <span class="number">49</span>, <span class="number">64</span>, <span class="number">81</span>]</div></pre></td></tr></table></figure>
-<p>然而Python作为一种那么优雅的语言，是否有简单的写法呢？答案必然是肯定的：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>list1 = list(range(<span class="number">10</span>))</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>list3 = [x*x <span class="keyword">for</span> x <span class="keyword">in</span> list1]</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>list3</div><div class="line">[<span class="number">0</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">16</span>, <span class="number">25</span>, <span class="number">36</span>, <span class="number">49</span>, <span class="number">64</span>, <span class="number">81</span>]</div></pre></td></tr></table></figure>
-<p>是的，就是这么简单~</p>
-<p>列表生成式中也可以写多个语句：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>list1 = list(range(<span class="number">10</span>))</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>list3 = [x*x <span class="keyword">for</span> x <span class="keyword">in</span> list1 <span class="keyword">if</span> x % <span class="number">2</span> == <span class="number">0</span>]</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>list3</div><div class="line">[<span class="number">0</span>, <span class="number">4</span>, <span class="number">16</span>, <span class="number">36</span>, <span class="number">64</span>]</div></pre></td></tr></table></figure>
-<p>甚至还可以进行循环的嵌套：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>[m+n <span class="keyword">for</span> m <span class="keyword">in</span> <span class="string">'abc'</span> <span class="keyword">for</span> n <span class="keyword">in</span> <span class="string">'def'</span>]</div><div class="line">[<span class="string">'ad'</span>, <span class="string">'ae'</span>, <span class="string">'af'</span>, <span class="string">'bd'</span>, <span class="string">'be'</span>, <span class="string">'bf'</span>, <span class="string">'cd'</span>, <span class="string">'ce'</span>, <span class="string">'cf'</span>]</div></pre></td></tr></table></figure>
-<p>运用列表生成式，可以写出非常简洁的代码。例如，列出当前目录下的所有文件和目录名，可以通过一行代码实现：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> os <span class="comment"># 导入os模块，模块的概念后面讲到</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>[d <span class="keyword">for</span> d <span class="keyword">in</span> os.listdir(<span class="string">'.'</span>)] <span class="comment"># os.listdir可以列出文件和目录</span></div><div class="line">[<span class="string">'.emacs.d'</span>, <span class="string">'.ssh'</span>, <span class="string">'.Trash'</span>, <span class="string">'Adlm'</span>, <span class="string">'Applications'</span>, <span class="string">'Desktop'</span>, <span class="string">'Documents'</span>, <span class="string">'Downloads'</span>, <span class="string">'Library'</span>, <span class="string">'Movies'</span>, <span class="string">'Music'</span>, <span class="string">'Pictures'</span>, <span class="string">'Public'</span>, <span class="string">'VirtualBox VMs'</span>, <span class="string">'Workspace'</span>, <span class="string">'XCode'</span>]</div></pre></td></tr></table></figure>
-<p>下面写几个小例子吧：</p>
-<p><strong>1. 将字典转化为列表</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>d = &#123;<span class="string">'x'</span>: <span class="string">'A'</span>, <span class="string">'y'</span>: <span class="string">'B'</span>, <span class="string">'z'</span>: <span class="string">'C'</span> &#125;</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>[k + <span class="string">'='</span> + v <span class="keyword">for</span> k, v <span class="keyword">in</span> d.items()]</div><div class="line">[<span class="string">'y=B'</span>, <span class="string">'x=A'</span>, <span class="string">'z=C'</span>]</div></pre></td></tr></table></figure>
-<p><strong>2. 将字符串中大写字母转化为小写</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>L = [<span class="string">'Hello'</span>, <span class="string">'World'</span>, <span class="string">'IBM'</span>, <span class="string">'Apple'</span>, <span class="number">18</span>, <span class="keyword">None</span>]</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>[s.lower() <span class="keyword">for</span> s <span class="keyword">in</span> L <span class="keyword">if</span> isinstance(s, str)]</div><div class="line">[<span class="string">'hello'</span>, <span class="string">'world'</span>, <span class="string">'ibm'</span>, <span class="string">'apple'</span>]</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> leetcode;</div><div class="line"></div><div class="line"><span class="keyword">import</span> java.util.ArrayList;</div><div class="line"><span class="keyword">import</span> java.util.Collections;</div><div class="line"><span class="keyword">import</span> java.util.Comparator;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RecoverBinarySearchTree</span> </span>&#123;</div><div class="line">    ArrayList&lt;TreeNode&gt; nodeList = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">recoverTree</span><span class="params">(TreeNode root)</span> </span>&#123;</div><div class="line">        createList(root);</div><div class="line">        ArrayList&lt;TreeNode&gt; orderList = <span class="keyword">new</span> ArrayList&lt;&gt;(nodeList);</div><div class="line">        Collections.sort(orderList, <span class="keyword">new</span> Comparator&lt;TreeNode&gt;() &#123;</div><div class="line">            <span class="meta">@Override</span></div><div class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(TreeNode o1, TreeNode o2)</span> </span>&#123;</div><div class="line">                <span class="keyword">return</span> Integer.compare(o1.val, o2.val);</div><div class="line">            &#125;</div><div class="line">        &#125;);</div><div class="line"></div><div class="line">        ArrayList&lt;TreeNode&gt; wrongNode = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line"></div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nodeList.size(); i++) &#123;</div><div class="line">            <span class="keyword">if</span> (nodeList.get(i).val != orderList.get(i).val)</div><div class="line">                wrongNode.add(nodeList.get(i));</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        wrongNode.get(<span class="number">0</span>).val = wrongNode.get(<span class="number">1</span>).val ^ wrongNode.get(<span class="number">0</span>).val ^ (wrongNode.get(<span class="number">1</span>).val = wrongNode.get(<span class="number">0</span>).val);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">createList</span><span class="params">(TreeNode root)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span> (root == <span class="keyword">null</span>) <span class="keyword">return</span>;</div><div class="line">        createList(root.left);</div><div class="line">        nodeList.add(root);</div><div class="line">        createList(root.right);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -362,9 +346,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Python3/" rel="tag">#Python3</a>
+            <a href="/tags/Java/" rel="tag">#Java</a>
           
-            <a href="/tags/列表生成式/" rel="tag">#列表生成式</a>
+            <a href="/tags/leetcode/" rel="tag">#leetcode</a>
+          
+            <a href="/tags/算法/" rel="tag">#算法</a>
           
         </div>
       
@@ -373,16 +359,12 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/05/29/剑指offer/" rel="next" title="剑指offer">
-                <i class="fa fa-chevron-left"></i> 剑指offer
-              </a>
-            
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/05/27/迭代/" rel="prev" title="迭代">
-                迭代 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/05/22/Convert-Sorted-List-To-Binary-Search-Tree/" rel="prev" title="Convert-Sorted-List-To-Binary-Search-Tree">
+                Convert-Sorted-List-To-Binary-Search-Tree <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -409,8 +391,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/05/27/列表生成式/"
-           data-title="列表生成式" data-url="http://yoursite.com/2016/05/27/列表生成式/">
+      <div class="ds-thread" data-thread-key="2017/05/23/Recover-Binary-Search-Tree/"
+           data-title="Recover-Binary-Search-Tree" data-url="http://yoursite.com/2017/05/23/Recover-Binary-Search-Tree/">
       </div>
     
   </div>
