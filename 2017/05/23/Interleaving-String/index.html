@@ -86,14 +86,14 @@
 
 <meta name="keywords" content="Java,leetcode,算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Word-Break">
-<meta property="og:url" content="http://yoursite.com/2017/05/05/Word-Break/index.html">
+<meta property="og:title" content="Interleaving-String">
+<meta property="og:url" content="http://yoursite.com/2017/05/23/Interleaving-String/index.html">
 <meta property="og:site_name" content="ephon的技术博客">
-<meta property="og:image" content="http://oon3lk745.bkt.clouddn.com/WordBreak.png">
-<meta property="og:updated_time" content="2017-05-05T15:13:09.000Z">
+<meta property="og:image" content="http://oon3lk745.bkt.clouddn.com/InterleavingString.png">
+<meta property="og:updated_time" content="2017-05-23T07:08:12.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Word-Break">
-<meta name="twitter:image" content="http://oon3lk745.bkt.clouddn.com/WordBreak.png">
+<meta name="twitter:title" content="Interleaving-String">
+<meta name="twitter:image" content="http://oon3lk745.bkt.clouddn.com/InterleavingString.png">
 
 
 
@@ -111,7 +111,7 @@
   };
 </script>
 
-  <title> Word-Break | ephon的技术博客 </title>
+  <title> Interleaving-String | ephon的技术博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -251,7 +251,7 @@
             
             
               
-                Word-Break
+                Interleaving-String
               
             
           </h1>
@@ -263,8 +263,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-05-05T23:09:45+08:00" content="2017-05-05">
-              2017-05-05
+            <time itemprop="dateCreated" datetime="2017-05-23T15:07:19+08:00" content="2017-05-23">
+              2017-05-23
             </time>
           </span>
 
@@ -293,8 +293,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/05/05/Word-Break/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/05/05/Word-Break/" itemprop="commentsCount"></span>
+                <a href="/2017/05/23/Interleaving-String/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/05/23/Interleaving-String/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -322,10 +322,9 @@
       
 
       
-        <p><img src="http://oon3lk745.bkt.clouddn.com/WordBreak.png" alt="avator"></p>
+        <p><img src="http://oon3lk745.bkt.clouddn.com/InterleavingString.png" alt="avator"></p>
 <a id="more"></a>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.util.Set;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WordBreak</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">wordBreak</span><span class="params">(String s, Set&lt;String&gt; dict)</span> </span>&#123;</div><div class="line">        <span class="keyword">int</span> length = s.length();</div><div class="line">        Boolean[] isBreak = <span class="keyword">new</span> Boolean[length + <span class="number">1</span>];</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; isBreak.length; i++)</div><div class="line">            isBreak[i] = <span class="keyword">false</span>;</div><div class="line">        isBreak[<span class="number">0</span>] = <span class="keyword">true</span>;</div><div class="line"></div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= length; i++) &#123;</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; i; j++) &#123;</div><div class="line">                <span class="keyword">if</span> (isBreak[j] &amp;&amp; dict.contains(s.substring(j, i)))</div><div class="line">                    isBreak[i] = <span class="keyword">true</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">return</span> isBreak[length];</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> leetcode;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">InterleavingString</span> </span>&#123;</div><div class="line">    <span class="comment">// 递归</span></div><div class="line"><span class="comment">//    public boolean isInterleave(String s1, String s2, String s3) &#123;</span></div><div class="line"><span class="comment">//        if (s1.length() == 0) return s2.equals(s3);</span></div><div class="line"><span class="comment">//        if (s2.length() == 0) return s1.equals(s3);</span></div><div class="line"><span class="comment">//</span></div><div class="line"><span class="comment">//        char c1 = s1.charAt(0);</span></div><div class="line"><span class="comment">//        char c2 = s2.charAt(0);</span></div><div class="line"><span class="comment">//        char c3 = s3.charAt(0);</span></div><div class="line"><span class="comment">//</span></div><div class="line"><span class="comment">//        if (c1 == c3 &amp;&amp; c2 == c3) return isInterleave(s1.substring(1), s2, s3.substring(1)) || isInterleave(s1, s2.substring(1), s3.substring(1));</span></div><div class="line"><span class="comment">//        else if (c1 == c3) return isInterleave(s1.substring(1), s2, s3.substring(1));</span></div><div class="line"><span class="comment">//        else if (c2 == c3)return isInterleave(s1, s2.substring(1), s3.substring(1));</span></div><div class="line"><span class="comment">//        else return false;</span></div><div class="line"><span class="comment">//    &#125;</span></div><div class="line"></div><div class="line">    <span class="comment">// 动态规划</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isInterleave</span><span class="params">(String s1, String s2, String s3)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span> (s1.length() + s2.length() != s3.length()) <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (s2.length() == <span class="number">0</span>) <span class="keyword">return</span> s1.equals(s3);</div><div class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (s1.length() == <span class="number">0</span>) <span class="keyword">return</span> s2.equals(s3);</div><div class="line"></div><div class="line">        <span class="keyword">boolean</span>[][] interLeave = <span class="keyword">new</span> <span class="keyword">boolean</span>[s1.length()+<span class="number">1</span>][s2.length()+<span class="number">1</span>];</div><div class="line">        interLeave[<span class="number">0</span>][<span class="number">0</span>] = <span class="keyword">true</span>;</div><div class="line">        interLeave[<span class="number">1</span>][<span class="number">0</span>] = <span class="keyword">true</span>;</div><div class="line"></div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= s2.length(); i++) &#123;</div><div class="line">            interLeave[<span class="number">0</span>][i] = interLeave[<span class="number">0</span>][i-<span class="number">1</span>] &amp;&amp; (s2.charAt(i-<span class="number">1</span>) == s3.charAt(i-<span class="number">1</span>));</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= s1.length(); i++) &#123;</div><div class="line">            interLeave[i][<span class="number">0</span>] = interLeave[i-<span class="number">1</span>][<span class="number">0</span>] &amp;&amp; (s1.charAt(i-<span class="number">1</span>) == s3.charAt(i-<span class="number">1</span>));</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= s1.length(); i++) &#123;</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= s2.length(); j++) &#123;</div><div class="line">                interLeave[i][j] = (interLeave[i-<span class="number">1</span>][j] &amp;&amp; (s1.charAt(i-<span class="number">1</span>) == s3.charAt(i-<span class="number">1</span>+j))) || (interLeave[i][j-<span class="number">1</span>] &amp;&amp; (s2.charAt(j-<span class="number">1</span>) == s3.charAt(i+j-<span class="number">1</span>)));</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">return</span> interLeave[s1.length()][s2.length()];</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -359,16 +358,12 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/05/07/Word-Break-II/" rel="next" title="Word-Break-II">
-                <i class="fa fa-chevron-left"></i> Word-Break-II
-              </a>
-            
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/05/05/Single-Number-II/" rel="prev" title="Single-Number-II">
-                Single-Number-II <i class="fa fa-chevron-right"></i>
+              <a href="/2017/05/23/Recover-Binary-Search-Tree/" rel="prev" title="Recover-Binary-Search-Tree">
+                Recover-Binary-Search-Tree <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -395,8 +390,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/05/05/Word-Break/"
-           data-title="Word-Break" data-url="http://yoursite.com/2017/05/05/Word-Break/">
+      <div class="ds-thread" data-thread-key="2017/05/23/Interleaving-String/"
+           data-title="Interleaving-String" data-url="http://yoursite.com/2017/05/23/Interleaving-String/">
       </div>
     
   </div>
