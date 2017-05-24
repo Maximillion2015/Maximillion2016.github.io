@@ -86,14 +86,14 @@
 
 <meta name="keywords" content="Java,leetcode,算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Binary-Tree-Preorder-Traversal">
-<meta property="og:url" content="http://yoursite.com/2017/05/03/Binary-Tree-Preorder-Traversal/index.html">
+<meta property="og:title" content="Decode-Ways">
+<meta property="og:url" content="http://yoursite.com/2017/05/24/Decode-Ways/index.html">
 <meta property="og:site_name" content="ephon的技术博客">
-<meta property="og:image" content="http://oon3lk745.bkt.clouddn.com/BinaryTreePreorderTraversal.png">
-<meta property="og:updated_time" content="2017-05-03T12:12:07.000Z">
+<meta property="og:image" content="http://oon3lk745.bkt.clouddn.com/DecodeWays.png">
+<meta property="og:updated_time" content="2017-05-24T06:11:55.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Binary-Tree-Preorder-Traversal">
-<meta name="twitter:image" content="http://oon3lk745.bkt.clouddn.com/BinaryTreePreorderTraversal.png">
+<meta name="twitter:title" content="Decode-Ways">
+<meta name="twitter:image" content="http://oon3lk745.bkt.clouddn.com/DecodeWays.png">
 
 
 
@@ -111,7 +111,7 @@
   };
 </script>
 
-  <title> Binary-Tree-Preorder-Traversal | ephon的技术博客 </title>
+  <title> Decode-Ways | ephon的技术博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -251,7 +251,7 @@
             
             
               
-                Binary-Tree-Preorder-Traversal
+                Decode-Ways
               
             
           </h1>
@@ -263,8 +263,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-05-03T20:11:17+08:00" content="2017-05-03">
-              2017-05-03
+            <time itemprop="dateCreated" datetime="2017-05-24T14:11:03+08:00" content="2017-05-24">
+              2017-05-24
             </time>
           </span>
 
@@ -293,8 +293,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/05/03/Binary-Tree-Preorder-Traversal/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/05/03/Binary-Tree-Preorder-Traversal/" itemprop="commentsCount"></span>
+                <a href="/2017/05/24/Decode-Ways/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/05/24/Decode-Ways/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -322,9 +322,9 @@
       
 
       
-        <p><img src="http://oon3lk745.bkt.clouddn.com/BinaryTreePreorderTraversal.png" alt="avator"></p>
+        <p><img src="http://oon3lk745.bkt.clouddn.com/DecodeWays.png" alt="avator"></p>
 <a id="more"></a>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.util.ArrayList;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BinaryTreePreorderTraversal</span> </span>&#123;</div><div class="line">    ArrayList&lt;Integer&gt; result = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">    <span class="function"><span class="keyword">public</span> ArrayList&lt;Integer&gt; <span class="title">preorderTraversal</span><span class="params">(TreeNode root)</span> </span>&#123;</div><div class="line">        preorderTraversalHelper(root);</div><div class="line"></div><div class="line">        <span class="keyword">return</span> result;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">preorderTraversalHelper</span><span class="params">(TreeNode root)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span> (root == <span class="keyword">null</span>) <span class="keyword">return</span>;</div><div class="line"></div><div class="line">        result.add(root.val);</div><div class="line"></div><div class="line">        preorderTraversalHelper(root.left);</div><div class="line"></div><div class="line">        preorderTraversalHelper(root.right);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这题写的略丑，考虑情况不是很全，导致最后只能用判断补，以后有空再修正：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> leetcode;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DecodeWays</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">numDecodings</span><span class="params">(String s)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span> (s.length() == <span class="number">0</span> || s.charAt(<span class="number">0</span>) == <span class="string">'0'</span>) <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">        <span class="keyword">int</span>[] count = <span class="keyword">new</span> <span class="keyword">int</span>[s.length()];</div><div class="line">        count[<span class="number">0</span>] = <span class="number">1</span>;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; s.length(); i++) &#123;</div><div class="line">            String numStr = s.substring(i-<span class="number">1</span>, i+<span class="number">1</span>);</div><div class="line">            <span class="keyword">int</span> num = Integer.valueOf(numStr);</div><div class="line">            <span class="keyword">if</span> (s.charAt(i) != <span class="string">'0'</span>) &#123;</div><div class="line">                count[i] = count[i-<span class="number">1</span>];</div><div class="line">                <span class="keyword">if</span> (s.charAt(i-<span class="number">1</span>) != <span class="string">'0'</span>) &#123;</div><div class="line">                    <span class="keyword">if</span> (num &gt;=<span class="number">1</span> &amp;&amp; num &lt;= <span class="number">26</span> &amp;&amp; i &gt;= <span class="number">2</span>) &#123;</div><div class="line">                        count[i] += count[i-<span class="number">2</span>];</div><div class="line">                    &#125;</div><div class="line"></div><div class="line">                    <span class="keyword">if</span> (num &gt;= <span class="number">1</span> &amp;&amp; num &lt;= <span class="number">26</span> &amp;&amp; i &lt; <span class="number">2</span>) &#123;</div><div class="line">                        count[i]++;</div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line">            &#125; <span class="keyword">else</span> &#123;</div><div class="line">                <span class="keyword">if</span> (i &gt;= <span class="number">2</span> &amp;&amp; num &gt;=<span class="number">1</span> &amp;&amp; num &lt;= <span class="number">26</span>) count[i] = count[i-<span class="number">2</span>];</div><div class="line">                <span class="keyword">else</span> <span class="keyword">if</span> (i &lt; <span class="number">2</span> &amp;&amp; num &gt;= <span class="number">1</span> &amp;&amp; num &lt;=<span class="number">26</span>) count[i] = <span class="number">1</span>;</div><div class="line">                <span class="keyword">else</span> <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line"></div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">return</span> count[s.length()-<span class="number">1</span>];</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -359,16 +359,12 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/05/03/Reorder-List/" rel="next" title="Reorder-List">
-                <i class="fa fa-chevron-left"></i> Reorder-List
-              </a>
-            
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/05/03/Binary-Tree-Postorder-Traversal/" rel="prev" title="Binary-Tree-Postorder-Traversal">
-                Binary-Tree-Postorder-Traversal <i class="fa fa-chevron-right"></i>
+              <a href="/2017/05/24/Restore-Ip-Address/" rel="prev" title="Restore-Ip-Address">
+                Restore-Ip-Address <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -395,8 +391,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/05/03/Binary-Tree-Preorder-Traversal/"
-           data-title="Binary-Tree-Preorder-Traversal" data-url="http://yoursite.com/2017/05/03/Binary-Tree-Preorder-Traversal/">
+      <div class="ds-thread" data-thread-key="2017/05/24/Decode-Ways/"
+           data-title="Decode-Ways" data-url="http://yoursite.com/2017/05/24/Decode-Ways/">
       </div>
     
   </div>
