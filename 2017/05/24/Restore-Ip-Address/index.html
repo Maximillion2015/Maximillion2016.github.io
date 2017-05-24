@@ -86,14 +86,14 @@
 
 <meta name="keywords" content="leetcode,Java,算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Same-Tree">
-<meta property="og:url" content="http://yoursite.com/2017/04/23/Same-Tree/index.html">
+<meta property="og:title" content="Restore-Ip-Address">
+<meta property="og:url" content="http://yoursite.com/2017/05/24/Restore-Ip-Address/index.html">
 <meta property="og:site_name" content="ephon的技术博客">
-<meta property="og:image" content="http://oon3lk745.bkt.clouddn.com/SameTree.png">
-<meta property="og:updated_time" content="2017-04-23T15:03:58.000Z">
+<meta property="og:image" content="http://oon3lk745.bkt.clouddn.com/RestoreIpAddress.png">
+<meta property="og:updated_time" content="2017-05-24T02:16:13.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Same-Tree">
-<meta name="twitter:image" content="http://oon3lk745.bkt.clouddn.com/SameTree.png">
+<meta name="twitter:title" content="Restore-Ip-Address">
+<meta name="twitter:image" content="http://oon3lk745.bkt.clouddn.com/RestoreIpAddress.png">
 
 
 
@@ -111,7 +111,7 @@
   };
 </script>
 
-  <title> Same-Tree | ephon的技术博客 </title>
+  <title> Restore-Ip-Address | ephon的技术博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -251,7 +251,7 @@
             
             
               
-                Same-Tree
+                Restore-Ip-Address
               
             
           </h1>
@@ -263,8 +263,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-04-23T23:02:18+08:00" content="2017-04-23">
-              2017-04-23
+            <time itemprop="dateCreated" datetime="2017-05-24T10:15:31+08:00" content="2017-05-24">
+              2017-05-24
             </time>
           </span>
 
@@ -293,8 +293,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/04/23/Same-Tree/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/23/Same-Tree/" itemprop="commentsCount"></span>
+                <a href="/2017/05/24/Restore-Ip-Address/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/05/24/Restore-Ip-Address/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -322,9 +322,9 @@
       
 
       
-        <p><img src="http://oon3lk745.bkt.clouddn.com/SameTree.png" alt="avatar"></p>
+        <p><img src="http://oon3lk745.bkt.clouddn.com/RestoreIpAddress.png" alt="avator"></p>
 <a id="more"></a>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * Definition for binary tree</div><div class="line"> * public class TreeNode &#123;</div><div class="line"> *     int val;</div><div class="line"> *     TreeNode left;</div><div class="line"> *     TreeNode right;</div><div class="line"> *     TreeNode(int x) &#123; val = x; &#125;</div><div class="line"> * &#125;</div><div class="line"> */</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SameTree</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isSameTree</span><span class="params">(TreeNode p, TreeNode q)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span> (p == <span class="keyword">null</span> || q == <span class="keyword">null</span>) <span class="keyword">return</span> p == q;</div><div class="line"></div><div class="line">        <span class="keyword">return</span> p.val == q.val &amp;&amp; isSameTree(p.left, q.left) &amp;&amp; isSameTree(p.right, q.right);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> leetcode;</div><div class="line"></div><div class="line"><span class="keyword">import</span> java.util.ArrayList;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RestoreIpAddress</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> ArrayList&lt;String&gt; <span class="title">restoreIpAddresses</span><span class="params">(String s)</span> </span>&#123;</div><div class="line">        ArrayList&lt;String&gt; result = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line"></div><div class="line">        <span class="keyword">int</span> length = s.length();</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">3</span>; i++) &#123;</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= <span class="number">3</span>; j++) &#123;</div><div class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> m = <span class="number">1</span>; m &lt;= <span class="number">3</span>; m++) &#123;</div><div class="line">                    <span class="keyword">for</span> (<span class="keyword">int</span> n = <span class="number">1</span>; n &lt;= <span class="number">3</span>; n++) &#123;</div><div class="line">                        <span class="keyword">if</span> (i + j + m + n == length) &#123;</div><div class="line">                            String one = s.substring(<span class="number">0</span>, i);</div><div class="line">                            String two = s.substring(i, i+j);</div><div class="line">                            String three = s.substring(i+j, i+j+m);</div><div class="line">                            String four = s.substring(i+j+m, i+j+m+n);</div><div class="line"></div><div class="line">                            <span class="keyword">if</span> ((Integer.valueOf(one) &gt;= <span class="number">0</span> &amp;&amp; Integer.valueOf(one) &lt;= <span class="number">255</span>) &amp;&amp; (Integer.valueOf(two) &gt;= <span class="number">0</span> &amp;&amp; Integer.valueOf(two) &lt;= <span class="number">255</span>) &amp;&amp; (Integer.valueOf(three) &gt;= <span class="number">0</span> &amp;&amp; Integer.valueOf(three) &lt;= <span class="number">255</span>) &amp;&amp; (Integer.valueOf(four) &gt;= <span class="number">0</span> &amp;&amp; Integer.valueOf(four) &lt;= <span class="number">255</span>)) &#123;</div><div class="line">                                <span class="keyword">if</span> (one.length() == <span class="number">1</span> || one.charAt(<span class="number">0</span>) != <span class="string">'0'</span>)</div><div class="line">                                    <span class="keyword">if</span> (two.length() == <span class="number">1</span> || two.charAt(<span class="number">0</span>) != <span class="string">'0'</span>)</div><div class="line">                                        <span class="keyword">if</span> (three.length() == <span class="number">1</span> || three.charAt(<span class="number">0</span>) != <span class="string">'0'</span>)</div><div class="line">                                            <span class="keyword">if</span> (four.length() == <span class="number">1</span> || four.charAt(<span class="number">0</span>) != <span class="string">'0'</span>)</div><div class="line">                                                result.add(one+<span class="string">"."</span>+two+<span class="string">"."</span>+three+<span class="string">"."</span>+four);</div><div class="line">                            &#125;</div><div class="line">                        &#125;</div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">return</span> result;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -358,16 +358,12 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/24/Binary-Tree-Inorder-Traversal/" rel="next" title="Binary-Tree-Inorder-Traversal">
-                <i class="fa fa-chevron-left"></i> Binary-Tree-Inorder-Traversal
-              </a>
-            
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/04/23/Maxmum-Depth-Of-Binary-Tree/" rel="prev" title="Maxmum-Depth-Of-Binary-Tree">
-                Maxmum-Depth-Of-Binary-Tree <i class="fa fa-chevron-right"></i>
+              <a href="/2017/05/23/Interleaving-String/" rel="prev" title="Interleaving-String">
+                Interleaving-String <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -394,8 +390,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/04/23/Same-Tree/"
-           data-title="Same-Tree" data-url="http://yoursite.com/2017/04/23/Same-Tree/">
+      <div class="ds-thread" data-thread-key="2017/05/24/Restore-Ip-Address/"
+           data-title="Restore-Ip-Address" data-url="http://yoursite.com/2017/05/24/Restore-Ip-Address/">
       </div>
     
   </div>
