@@ -84,16 +84,17 @@
 
 
 
+<meta name="description" content="题目描述:Given a string S and a string T, count the number of distinct subsequences of T in S.A subsequence of a string is a new string which is formed from the original string by deleting some (can be n">
 <meta name="keywords" content="Java,leetcode,算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Sort-Colors">
-<meta property="og:url" content="http://yoursite.com/2017/05/25/Sort-Colors/index.html">
+<meta property="og:title" content="Distinct-SubSequences">
+<meta property="og:url" content="http://yoursite.com/2017/05/30/Distinct-SubSequences/index.html">
 <meta property="og:site_name" content="ephon的技术博客">
-<meta property="og:image" content="http://oon3lk745.bkt.clouddn.com/SortColors.png">
-<meta property="og:updated_time" content="2017-05-25T03:13:59.000Z">
+<meta property="og:description" content="题目描述:Given a string S and a string T, count the number of distinct subsequences of T in S.A subsequence of a string is a new string which is formed from the original string by deleting some (can be n">
+<meta property="og:updated_time" content="2017-05-30T15:37:40.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Sort-Colors">
-<meta name="twitter:image" content="http://oon3lk745.bkt.clouddn.com/SortColors.png">
+<meta name="twitter:title" content="Distinct-SubSequences">
+<meta name="twitter:description" content="题目描述:Given a string S and a string T, count the number of distinct subsequences of T in S.A subsequence of a string is a new string which is formed from the original string by deleting some (can be n">
 
 
 
@@ -111,7 +112,7 @@
   };
 </script>
 
-  <title> Sort-Colors | ephon的技术博客 </title>
+  <title> Distinct-SubSequences | ephon的技术博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -251,7 +252,7 @@
             
             
               
-                Sort-Colors
+                Distinct-SubSequences
               
             
           </h1>
@@ -263,8 +264,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-05-25T11:12:19+08:00" content="2017-05-25">
-              2017-05-25
+            <time itemprop="dateCreated" datetime="2017-05-30T23:37:03+08:00" content="2017-05-30">
+              2017-05-30
             </time>
           </span>
 
@@ -293,8 +294,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/05/25/Sort-Colors/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/05/25/Sort-Colors/" itemprop="commentsCount"></span>
+                <a href="/2017/05/30/Distinct-SubSequences/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/05/30/Distinct-SubSequences/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -322,9 +323,12 @@
       
 
       
-        <p><img src="http://oon3lk745.bkt.clouddn.com/SortColors.png" alt="avator"></p>
-<a id="more"></a>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> leetcode;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SortColors</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sortColors</span><span class="params">(<span class="keyword">int</span>[] A)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span> (A.length &lt;= <span class="number">0</span>) <span class="keyword">return</span>;</div><div class="line">        <span class="keyword">int</span> redLength = <span class="number">0</span>;</div><div class="line">        <span class="keyword">int</span> whiteLength = <span class="number">0</span>;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; A.length; i++) &#123;</div><div class="line">            <span class="keyword">if</span> (A[i] == <span class="number">0</span>) redLength++;</div><div class="line">            <span class="keyword">if</span> (A[i] == <span class="number">1</span>) whiteLength++;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; redLength; i++) &#123;</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = redLength; j &lt; A.length; j++) &#123;</div><div class="line">                <span class="keyword">if</span> (A[i] != <span class="number">0</span> &amp;&amp; A[j] == <span class="number">0</span>) A[i] = A[j] ^ A[i] ^ (A[j] = A[i]);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = redLength; i &lt; redLength+whiteLength; i++) &#123;</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = redLength + whiteLength; j &lt; A.length; j++) &#123;</div><div class="line">                <span class="keyword">if</span> (A[i] != <span class="number">1</span> &amp;&amp; A[j] == <span class="number">1</span>) A[i] = A[j] ^ A[i] ^ (A[j] = A[i]);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        <blockquote>
+<p>题目描述:Given a string S and a string T, count the number of distinct subsequences of T in S.<br>A subsequence of a string is a new string which is formed from the original string by deleting some (can be none) of the characters without disturbing the relative positions of the remaining characters. (ie,”ACE”is a subsequence of”ABCDE”while”AEC”is not).<br>Here is an example:<br>S =”rabbbit”, T =”rabbit”<br>Return3.</p>
+</blockquote>
+<p>一开始使用递归做，复杂度过高：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DistinctSubSequences</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">numDistinct</span><span class="params">(String S, String T)</span> </span>&#123;</div><div class="line">        <span class="keyword">int</span> sLength = S.length();</div><div class="line">        <span class="keyword">int</span> tLength = T.length();</div><div class="line">        <span class="keyword">int</span>[][] array = initArray(S, T, sLength, tLength);</div><div class="line"></div><div class="line">        <span class="keyword">return</span> sumSubSequences(array, <span class="number">0</span>, <span class="number">0</span>, sLength, tLength);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">sumSubSequences</span><span class="params">(<span class="keyword">int</span>[][] array, <span class="keyword">int</span> s, <span class="keyword">int</span> t, <span class="keyword">int</span> sLength, <span class="keyword">int</span> tLength)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span> (sLength-s &lt; tLength-t || s &gt; sLength - <span class="number">1</span> || t &gt; tLength - <span class="number">1</span>) <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (array[s][t] == <span class="number">0</span>) <span class="keyword">return</span> sumSubSequences(array, s+<span class="number">1</span>, t, sLength, tLength);</div><div class="line">        <span class="keyword">else</span> <span class="keyword">if</span> ((t == tLength - <span class="number">1</span>))  <span class="keyword">return</span> sumSubSequences(array, s+<span class="number">1</span>, t, sLength, tLength) + <span class="number">1</span>;</div><div class="line">        <span class="keyword">else</span> <span class="keyword">return</span> sumSubSequences(array, s+<span class="number">1</span>, t+<span class="number">1</span>, sLength, tLength) + sumSubSequences(array, s+<span class="number">1</span>, t, sLength, tLength);</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[][] initArray(String S, String T, <span class="keyword">int</span> sLength, <span class="keyword">int</span> tLength) &#123;</div><div class="line">        <span class="keyword">int</span>[][] array = <span class="keyword">new</span> <span class="keyword">int</span>[sLength][tLength];</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> s = <span class="number">0</span>; s &lt; sLength; s++) &#123;</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> t = <span class="number">0</span>; t &lt; tLength; t++) &#123;</div><div class="line">                <span class="keyword">if</span> (S.charAt(s) == T.charAt(t))</div><div class="line">                    array[s][t] = <span class="number">1</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> array;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>后来查看讨论区代码，使用动态规划更加简便</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DistinctSubSequences</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">numDistinct</span><span class="params">(String S, String T)</span> </span>&#123;</div><div class="line">        <span class="keyword">int</span> row = S.length() + <span class="number">1</span>;</div><div class="line">        <span class="keyword">int</span> col = T.length() + <span class="number">1</span>;</div><div class="line">        <span class="keyword">int</span>[][] dp = <span class="keyword">new</span> <span class="keyword">int</span>[row][col];</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; col; i++) &#123;</div><div class="line">            dp[<span class="number">0</span>][i] = <span class="number">0</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; row; i++) &#123;</div><div class="line">            dp[i][<span class="number">0</span>] = <span class="number">1</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; row; i++) &#123;</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; col; j++) &#123;</div><div class="line">                <span class="keyword">if</span> (S.charAt(i - <span class="number">1</span>) == T.charAt(j - <span class="number">1</span>)) &#123;</div><div class="line">                    dp[i][j] = dp[i - <span class="number">1</span>][j - <span class="number">1</span>] + dp[i - <span class="number">1</span>][j];</div><div class="line">                &#125; <span class="keyword">else</span> &#123;</div><div class="line">                    dp[i][j] = dp[i - <span class="number">1</span>][j];</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> dp[row - <span class="number">1</span>][col - <span class="number">1</span>];</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -358,16 +362,12 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/05/25/Set-Matrix-Zeros/" rel="next" title="Set-Matrix-Zeros">
-                <i class="fa fa-chevron-left"></i> Set-Matrix-Zeros
-              </a>
-            
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/05/24/Decode-Ways/" rel="prev" title="Decode-Ways">
-                Decode-Ways <i class="fa fa-chevron-right"></i>
+              <a href="/2017/05/30/Pascals-Triangle-II/" rel="prev" title="Pascals-Triangle-II">
+                Pascals-Triangle-II <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -394,8 +394,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/05/25/Sort-Colors/"
-           data-title="Sort-Colors" data-url="http://yoursite.com/2017/05/25/Sort-Colors/">
+      <div class="ds-thread" data-thread-key="2017/05/30/Distinct-SubSequences/"
+           data-title="Distinct-SubSequences" data-url="http://yoursite.com/2017/05/30/Distinct-SubSequences/">
       </div>
     
   </div>
