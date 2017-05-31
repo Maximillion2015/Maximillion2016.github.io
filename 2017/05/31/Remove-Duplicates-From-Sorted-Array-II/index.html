@@ -86,14 +86,14 @@
 
 <meta name="keywords" content="leetcode,Java,算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Gray-Code">
-<meta property="og:url" content="http://yoursite.com/2017/04/29/Gray-Code/index.html">
+<meta property="og:title" content="Remove-Duplicates-From-Sorted-Array-II">
+<meta property="og:url" content="http://yoursite.com/2017/05/31/Remove-Duplicates-From-Sorted-Array-II/index.html">
 <meta property="og:site_name" content="ephon的技术博客">
-<meta property="og:image" content="http://oon3lk745.bkt.clouddn.com/GrayCode.png">
-<meta property="og:updated_time" content="2017-04-29T07:40:23.000Z">
+<meta property="og:image" content="http://oon3lk745.bkt.clouddn.com/RemoveDuplicatesFromSortedArrayII.png">
+<meta property="og:updated_time" content="2017-05-31T09:07:06.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Gray-Code">
-<meta name="twitter:image" content="http://oon3lk745.bkt.clouddn.com/GrayCode.png">
+<meta name="twitter:title" content="Remove-Duplicates-From-Sorted-Array-II">
+<meta name="twitter:image" content="http://oon3lk745.bkt.clouddn.com/RemoveDuplicatesFromSortedArrayII.png">
 
 
 
@@ -111,7 +111,7 @@
   };
 </script>
 
-  <title> Gray-Code | ephon的技术博客 </title>
+  <title> Remove-Duplicates-From-Sorted-Array-II | ephon的技术博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -251,7 +251,7 @@
             
             
               
-                Gray-Code
+                Remove-Duplicates-From-Sorted-Array-II
               
             
           </h1>
@@ -263,8 +263,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-04-29T15:39:43+08:00" content="2017-04-29">
-              2017-04-29
+            <time itemprop="dateCreated" datetime="2017-05-31T17:06:38+08:00" content="2017-05-31">
+              2017-05-31
             </time>
           </span>
 
@@ -293,8 +293,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/04/29/Gray-Code/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/29/Gray-Code/" itemprop="commentsCount"></span>
+                <a href="/2017/05/31/Remove-Duplicates-From-Sorted-Array-II/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/05/31/Remove-Duplicates-From-Sorted-Array-II/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -322,9 +322,9 @@
       
 
       
-        <p><img src="http://oon3lk745.bkt.clouddn.com/GrayCode.png" alt="avator"></p>
+        <p><img src="http://oon3lk745.bkt.clouddn.com/RemoveDuplicatesFromSortedArrayII.png" alt="avator"></p>
 <a id="more"></a>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.util.ArrayList;</div><div class="line"><span class="keyword">import</span> java.util.Collections;</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> ArrayList&lt;Integer&gt; <span class="title">grayCode</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</div><div class="line">        ArrayList&lt;Integer&gt; resultList = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">        <span class="keyword">if</span> (n &lt; <span class="number">0</span>) <span class="keyword">return</span> resultList;</div><div class="line">        resultList.add(<span class="number">0</span>);</div><div class="line">        <span class="keyword">if</span> (n == <span class="number">0</span>) <span class="keyword">return</span> resultList;</div><div class="line">        <span class="keyword">int</span> index = <span class="number">0</span>;</div><div class="line">        <span class="keyword">while</span> (index != n) &#123;</div><div class="line">            ArrayList&lt;Integer&gt; temp = <span class="keyword">new</span> ArrayList(resultList);</div><div class="line">            Collections.reverse(temp);</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; temp.size(); i++) &#123;</div><div class="line">                temp.set(i, temp.get(i) + (<span class="keyword">int</span>)Math.pow(<span class="number">2</span>, index));</div><div class="line">            &#125;</div><div class="line">            resultList.addAll(temp);</div><div class="line">            index++;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">return</span> resultList;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RemoveDuplicatesFromSortedArrayII</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">removeDuplicates</span><span class="params">(<span class="keyword">int</span>[] A)</span> </span>&#123;</div><div class="line">        <span class="keyword">int</span> n = <span class="number">2</span>;</div><div class="line">        <span class="keyword">int</span> index = <span class="number">2</span>;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt; A.length; i++) &#123;</div><div class="line">            <span class="keyword">if</span> (A[index-<span class="number">2</span>] != A[i]) &#123;</div><div class="line">                A[index++] = A[i];</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> index;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -358,16 +358,12 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/29/Unique-Binary-Search-Tree/" rel="next" title="Unique-Binary-Search-Tree">
-                <i class="fa fa-chevron-left"></i> Unique-Binary-Search-Tree
-              </a>
-            
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/04/29/Convert-Sorted-Array-To-Binary-Search-Tree/" rel="prev" title="Convert-Sorted-Array-To-Binary-Search-Tree">
-                Convert-Sorted-Array-To-Binary-Search-Tree <i class="fa fa-chevron-right"></i>
+              <a href="/2017/05/31/Search-In-Rotated-Sorted-Array-II/" rel="prev" title="Search-In-Rotated-Sorted-Array-II">
+                Search-In-Rotated-Sorted-Array-II <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -394,8 +390,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/04/29/Gray-Code/"
-           data-title="Gray-Code" data-url="http://yoursite.com/2017/04/29/Gray-Code/">
+      <div class="ds-thread" data-thread-key="2017/05/31/Remove-Duplicates-From-Sorted-Array-II/"
+           data-title="Remove-Duplicates-From-Sorted-Array-II" data-url="http://yoursite.com/2017/05/31/Remove-Duplicates-From-Sorted-Array-II/">
       </div>
     
   </div>

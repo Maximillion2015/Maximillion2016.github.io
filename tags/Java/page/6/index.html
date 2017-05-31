@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="leetcode,Java,算法," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -84,16 +84,15 @@
 
 
 
-<meta name="keywords" content="leetcode,Java,算法">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Gray-Code">
-<meta property="og:url" content="http://yoursite.com/2017/04/29/Gray-Code/index.html">
+<meta name="description" content="女朋友一直喊我程序猿猴">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ephon的技术博客">
+<meta property="og:url" content="http://yoursite.com/tags/Java/page/6/index.html">
 <meta property="og:site_name" content="ephon的技术博客">
-<meta property="og:image" content="http://oon3lk745.bkt.clouddn.com/GrayCode.png">
-<meta property="og:updated_time" content="2017-04-29T07:40:23.000Z">
+<meta property="og:description" content="女朋友一直喊我程序猿猴">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Gray-Code">
-<meta name="twitter:image" content="http://oon3lk745.bkt.clouddn.com/GrayCode.png">
+<meta name="twitter:title" content="ephon的技术博客">
+<meta name="twitter:description" content="女朋友一直喊我程序猿猴">
 
 
 
@@ -111,7 +110,7 @@
   };
 </script>
 
-  <title> Gray-Code | ephon的技术博客 </title>
+  <title> 标签: Java | ephon的技术博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -132,7 +131,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container one-collumn sidebar-position-left  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -230,161 +229,50 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                Gray-Code
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-04-29T15:39:43+08:00" content="2017-04-29">
-              2017-04-29
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/leetcode/" itemprop="url" rel="index">
-                    <span itemprop="name">leetcode</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2017/04/29/Gray-Code/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/29/Gray-Code/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-       
-          
-          <span id="busuanzi_container_page_pv">  |  阅读量 <span id="busuanzi_value_page_pv"></span> 次</span>
-          
-
-         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <p><img src="http://oon3lk745.bkt.clouddn.com/GrayCode.png" alt="avator"></p>
-<a id="more"></a>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.util.ArrayList;</div><div class="line"><span class="keyword">import</span> java.util.Collections;</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> ArrayList&lt;Integer&gt; <span class="title">grayCode</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</div><div class="line">        ArrayList&lt;Integer&gt; resultList = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">        <span class="keyword">if</span> (n &lt; <span class="number">0</span>) <span class="keyword">return</span> resultList;</div><div class="line">        resultList.add(<span class="number">0</span>);</div><div class="line">        <span class="keyword">if</span> (n == <span class="number">0</span>) <span class="keyword">return</span> resultList;</div><div class="line">        <span class="keyword">int</span> index = <span class="number">0</span>;</div><div class="line">        <span class="keyword">while</span> (index != n) &#123;</div><div class="line">            ArrayList&lt;Integer&gt; temp = <span class="keyword">new</span> ArrayList(resultList);</div><div class="line">            Collections.reverse(temp);</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; temp.size(); i++) &#123;</div><div class="line">                temp.set(i, temp.get(i) + (<span class="keyword">int</span>)Math.pow(<span class="number">2</span>, index));</div><div class="line">            &#125;</div><div class="line">            resultList.addAll(temp);</div><div class="line">            index++;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">return</span> resultList;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-      
+  <div id="posts" class="posts-collapse">
+    <div class="collection-title">
+      <h2 >
+        Java
+        <small>标签</small>
+      </h2>
     </div>
 
-    <div>
+    
       
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
         
-      
-    </div>
-
-    <div>
-      
+            <a class="post-title-link" href="/2017/04/17/Pascals-Triangle/" itemprop="url">
+              
+                <span itemprop="name">Pascals-Triangle</span>
+              
+            </a>
         
+      </h1>
 
-      
-    </div>
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2017-04-17T14:05:09+08:00"
+              content="2017-04-17" >
+          04-17
+        </time>
+      </div>
 
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/leetcode/" rel="tag">#leetcode</a>
-          
-            <a href="/tags/Java/" rel="tag">#Java</a>
-          
-            <a href="/tags/算法/" rel="tag">#算法</a>
-          
-        </div>
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2017/04/29/Unique-Binary-Search-Tree/" rel="next" title="Unique-Binary-Search-Tree">
-                <i class="fa fa-chevron-left"></i> Unique-Binary-Search-Tree
-              </a>
-            
-          </div>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/04/29/Convert-Sorted-Array-To-Binary-Search-Tree/" rel="prev" title="Convert-Sorted-Array-To-Binary-Search-Tree">
-                Convert-Sorted-Array-To-Binary-Search-Tree <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
+    </header>
   </article>
 
 
-
-    <div class="post-spread">
-      
-    </div>
+    
   </div>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/tags/Java/page/5/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/tags/Java/">1</a><span class="space">&hellip;</span><a class="page-number" href="/tags/Java/page/5/">5</a><span class="page-number current">6</span>
+  </nav>
+
 
 
           </div>
@@ -392,14 +280,6 @@
 
 
           
-  <div class="comments" id="comments">
-    
-      <div class="ds-thread" data-thread-key="2017/04/29/Gray-Code/"
-           data-title="Gray-Code" data-url="http://yoursite.com/2017/04/29/Gray-Code/">
-      </div>
-    
-  </div>
-
 
         </div>
         
@@ -419,17 +299,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel ">
+      <section class="site-overview sidebar-panel  sidebar-panel-active ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://o7dejg5ls.bkt.clouddn.com/image%3Ajpg%3Aicon.jpg"
@@ -499,17 +370,6 @@
 
       </section>
 
-      
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-            
-              
-            
-            
-              <p class="post-toc-empty">此文章未包含目录</p>
-            
-          </div>
-        </section>
       
 
     </div>
@@ -603,10 +463,6 @@
   
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
-
-
 
   
 
