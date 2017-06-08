@@ -84,17 +84,16 @@
 
 
 
-<meta name="description" content="题目描述:Given an index k, return the kth row of the Pascal’s triangle.For example, given k = 3,Return[1,3,3,1]. Note:Could you optimize your algorithm to use only O(k) extra space?  12345678910111213141">
 <meta name="keywords" content="Java,leetcode,算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Pascals-Triangle-II">
-<meta property="og:url" content="http://yoursite.com/2017/05/30/Pascals-Triangle-II/index.html">
+<meta property="og:title" content="Word-Search">
+<meta property="og:url" content="http://yoursite.com/2017/06/08/Word-Search/index.html">
 <meta property="og:site_name" content="ephon的技术博客">
-<meta property="og:description" content="题目描述:Given an index k, return the kth row of the Pascal’s triangle.For example, given k = 3,Return[1,3,3,1]. Note:Could you optimize your algorithm to use only O(k) extra space?  12345678910111213141">
-<meta property="og:updated_time" content="2017-05-30T15:36:08.000Z">
+<meta property="og:image" content="http://oon3lk745.bkt.clouddn.com/WordSearch.png">
+<meta property="og:updated_time" content="2017-06-08T02:40:24.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Pascals-Triangle-II">
-<meta name="twitter:description" content="题目描述:Given an index k, return the kth row of the Pascal’s triangle.For example, given k = 3,Return[1,3,3,1]. Note:Could you optimize your algorithm to use only O(k) extra space?  12345678910111213141">
+<meta name="twitter:title" content="Word-Search">
+<meta name="twitter:image" content="http://oon3lk745.bkt.clouddn.com/WordSearch.png">
 
 
 
@@ -112,7 +111,7 @@
   };
 </script>
 
-  <title> Pascals-Triangle-II | ephon的技术博客 </title>
+  <title> Word-Search | ephon的技术博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -252,7 +251,7 @@
             
             
               
-                Pascals-Triangle-II
+                Word-Search
               
             
           </h1>
@@ -264,8 +263,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-05-30T23:35:23+08:00" content="2017-05-30">
-              2017-05-30
+            <time itemprop="dateCreated" datetime="2017-06-08T10:39:55+08:00" content="2017-06-08">
+              2017-06-08
             </time>
           </span>
 
@@ -294,8 +293,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/05/30/Pascals-Triangle-II/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/05/30/Pascals-Triangle-II/" itemprop="commentsCount"></span>
+                <a href="/2017/06/08/Word-Search/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/06/08/Word-Search/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -323,11 +322,9 @@
       
 
       
-        <blockquote>
-<p>题目描述:<br>Given an index k, return the kth row of the Pascal’s triangle.<br>For example, given k = 3,<br>Return[1,3,3,1].</p>
-<p>Note:<br>Could you optimize your algorithm to use only O(k) extra space?</p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.util.ArrayList;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PascalsTriangleII</span> </span>&#123;</div><div class="line">    <span class="keyword">public</span> ArrayList &lt;ArrayList&lt; Integer&gt;&gt; al = <span class="keyword">new</span> ArrayList();</div><div class="line">    <span class="function"><span class="keyword">public</span> ArrayList&lt;Integer&gt; <span class="title">getRow</span><span class="params">(<span class="keyword">int</span> rowIndex)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span> (rowIndex &lt; <span class="number">0</span>) <span class="keyword">return</span> <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">        ArrayList&lt;Integer&gt; al1 = <span class="keyword">new</span> ArrayList();</div><div class="line">        al1.add(<span class="number">1</span>);</div><div class="line">        al.add(al1);</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= rowIndex; i++) &#123;</div><div class="line">            ArrayList &lt; Integer&gt; temp = <span class="keyword">new</span> ArrayList();</div><div class="line">            ArrayList &lt; Integer&gt; oldAl = al.get(i-<span class="number">1</span>);</div><div class="line">            <span class="keyword">int</span> oldAlLength = oldAl.size();</div><div class="line">            temp.add(<span class="number">1</span>);</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; oldAlLength - <span class="number">1</span>; j++) &#123;</div><div class="line">                temp.add(oldAl.get(j) + oldAl.get(j+<span class="number">1</span>));</div><div class="line">            &#125;</div><div class="line">            temp.add(<span class="number">1</span>);</div><div class="line">            al.add(temp);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">return</span> al.get(rowIndex);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        <p><img src="http://oon3lk745.bkt.clouddn.com/WordSearch.png" alt="avator"></p>
+<a id="more"></a>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">exist</span><span class="params">(<span class="keyword">char</span>[][] board, String word)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span> (word.length() == <span class="number">0</span>) <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">        <span class="keyword">boolean</span> isExist = <span class="keyword">false</span>;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; board.length; i++) &#123;</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; board[i].length; j++) &#123;</div><div class="line">                <span class="keyword">if</span> (board[i][j] == word.charAt(<span class="number">0</span>)) &#123;</div><div class="line">                    isExist |= existHelper(board, word, i, j);</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> isExist;</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">existHelper</span><span class="params">(<span class="keyword">char</span>[][] board, String word, <span class="keyword">int</span> i, <span class="keyword">int</span> j)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span> (word.length() == <span class="number">1</span> &amp;&amp; board[i][j] == word.charAt(<span class="number">0</span>)) <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">        <span class="keyword">boolean</span> isUpExist = <span class="keyword">false</span>;</div><div class="line">        <span class="keyword">boolean</span> isLeftExist = <span class="keyword">false</span>;</div><div class="line">        <span class="keyword">boolean</span> isRightExist = <span class="keyword">false</span>;</div><div class="line">        <span class="keyword">boolean</span> isDownExist = <span class="keyword">false</span>;</div><div class="line">        <span class="keyword">if</span> (board[i][j] == word.charAt(<span class="number">0</span>)) &#123;</div><div class="line">            <span class="keyword">char</span>[][] tempBoard = <span class="keyword">new</span> <span class="keyword">char</span>[board.length][board[<span class="number">0</span>].length];</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> p = <span class="number">0</span>; p &lt; board.length; p++) &#123;</div><div class="line">                tempBoard[p] = board[p].clone();</div><div class="line">            &#125;</div><div class="line">            tempBoard[i][j] = <span class="string">'0'</span>;</div><div class="line">            <span class="keyword">if</span> (i &gt; <span class="number">0</span>) isUpExist = existHelper(tempBoard, word.substring(<span class="number">1</span>), i - <span class="number">1</span>, j);</div><div class="line">            <span class="keyword">if</span> (isUpExist) <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">            <span class="keyword">if</span> (i &lt; board.length - <span class="number">1</span>) isDownExist = existHelper(tempBoard, word.substring(<span class="number">1</span>), i + <span class="number">1</span>, j);</div><div class="line">            <span class="keyword">if</span> (isDownExist) <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">            <span class="keyword">if</span> (j &gt; <span class="number">0</span>) isLeftExist = existHelper(tempBoard, word.substring(<span class="number">1</span>), i, j - <span class="number">1</span>);</div><div class="line">            <span class="keyword">if</span> (isLeftExist) <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">            <span class="keyword">if</span> (j &lt; board[i].length - <span class="number">1</span>) isRightExist = existHelper(tempBoard, word.substring(<span class="number">1</span>), i, j + <span class="number">1</span>);</div><div class="line">            <span class="keyword">if</span> (isRightExist) <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -361,16 +358,12 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/05/30/Distinct-SubSequences/" rel="next" title="Distinct-SubSequences">
-                <i class="fa fa-chevron-left"></i> Distinct-SubSequences
-              </a>
-            
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/05/29/Merge-Sorted-Array/" rel="prev" title="Merge-Sorted-Array">
-                Merge-Sorted-Array <i class="fa fa-chevron-right"></i>
+              <a href="/2017/06/07/Subsets/" rel="prev" title="Subsets">
+                Subsets <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -397,8 +390,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/05/30/Pascals-Triangle-II/"
-           data-title="Pascals-Triangle-II" data-url="http://yoursite.com/2017/05/30/Pascals-Triangle-II/">
+      <div class="ds-thread" data-thread-key="2017/06/08/Word-Search/"
+           data-title="Word-Search" data-url="http://yoursite.com/2017/06/08/Word-Search/">
       </div>
     
   </div>
