@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Java,leetcode,算法," />
+  <meta name="keywords" content="leetcode,Java,算法," />
 
 
 
@@ -84,16 +84,16 @@
 
 
 
-<meta name="keywords" content="Java,leetcode,算法">
+<meta name="keywords" content="leetcode,Java,算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Binary-Tree-Lever-Order-Traversal">
-<meta property="og:url" content="http://yoursite.com/2017/04/25/Binary-Tree-Lever-Order-Traversal/index.html">
+<meta property="og:title" content="Remove-Duplicates-From-SortedList-II">
+<meta property="og:url" content="http://yoursite.com/2017/06/10/Remove-Duplicates-From-SortedList-II/index.html">
 <meta property="og:site_name" content="ephon的技术博客">
-<meta property="og:image" content="http://oon3lk745.bkt.clouddn.com/BinaryTreeLeverOrderTraversal.png">
-<meta property="og:updated_time" content="2017-04-25T11:57:32.000Z">
+<meta property="og:image" content="http://oon3lk745.bkt.clouddn.com/RemoveDuplicatesFromSortedListII.png">
+<meta property="og:updated_time" content="2017-06-10T07:37:11.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Binary-Tree-Lever-Order-Traversal">
-<meta name="twitter:image" content="http://oon3lk745.bkt.clouddn.com/BinaryTreeLeverOrderTraversal.png">
+<meta name="twitter:title" content="Remove-Duplicates-From-SortedList-II">
+<meta name="twitter:image" content="http://oon3lk745.bkt.clouddn.com/RemoveDuplicatesFromSortedListII.png">
 
 
 
@@ -111,7 +111,7 @@
   };
 </script>
 
-  <title> Binary-Tree-Lever-Order-Traversal | ephon的技术博客 </title>
+  <title> Remove-Duplicates-From-SortedList-II | ephon的技术博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -251,7 +251,7 @@
             
             
               
-                Binary-Tree-Lever-Order-Traversal
+                Remove-Duplicates-From-SortedList-II
               
             
           </h1>
@@ -263,8 +263,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-04-25T19:56:31+08:00" content="2017-04-25">
-              2017-04-25
+            <time itemprop="dateCreated" datetime="2017-06-10T15:36:23+08:00" content="2017-06-10">
+              2017-06-10
             </time>
           </span>
 
@@ -293,8 +293,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/04/25/Binary-Tree-Lever-Order-Traversal/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/25/Binary-Tree-Lever-Order-Traversal/" itemprop="commentsCount"></span>
+                <a href="/2017/06/10/Remove-Duplicates-From-SortedList-II/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/06/10/Remove-Duplicates-From-SortedList-II/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -322,10 +322,9 @@
       
 
       
-        <p><img src="http://oon3lk745.bkt.clouddn.com/BinaryTreeLeverOrderTraversal.png" alt="avator"></p>
+        <p><img src="http://oon3lk745.bkt.clouddn.com/RemoveDuplicatesFromSortedListII.png" alt="avator"></p>
 <a id="more"></a>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BinaryTreeLeverOrderTraversal</span> </span>&#123;</div><div class="line">    <span class="keyword">public</span> ArrayList&lt;ArrayList&lt;Integer&gt;&gt; levelOrder(TreeNode root) &#123;</div><div class="line">        ArrayList&lt;ArrayList&lt;Integer&gt;&gt; result = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">        <span class="keyword">if</span> (root == <span class="keyword">null</span>) <span class="keyword">return</span> result;</div><div class="line"></div><div class="line">        Queue&lt;TreeNode&gt; oldQueue = <span class="keyword">new</span> LinkedList&lt;&gt;();</div><div class="line">        Queue&lt;TreeNode&gt; newQueue = <span class="keyword">new</span> LinkedList&lt;&gt;();</div><div class="line">        oldQueue.add(root);</div><div class="line">        ArrayList&lt;Integer&gt; tempList = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line"></div><div class="line">        <span class="keyword">while</span> (!oldQueue.isEmpty() || !newQueue.isEmpty()) &#123;</div><div class="line">            <span class="keyword">while</span> (!oldQueue.isEmpty()) &#123;</div><div class="line">                TreeNode node = oldQueue.peek();</div><div class="line">                tempList.add(node.val);</div><div class="line">                <span class="keyword">if</span> (node.left != <span class="keyword">null</span>) newQueue.add(node.left);</div><div class="line">                <span class="keyword">if</span> (node.right != <span class="keyword">null</span>) newQueue.add(node.right);</div><div class="line">                oldQueue.remove(oldQueue.peek());</div><div class="line">            &#125;</div><div class="line">            result.add( tempList);</div><div class="line">            tempList = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">            oldQueue.addAll(newQueue);</div><div class="line">            newQueue.clear();</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">return</span> result;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.util.HashMap;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RemoveDuplicatesFromSortedListII</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">deleteDuplicates</span><span class="params">(ListNode head)</span> </span>&#123;</div><div class="line">        HashMap&lt;Integer, Boolean&gt; map= <span class="keyword">new</span> HashMap&lt;&gt;();</div><div class="line">        ListNode node = head;</div><div class="line">        <span class="keyword">while</span> (node != <span class="keyword">null</span>) &#123;</div><div class="line">            <span class="keyword">if</span> (map.containsKey(node.val)) map.put(node.val, <span class="keyword">false</span>);</div><div class="line">            <span class="keyword">else</span> map.put(node.val, <span class="keyword">true</span>);</div><div class="line">            node = node.next;</div><div class="line">        &#125;</div><div class="line">        ListNode nodeHead = head;</div><div class="line">        <span class="keyword">while</span> (nodeHead != <span class="keyword">null</span> &amp;&amp; !map.get(nodeHead.val)) &#123;</div><div class="line">            nodeHead = nodeHead.next;</div><div class="line">        &#125;</div><div class="line">        node = nodeHead;</div><div class="line">        <span class="keyword">while</span> (node != <span class="keyword">null</span> &amp;&amp; node.next != <span class="keyword">null</span>) &#123;</div><div class="line">            <span class="keyword">if</span> (map.get(node.next.val)) node = node.next;</div><div class="line">            <span class="keyword">else</span>  node.next = node.next.next;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">return</span> nodeHead;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -346,9 +345,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Java/" rel="tag">#Java</a>
-          
             <a href="/tags/leetcode/" rel="tag">#leetcode</a>
+          
+            <a href="/tags/Java/" rel="tag">#Java</a>
           
             <a href="/tags/算法/" rel="tag">#算法</a>
           
@@ -359,16 +358,12 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/25/Subsets-II/" rel="next" title="Subsets-II">
-                <i class="fa fa-chevron-left"></i> Subsets-II
-              </a>
-            
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/04/25/Binary-Tree-Zigzag-Level-Order-Traversal/" rel="prev" title="Binary-Tree-Zigzag-Level-Order-Traversal">
-                Binary-Tree-Zigzag-Level-Order-Traversal <i class="fa fa-chevron-right"></i>
+              <a href="/2017/06/09/Combinations/" rel="prev" title="Combinations">
+                Combinations <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -395,8 +390,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/04/25/Binary-Tree-Lever-Order-Traversal/"
-           data-title="Binary-Tree-Lever-Order-Traversal" data-url="http://yoursite.com/2017/04/25/Binary-Tree-Lever-Order-Traversal/">
+      <div class="ds-thread" data-thread-key="2017/06/10/Remove-Duplicates-From-SortedList-II/"
+           data-title="Remove-Duplicates-From-SortedList-II" data-url="http://yoursite.com/2017/06/10/Remove-Duplicates-From-SortedList-II/">
       </div>
     
   </div>
@@ -441,7 +436,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">59</span>
+              <span class="site-state-item-count">85</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
