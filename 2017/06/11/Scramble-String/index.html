@@ -86,14 +86,15 @@
 
 <meta name="keywords" content="Java,leetcode,算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Word-Search">
-<meta property="og:url" content="http://yoursite.com/2017/06/08/Word-Search/index.html">
+<meta property="og:title" content="Scramble-String">
+<meta property="og:url" content="http://yoursite.com/2017/06/11/Scramble-String/index.html">
 <meta property="og:site_name" content="ephon的技术博客">
-<meta property="og:image" content="http://oon3lk745.bkt.clouddn.com/WordSearch.png">
-<meta property="og:updated_time" content="2017-06-08T02:40:24.000Z">
+<meta property="og:image" content="http://oon3lk745.bkt.clouddn.com/ScrambleString1.png">
+<meta property="og:image" content="http://oon3lk745.bkt.clouddn.com/ScrambleString2.png">
+<meta property="og:updated_time" content="2017-06-11T04:44:59.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Word-Search">
-<meta name="twitter:image" content="http://oon3lk745.bkt.clouddn.com/WordSearch.png">
+<meta name="twitter:title" content="Scramble-String">
+<meta name="twitter:image" content="http://oon3lk745.bkt.clouddn.com/ScrambleString1.png">
 
 
 
@@ -111,7 +112,7 @@
   };
 </script>
 
-  <title> Word-Search | ephon的技术博客 </title>
+  <title> Scramble-String | ephon的技术博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -251,7 +252,7 @@
             
             
               
-                Word-Search
+                Scramble-String
               
             
           </h1>
@@ -263,8 +264,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-06-08T10:39:55+08:00" content="2017-06-08">
-              2017-06-08
+            <time itemprop="dateCreated" datetime="2017-06-11T12:44:20+08:00" content="2017-06-11">
+              2017-06-11
             </time>
           </span>
 
@@ -293,8 +294,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/06/08/Word-Search/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/06/08/Word-Search/" itemprop="commentsCount"></span>
+                <a href="/2017/06/11/Scramble-String/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/06/11/Scramble-String/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -322,9 +323,10 @@
       
 
       
-        <p><img src="http://oon3lk745.bkt.clouddn.com/WordSearch.png" alt="avator"></p>
+        <p><img src="http://oon3lk745.bkt.clouddn.com/ScrambleString1.png" alt="avator"></p>
 <a id="more"></a>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">exist</span><span class="params">(<span class="keyword">char</span>[][] board, String word)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span> (word.length() == <span class="number">0</span>) <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">        <span class="keyword">boolean</span> isExist = <span class="keyword">false</span>;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; board.length; i++) &#123;</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; board[i].length; j++) &#123;</div><div class="line">                <span class="keyword">if</span> (board[i][j] == word.charAt(<span class="number">0</span>)) &#123;</div><div class="line">                    isExist |= existHelper(board, word, i, j);</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> isExist;</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">existHelper</span><span class="params">(<span class="keyword">char</span>[][] board, String word, <span class="keyword">int</span> i, <span class="keyword">int</span> j)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span> (word.length() == <span class="number">1</span> &amp;&amp; board[i][j] == word.charAt(<span class="number">0</span>)) <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">        <span class="keyword">boolean</span> isUpExist = <span class="keyword">false</span>;</div><div class="line">        <span class="keyword">boolean</span> isLeftExist = <span class="keyword">false</span>;</div><div class="line">        <span class="keyword">boolean</span> isRightExist = <span class="keyword">false</span>;</div><div class="line">        <span class="keyword">boolean</span> isDownExist = <span class="keyword">false</span>;</div><div class="line">        <span class="keyword">if</span> (board[i][j] == word.charAt(<span class="number">0</span>)) &#123;</div><div class="line">            <span class="keyword">char</span>[][] tempBoard = <span class="keyword">new</span> <span class="keyword">char</span>[board.length][board[<span class="number">0</span>].length];</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> p = <span class="number">0</span>; p &lt; board.length; p++) &#123;</div><div class="line">                tempBoard[p] = board[p].clone();</div><div class="line">            &#125;</div><div class="line">            tempBoard[i][j] = <span class="string">'0'</span>;</div><div class="line">            <span class="keyword">if</span> (i &gt; <span class="number">0</span>) isUpExist = existHelper(tempBoard, word.substring(<span class="number">1</span>), i - <span class="number">1</span>, j);</div><div class="line">            <span class="keyword">if</span> (isUpExist) <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">            <span class="keyword">if</span> (i &lt; board.length - <span class="number">1</span>) isDownExist = existHelper(tempBoard, word.substring(<span class="number">1</span>), i + <span class="number">1</span>, j);</div><div class="line">            <span class="keyword">if</span> (isDownExist) <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">            <span class="keyword">if</span> (j &gt; <span class="number">0</span>) isLeftExist = existHelper(tempBoard, word.substring(<span class="number">1</span>), i, j - <span class="number">1</span>);</div><div class="line">            <span class="keyword">if</span> (isLeftExist) <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">            <span class="keyword">if</span> (j &lt; board[i].length - <span class="number">1</span>) isRightExist = existHelper(tempBoard, word.substring(<span class="number">1</span>), i, j + <span class="number">1</span>);</div><div class="line">            <span class="keyword">if</span> (isRightExist) <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://oon3lk745.bkt.clouddn.com/ScrambleString2.png" alt="avator"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.util.Arrays;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ScrambleString</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isScramble</span><span class="params">(String s1, String s2)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span> (s1.length() == <span class="number">1</span>) <span class="keyword">return</span> s1.equals(s2);</div><div class="line">        <span class="keyword">if</span> (!isScrambleHelper(s1, s2)) <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line"></div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; s1.length(); i++) &#123;</div><div class="line">            String s1Left = s1.substring(<span class="number">0</span>, i);</div><div class="line">            String s1Right = s1.substring(i, s1.length());</div><div class="line">            String s2Left = s2.substring(<span class="number">0</span>, i);</div><div class="line">            String s2Right = s2.substring(i, s1.length());</div><div class="line"></div><div class="line">            <span class="keyword">if</span> (isScramble(s1Left, s2Left) &amp;&amp; isScramble(s1Right, s2Right)) <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line"></div><div class="line">            s2Left = s2.substring(<span class="number">0</span>, s1.length() - i);</div><div class="line">            s2Right = s2.substring(s1.length() - i, s1.length());</div><div class="line"></div><div class="line">            <span class="keyword">if</span> (isScramble(s1Left, s2Right) &amp;&amp; isScramble(s1Right, s2Left)) <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line"></div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isScrambleHelper</span><span class="params">(String s1, String s2)</span> </span>&#123;</div><div class="line">        <span class="keyword">int</span>[] scramble1 = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">127</span>];</div><div class="line">        <span class="keyword">int</span>[] scramble2 = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">127</span>];</div><div class="line"></div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; s1.length(); i++) &#123;</div><div class="line">            scramble1[s1.charAt(i)]++;</div><div class="line">            scramble2[s2.charAt(i)]++;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">return</span> Arrays.equals(scramble1, scramble2);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -358,16 +360,12 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/06/09/Combinations/" rel="next" title="Combinations">
-                <i class="fa fa-chevron-left"></i> Combinations
-              </a>
-            
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/06/07/Subsets/" rel="prev" title="Subsets">
-                Subsets <i class="fa fa-chevron-right"></i>
+              <a href="/2017/06/10/Remove-Duplicates-From-SortedList-II/" rel="prev" title="Remove-Duplicates-From-SortedList-II">
+                Remove-Duplicates-From-SortedList-II <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -394,8 +392,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/06/08/Word-Search/"
-           data-title="Word-Search" data-url="http://yoursite.com/2017/06/08/Word-Search/">
+      <div class="ds-thread" data-thread-key="2017/06/11/Scramble-String/"
+           data-title="Scramble-String" data-url="http://yoursite.com/2017/06/11/Scramble-String/">
       </div>
     
   </div>
