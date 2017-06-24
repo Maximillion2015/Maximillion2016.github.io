@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Java,leetcode,算法," />
 
 
 
@@ -84,15 +84,16 @@
 
 
 
-<meta name="description" content="女朋友一直喊我程序猿猴">
-<meta property="og:type" content="website">
-<meta property="og:title" content="ephon的技术博客">
-<meta property="og:url" content="http://yoursite.com/tags/格式字符串/index.html">
+<meta name="keywords" content="Java,leetcode,算法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PowX-N">
+<meta property="og:url" content="http://yoursite.com/2017/06/24/PowX-N/index.html">
 <meta property="og:site_name" content="ephon的技术博客">
-<meta property="og:description" content="女朋友一直喊我程序猿猴">
+<meta property="og:image" content="http://oon3lk745.bkt.clouddn.com/PowXN.png">
+<meta property="og:updated_time" content="2017-06-24T07:57:41.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ephon的技术博客">
-<meta name="twitter:description" content="女朋友一直喊我程序猿猴">
+<meta name="twitter:title" content="PowX-N">
+<meta name="twitter:image" content="http://oon3lk745.bkt.clouddn.com/PowXN.png">
 
 
 
@@ -110,7 +111,7 @@
   };
 </script>
 
-  <title> 标签: 格式字符串 | ephon的技术博客 </title>
+  <title> PowX-N | ephon的技术博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -131,7 +132,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -229,46 +230,157 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        格式字符串
-        <small>标签</small>
-      </h2>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                PowX-N
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-06-24T15:57:15+08:00" content="2017-06-24">
+              2017-06-24
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/leetcode/" itemprop="url" rel="index">
+                    <span itemprop="name">leetcode</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/06/24/PowX-N/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/06/24/PowX-N/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+       
+          
+          <span id="busuanzi_container_page_pv">  |  阅读量 <span id="busuanzi_value_page_pv"></span> 次</span>
+          
+
+         </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+        <p><img src="http://oon3lk745.bkt.clouddn.com/PowXN.png" alt="avator"></p>
+<a id="more"></a>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PowXN</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">pow</span><span class="params">(<span class="keyword">double</span> x, <span class="keyword">int</span> n)</span> </span>&#123;</div><div class="line">        <span class="keyword">int</span> absN = Math.abs(n);</div><div class="line">        <span class="keyword">double</span> result;</div><div class="line">        <span class="keyword">if</span> (absN == <span class="number">0</span>) result = <span class="number">1</span>;</div><div class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(absN == <span class="number">1</span>) result = x;</div><div class="line">        <span class="keyword">else</span> &#123;</div><div class="line">            <span class="keyword">double</span> half = pow(x, absN / <span class="number">2</span>);</div><div class="line">            <span class="keyword">if</span> (absN % <span class="number">2</span> == <span class="number">1</span>) result = half * half * x;</div><div class="line">            <span class="keyword">else</span> result = half * half;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">if</span> (n &gt; <span class="number">0</span>) <span class="keyword">return</span> result;</div><div class="line">        <span class="keyword">else</span> <span class="keyword">return</span> <span class="number">1</span> / result;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        System.out.println(<span class="keyword">new</span> PowXN().pow(<span class="number">10</span>, -<span class="number">3</span>));</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+    </div>
 
-      <h1 class="post-title">
+    <div>
+      
         
-            <a class="post-title-link" href="/2016/09/05/Python中格式字符串/" itemprop="url">
-              
-                <span itemprop="name">Python中格式字符串</span>
-              
-            </a>
+      
+    </div>
+
+    <div>
+      
         
-      </h1>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-09-05T20:06:07+08:00"
-              content="2016-09-05" >
-          09-05
-        </time>
-      </div>
+      
+    </div>
 
-    </header>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag">#Java</a>
+          
+            <a href="/tags/leetcode/" rel="tag">#leetcode</a>
+          
+            <a href="/tags/算法/" rel="tag">#算法</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/06/19/Add-Binary/" rel="prev" title="Add-Binary">
+                Add-Binary <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </div>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -276,6 +388,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/06/24/PowX-N/"
+           data-title="PowX-N" data-url="http://yoursite.com/2017/06/24/PowX-N/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -295,8 +415,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://o7dejg5ls.bkt.clouddn.com/image%3Ajpg%3Aicon.jpg"
@@ -366,6 +495,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -459,6 +599,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
