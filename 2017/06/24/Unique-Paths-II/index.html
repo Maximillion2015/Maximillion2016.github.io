@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Python3,StringIO," />
+  <meta name="keywords" content="leetcode,Java,算法," />
 
 
 
@@ -84,17 +84,16 @@
 
 
 
-<meta name="description" content="很多时候数据读写不一定是文件，也有可能是在内存中读写。StringIO顾名思义就是在内存中读写str。">
-<meta name="keywords" content="Python3,StringIO">
+<meta name="keywords" content="leetcode,Java,算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="StringIO">
-<meta property="og:url" content="http://yoursite.com/2016/06/09/StringIO/index.html">
+<meta property="og:title" content="Unique-Paths-II">
+<meta property="og:url" content="http://yoursite.com/2017/06/24/Unique-Paths-II/index.html">
 <meta property="og:site_name" content="ephon的技术博客">
-<meta property="og:description" content="很多时候数据读写不一定是文件，也有可能是在内存中读写。StringIO顾名思义就是在内存中读写str。">
-<meta property="og:updated_time" content="2016-06-09T11:39:14.000Z">
+<meta property="og:image" content="http://oon3lk745.bkt.clouddn.com/UniquePathsII.png">
+<meta property="og:updated_time" content="2017-06-24T08:17:12.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="StringIO">
-<meta name="twitter:description" content="很多时候数据读写不一定是文件，也有可能是在内存中读写。StringIO顾名思义就是在内存中读写str。">
+<meta name="twitter:title" content="Unique-Paths-II">
+<meta name="twitter:image" content="http://oon3lk745.bkt.clouddn.com/UniquePathsII.png">
 
 
 
@@ -112,7 +111,7 @@
   };
 </script>
 
-  <title> StringIO | ephon的技术博客 </title>
+  <title> Unique-Paths-II | ephon的技术博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -252,7 +251,7 @@
             
             
               
-                StringIO
+                Unique-Paths-II
               
             
           </h1>
@@ -264,8 +263,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-09T19:20:48+08:00" content="2016-06-09">
-              2016-06-09
+            <time itemprop="dateCreated" datetime="2017-06-24T16:16:42+08:00" content="2017-06-24">
+              2017-06-24
             </time>
           </span>
 
@@ -278,8 +277,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Python3/" itemprop="url" rel="index">
-                    <span itemprop="name">Python3</span>
+                  <a href="/categories/leetcode/" itemprop="url" rel="index">
+                    <span itemprop="name">leetcode</span>
                   </a>
                 </span>
 
@@ -294,8 +293,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/06/09/StringIO/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/09/StringIO/" itemprop="commentsCount"></span>
+                <a href="/2017/06/24/Unique-Paths-II/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/06/24/Unique-Paths-II/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -323,20 +322,9 @@
       
 
       
-        <p>很多时候数据读写不一定是文件，也有可能是在内存中读写。<br>StringIO顾名思义就是在内存中读写str。</p>
+        <p><img src="http://oon3lk745.bkt.clouddn.com/UniquePathsII.png" alt="avator"></p>
 <a id="more"></a>
-<p>在内存中写str有两种方法，一个是在<code>定义时</code>直接赋值，一个是用<code>write()</code>:</p>
-<p><strong>定义时</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> io <span class="keyword">import</span> StringIO</div><div class="line"></div><div class="line">f = StringIO(<span class="string">'nihao123'</span>)</div><div class="line"></div><div class="line">print(f.read())</div><div class="line">print(f.getvalue())</div><div class="line"></div><div class="line">----------------------------</div><div class="line">nihao123</div><div class="line">nihao123</div></pre></td></tr></table></figure>
-<p><strong>write</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> io <span class="keyword">import</span> StringIO</div><div class="line"></div><div class="line">f = StringIO()</div><div class="line"></div><div class="line">f.write(<span class="string">'Hello'</span>)</div><div class="line"></div><div class="line">f.write(<span class="string">' '</span>)</div><div class="line"></div><div class="line">f.write(<span class="string">'World!'</span>)</div><div class="line"></div><div class="line">---------------------------------</div><div class="line"></div><div class="line">Hello World!</div></pre></td></tr></table></figure>
-<p>这时奇怪的事情发生了，为什么第二段程序使用<code>read()</code>会输出空呢？</p>
-<p>原来是<code>stream position</code>搞的鬼，我们可以通过<code>tell()</code>方法来查看，通过<code>seek()</code>方法来修改：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">f = StringIO(<span class="string">'nihao123'</span>)</div><div class="line"></div><div class="line">print(f.tell())</div><div class="line"></div><div class="line">f.write(<span class="string">'Hello'</span>)</div><div class="line"></div><div class="line">print(f.tell())</div><div class="line"></div><div class="line">print(f.read())</div><div class="line">print(f.getvalue())</div><div class="line"></div><div class="line">---------------------------</div><div class="line"><span class="number">0</span></div><div class="line"><span class="number">5</span></div><div class="line"><span class="number">123</span></div><div class="line">Hello123</div></pre></td></tr></table></figure>
-<p>可以看到在初试化时写入，<code>stream position</code>是不变的，依然为<code>0</code>，而用<code>write()</code>写入时<code>stream position</code>会变，而<code>read()</code>方法是从当前的<code>stream position</code>向后读，<code>getvalue()</code>则是从<code>0</code>开始读，我们修改一下程序：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">f = StringIO(<span class="string">'nihao123'</span>)</div><div class="line"></div><div class="line">print(f.tell())</div><div class="line"></div><div class="line">f.write(<span class="string">'Hello'</span>)</div><div class="line"></div><div class="line">print(f.tell())</div><div class="line"></div><div class="line">f.seek(<span class="number">0</span>)</div><div class="line">print(f.tell())</div><div class="line"></div><div class="line">print(f.read())</div><div class="line">print(f.getvalue())</div><div class="line"></div><div class="line">--------------------------------</div><div class="line"><span class="number">0</span></div><div class="line"><span class="number">5</span></div><div class="line"><span class="number">0</span></div><div class="line">Hello123</div><div class="line">Hello123</div></pre></td></tr></table></figure>
-<p>哈哈，这下终于得到我们想要的啦~</p>
-
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> leetcode;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UniquePathsII</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">uniquePathsWithObstacles</span><span class="params">(<span class="keyword">int</span>[][] obstacleGrid)</span> </span>&#123;</div><div class="line">        <span class="keyword">int</span> row = obstacleGrid.length;</div><div class="line">        <span class="keyword">int</span> column = obstacleGrid[<span class="number">0</span>].length;</div><div class="line">        <span class="keyword">int</span>[][] result = <span class="keyword">new</span> <span class="keyword">int</span>[row][column];</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; row; i++) &#123;</div><div class="line">            <span class="keyword">if</span> (obstacleGrid[i][<span class="number">0</span>] == <span class="number">0</span>) result[i][<span class="number">0</span>] = <span class="number">1</span>;</div><div class="line">            <span class="keyword">else</span> <span class="keyword">break</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; column; i++) &#123;</div><div class="line">            <span class="keyword">if</span> (obstacleGrid[<span class="number">0</span>][i] == <span class="number">0</span>)result[<span class="number">0</span>][i] = <span class="number">1</span>;</div><div class="line">            <span class="keyword">else</span> <span class="keyword">break</span>;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; row; i++) &#123;</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; column; j++) &#123;</div><div class="line">                <span class="keyword">if</span> (obstacleGrid[i][j] == <span class="number">0</span>)</div><div class="line">                    result[i][j] = result[i - <span class="number">1</span>][j] + result[i][j - <span class="number">1</span>];</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">return</span> result[row - <span class="number">1</span>][column - <span class="number">1</span>];</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        <span class="keyword">int</span>[][] result = &#123;&#123;<span class="number">1</span>, <span class="number">0</span>&#125;&#125;;</div><div class="line">        System.out.println(<span class="keyword">new</span> UniquePathsII().uniquePathsWithObstacles(result));</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -357,9 +345,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Python3/" rel="tag">#Python3</a>
+            <a href="/tags/leetcode/" rel="tag">#leetcode</a>
           
-            <a href="/tags/StringIO/" rel="tag">#StringIO</a>
+            <a href="/tags/Java/" rel="tag">#Java</a>
+          
+            <a href="/tags/算法/" rel="tag">#算法</a>
           
         </div>
       
@@ -368,16 +358,12 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/08/29/property/" rel="next" title="@property">
-                <i class="fa fa-chevron-left"></i> @property
-              </a>
-            
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/06/09/文件读写/" rel="prev" title="文件读写">
-                文件读写 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/06/24/PowX-N/" rel="prev" title="PowX-N">
+                PowX-N <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -404,8 +390,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/06/09/StringIO/"
-           data-title="StringIO" data-url="http://yoursite.com/2016/06/09/StringIO/">
+      <div class="ds-thread" data-thread-key="2017/06/24/Unique-Paths-II/"
+           data-title="Unique-Paths-II" data-url="http://yoursite.com/2017/06/24/Unique-Paths-II/">
       </div>
     
   </div>
