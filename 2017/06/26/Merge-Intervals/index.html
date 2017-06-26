@@ -86,15 +86,14 @@
 
 <meta name="keywords" content="leetcode,Java,算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Sqrtx">
-<meta property="og:url" content="http://yoursite.com/2017/06/05/Sqrtx/index.html">
+<meta property="og:title" content="Merge-Intervals">
+<meta property="og:url" content="http://yoursite.com/2017/06/26/Merge-Intervals/index.html">
 <meta property="og:site_name" content="ephon的技术博客">
-<meta property="og:image" content="http://oon3lk745.bkt.clouddn.com/Sqrtx.png">
-<meta property="og:image" content="http://oon3lk745.bkt.clouddn.com/%E7%89%9B%E9%A1%BF%E9%80%BC%E8%BF%91%E6%B3%95.png">
-<meta property="og:updated_time" content="2017-06-07T07:13:11.000Z">
+<meta property="og:image" content="http://oon3lk745.bkt.clouddn.com/MergeIntervals.png">
+<meta property="og:updated_time" content="2017-06-26T14:06:14.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Sqrtx">
-<meta name="twitter:image" content="http://oon3lk745.bkt.clouddn.com/Sqrtx.png">
+<meta name="twitter:title" content="Merge-Intervals">
+<meta name="twitter:image" content="http://oon3lk745.bkt.clouddn.com/MergeIntervals.png">
 
 
 
@@ -112,7 +111,7 @@
   };
 </script>
 
-  <title> Sqrtx | ephon的技术博客 </title>
+  <title> Merge-Intervals | ephon的技术博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -252,7 +251,7 @@
             
             
               
-                Sqrtx
+                Merge-Intervals
               
             
           </h1>
@@ -264,8 +263,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-06-05T10:48:24+08:00" content="2017-06-05">
-              2017-06-05
+            <time itemprop="dateCreated" datetime="2017-06-26T22:03:46+08:00" content="2017-06-26">
+              2017-06-26
             </time>
           </span>
 
@@ -294,8 +293,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/06/05/Sqrtx/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/06/05/Sqrtx/" itemprop="commentsCount"></span>
+                <a href="/2017/06/26/Merge-Intervals/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/06/26/Merge-Intervals/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -323,12 +322,9 @@
       
 
       
-        <p><img src="http://oon3lk745.bkt.clouddn.com/Sqrtx.png" alt="avator"></p>
+        <p><img src="http://oon3lk745.bkt.clouddn.com/MergeIntervals.png" alt="avator"></p>
 <a id="more"></a>
-<p>此题采用牛顿逼近法，原理如下：<br><img src="http://oon3lk745.bkt.clouddn.com/%E7%89%9B%E9%A1%BF%E9%80%BC%E8%BF%91%E6%B3%95.png" alt="avator"></p>
-<p>代码如下：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> leetcode;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Sqrtx</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">sqrt</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</div><div class="line">        <span class="keyword">long</span> r = x;</div><div class="line">        <span class="keyword">while</span> (r*r &gt; x)</div><div class="line">            r = (r + x/r) / <span class="number">2</span>;</div><div class="line">        <span class="keyword">return</span> (<span class="keyword">int</span>)r;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.util.ArrayList;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MergeIntervals</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> ArrayList&lt;Interval&gt; <span class="title">merge</span><span class="params">(ArrayList&lt;Interval&gt; intervals)</span> </span>&#123;</div><div class="line">        ArrayList&lt;Interval&gt; result = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">        <span class="keyword">for</span> (Interval itv : intervals) &#123;</div><div class="line">            ArrayList&lt;Interval&gt; delete = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">            Interval tempItv = <span class="keyword">null</span>;</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; result.size(); i++) &#123;</div><div class="line">                <span class="keyword">if</span> (overlap(itv, result.get(i))) &#123;</div><div class="line">                    delete.add(result.get(i));</div><div class="line">                    <span class="keyword">if</span> (tempItv == <span class="keyword">null</span>) &#123;</div><div class="line">                        tempItv = mergeItv(itv, result.get(i));</div><div class="line">                    &#125; <span class="keyword">else</span></div><div class="line">                        tempItv = mergeItv(tempItv, result.get(i));</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line"></div><div class="line">            result.removeAll(delete);</div><div class="line">            Interval addItv;</div><div class="line">            <span class="keyword">if</span> (tempItv == <span class="keyword">null</span>)</div><div class="line">                addItv = itv;</div><div class="line">            <span class="keyword">else</span> addItv = tempItv;</div><div class="line"></div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; result.size(); i++) &#123;</div><div class="line">                <span class="keyword">if</span> (addItv.start &lt; result.get(i).start) &#123;</div><div class="line">                    result.add(i, addItv);</div><div class="line">                    <span class="keyword">break</span>;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">return</span> result;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">overlap</span><span class="params">(Interval itv1, Interval itv2)</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> (itv1.start &gt;= itv2.start &amp;&amp; itv1.start &lt;= itv2.end) || (itv1.end &gt;= itv2.start &amp;&amp; itv1.end &lt;= itv2.end) || (itv2.start &gt;= itv1.start &amp;&amp; itv2.start &lt;= itv1.end) || (itv2.end &gt;= itv1.start &amp;&amp; itv2.end &lt;= itv1.end);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> Interval <span class="title">mergeItv</span><span class="params">(Interval itv1, Interval itv2)</span> </span>&#123;</div><div class="line">        <span class="keyword">int</span> min = Math.min(itv1.start, itv2.start);</div><div class="line">        <span class="keyword">int</span> max = Math.max(itv1.end, itv2.end);</div><div class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Interval(min, max);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        Interval it1 = <span class="keyword">new</span> Interval(<span class="number">2</span>, <span class="number">3</span>);</div><div class="line">        Interval it2 = <span class="keyword">new</span> Interval(<span class="number">4</span>, <span class="number">6</span>);</div><div class="line">        Interval it3 = <span class="keyword">new</span> Interval(<span class="number">5</span>, <span class="number">7</span>);</div><div class="line">        Interval it4 = <span class="keyword">new</span> Interval(<span class="number">3</span>, <span class="number">4</span>);</div><div class="line"></div><div class="line">        ArrayList&lt;Interval&gt; intervals = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">        intervals.add(it1);</div><div class="line">        intervals.add(it2);</div><div class="line">        intervals.add(it3);</div><div class="line">        intervals.add(it4);</div><div class="line"></div><div class="line">        ArrayList&lt;Interval&gt; result = <span class="keyword">new</span> MergeIntervals().merge(intervals);</div><div class="line">        System.out.println(result);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -362,16 +358,12 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/06/07/Subsets/" rel="next" title="Subsets">
-                <i class="fa fa-chevron-left"></i> Subsets
-              </a>
-            
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/06/05/Edit-Distance/" rel="prev" title="Edit-Distance">
-                Edit-Distance <i class="fa fa-chevron-right"></i>
+              <a href="/2017/06/24/Spiral-Matrix/" rel="prev" title="Spiral-Matrix">
+                Spiral-Matrix <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -398,8 +390,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/06/05/Sqrtx/"
-           data-title="Sqrtx" data-url="http://yoursite.com/2017/06/05/Sqrtx/">
+      <div class="ds-thread" data-thread-key="2017/06/26/Merge-Intervals/"
+           data-title="Merge-Intervals" data-url="http://yoursite.com/2017/06/26/Merge-Intervals/">
       </div>
     
   </div>
