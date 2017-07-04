@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Python3,文件读写," />
+  <meta name="keywords" content="leetcode,Java,算法," />
 
 
 
@@ -84,17 +84,16 @@
 
 
 
-<meta name="description" content="在编程中往往需要涉及到文件的读写，Python中的读写操作与其他语言相差不大，但是更加的简便，符合Python的核心思想。">
-<meta name="keywords" content="Python3,文件读写">
+<meta name="keywords" content="leetcode,Java,算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="文件读写">
-<meta property="og:url" content="http://yoursite.com/2016/06/09/文件读写/index.html">
+<meta property="og:title" content="Search-Insert-Position">
+<meta property="og:url" content="http://yoursite.com/2017/07/04/Search-Insert-Position/index.html">
 <meta property="og:site_name" content="ephon的技术博客">
-<meta property="og:description" content="在编程中往往需要涉及到文件的读写，Python中的读写操作与其他语言相差不大，但是更加的简便，符合Python的核心思想。">
-<meta property="og:updated_time" content="2016-06-09T11:20:02.000Z">
+<meta property="og:image" content="http://oon3lk745.bkt.clouddn.com/SearchInsertPosition.png">
+<meta property="og:updated_time" content="2017-07-04T06:42:46.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="文件读写">
-<meta name="twitter:description" content="在编程中往往需要涉及到文件的读写，Python中的读写操作与其他语言相差不大，但是更加的简便，符合Python的核心思想。">
+<meta name="twitter:title" content="Search-Insert-Position">
+<meta name="twitter:image" content="http://oon3lk745.bkt.clouddn.com/SearchInsertPosition.png">
 
 
 
@@ -112,7 +111,7 @@
   };
 </script>
 
-  <title> 文件读写 | ephon的技术博客 </title>
+  <title> Search-Insert-Position | ephon的技术博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -252,7 +251,7 @@
             
             
               
-                文件读写
+                Search-Insert-Position
               
             
           </h1>
@@ -264,8 +263,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-09T18:53:49+08:00" content="2016-06-09">
-              2016-06-09
+            <time itemprop="dateCreated" datetime="2017-07-04T14:42:20+08:00" content="2017-07-04">
+              2017-07-04
             </time>
           </span>
 
@@ -278,8 +277,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Python3/" itemprop="url" rel="index">
-                    <span itemprop="name">Python3</span>
+                  <a href="/categories/leetcode/" itemprop="url" rel="index">
+                    <span itemprop="name">leetcode</span>
                   </a>
                 </span>
 
@@ -294,8 +293,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/06/09/文件读写/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/09/文件读写/" itemprop="commentsCount"></span>
+                <a href="/2017/07/04/Search-Insert-Position/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/07/04/Search-Insert-Position/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -323,29 +322,9 @@
       
 
       
-        <p>在编程中往往需要涉及到文件的读写，Python中的读写操作与其他语言相差不大，但是更加的简便，符合Python的核心思想。</p>
+        <p><img src="http://oon3lk745.bkt.clouddn.com/SearchInsertPosition.png" alt="avator"></p>
 <a id="more"></a>
-<p>首先先写一个<code>test.txt</code>的目标文件：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">ephon123</div><div class="line">jack</div><div class="line">tom</div></pre></td></tr></table></figure>
-<h2 id="读"><a href="#读" class="headerlink" title="读"></a>读</h2><p>那么如何读这个文件呢？我们有<code>read()</code>, <code>readline()/readlines()</code>, <code>read(n)</code>三种方法！</p>
-<p><strong>read()</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">f = open(<span class="string">'test.txt'</span>, <span class="string">'r'</span>)</div><div class="line">print(f.read())</div><div class="line">f.close()</div><div class="line"></div><div class="line">-----------------------------</div><div class="line">ephon123</div><div class="line">jack</div><div class="line">tom</div></pre></td></tr></table></figure>
-<p><strong>readline()/readlines()</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">f = open(<span class="string">'test.txt'</span>, <span class="string">'r'</span>)</div><div class="line">print(f.readline())</div><div class="line">f.close()</div><div class="line"></div><div class="line">-------------------------------</div><div class="line">ephon123</div></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">f = open(<span class="string">'test.txt'</span>, <span class="string">'r'</span>)</div><div class="line"><span class="keyword">for</span> line <span class="keyword">in</span> f.readlines():</div><div class="line">    print(line.strip())</div><div class="line">f.close()</div><div class="line"></div><div class="line">--------------------------------</div><div class="line">ephon123</div><div class="line">jack</div><div class="line">tom</div></pre></td></tr></table></figure>
-<p><strong>注意：<code>readline()/readlines()</code>会将<code>\n</code>读进去的，而<code>print</code>也会换行，所以如果不加<code>strip()</code>，会输出多余的空行。</strong></p>
-<p><strong>read(n)</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">f = open(<span class="string">'test.txt'</span>, <span class="string">'r'</span>)</div><div class="line"><span class="comment"># \n也会占一个字节哦</span></div><div class="line">print(f.read(<span class="number">10</span>))</div><div class="line">f.close()</div><div class="line"></div><div class="line">-----------------------------------</div><div class="line">ephon123</div><div class="line">j</div></pre></td></tr></table></figure>
-<p>通过上面的代码我们可以发现，文件被打开后就要关闭，但是如果考虑没有这个文件的话，打开操作就无法做到，更何况是关闭文件呢，因此我们应该这样写：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">try</span>:</div><div class="line">    f = open(<span class="string">'test.txt'</span>, <span class="string">'r'</span>)</div><div class="line">	 print(f.read())</div><div class="line"><span class="keyword">finally</span>:</div><div class="line">    <span class="keyword">if</span> f:</div><div class="line">        f.close()</div></pre></td></tr></table></figure>
-<p>Python中提供了更加简便的写法：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">with</span> open(<span class="string">'test.txt'</span>, <span class="string">'r'</span>) <span class="keyword">as</span> f:</div><div class="line">    print(f.read())</div></pre></td></tr></table></figure>
-<p>这两种写法效果是一样的。</p>
-<h2 id="写"><a href="#写" class="headerlink" title="写"></a>写</h2><p>写的话与读类似：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">with</span> open(<span class="string">'test.txt'</span>, <span class="string">'w'</span>) <span class="keyword">as</span> f:</div><div class="line">    f.write(<span class="string">'123\nabc\nxyz'</span>)</div></pre></td></tr></table></figure>
-<p>打开<code>test.txt</code>文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">123</div><div class="line">abc</div><div class="line">xyz</div></pre></td></tr></table></figure>
-
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SearchInsertPosition</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">searchInsert</span><span class="params">(<span class="keyword">int</span>[] A, <span class="keyword">int</span> target)</span> </span>&#123;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; A.length; i++) &#123;</div><div class="line">            <span class="keyword">if</span> (A[i] &gt;= target) <span class="keyword">return</span> i;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">return</span> A.length;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -366,9 +345,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Python3/" rel="tag">#Python3</a>
+            <a href="/tags/leetcode/" rel="tag">#leetcode</a>
           
-            <a href="/tags/文件读写/" rel="tag">#文件读写</a>
+            <a href="/tags/Java/" rel="tag">#Java</a>
+          
+            <a href="/tags/算法/" rel="tag">#算法</a>
           
         </div>
       
@@ -377,16 +358,12 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/06/09/StringIO/" rel="next" title="StringIO">
-                <i class="fa fa-chevron-left"></i> StringIO
-              </a>
-            
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/06/07/Python中元类的使用/" rel="prev" title="Python中元类的使用">
-                Python中元类的使用 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/07/04/Rotate-Image/" rel="prev" title="Rotate-Image">
+                Rotate-Image <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -413,8 +390,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/06/09/文件读写/"
-           data-title="文件读写" data-url="http://yoursite.com/2016/06/09/文件读写/">
+      <div class="ds-thread" data-thread-key="2017/07/04/Search-Insert-Position/"
+           data-title="Search-Insert-Position" data-url="http://yoursite.com/2017/07/04/Search-Insert-Position/">
       </div>
     
   </div>
@@ -525,7 +502,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#读"><span class="nav-number">1.</span> <span class="nav-text">读</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#写"><span class="nav-number">2.</span> <span class="nav-text">写</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
         </section>
