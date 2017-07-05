@@ -86,14 +86,14 @@
 
 <meta name="keywords" content="leetcode,Java,算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Construct-Binary-Tree-From-Preorder-And-Inorder-Traversal">
-<meta property="og:url" content="http://yoursite.com/2017/04/30/Construct-Binary-Tree-From-Preorder-And-Inorder-Traversal/index.html">
+<meta property="og:title" content="PermutationsII">
+<meta property="og:url" content="http://yoursite.com/2017/07/05/PermutationsII/index.html">
 <meta property="og:site_name" content="ephon的技术博客">
-<meta property="og:image" content="http://oon3lk745.bkt.clouddn.com/ConstructBinaryTreeFromPreorderAndInorderTraversal.png">
-<meta property="og:updated_time" content="2017-04-30T06:19:34.000Z">
+<meta property="og:image" content="http://oon3lk745.bkt.clouddn.com/PermutationsII.png">
+<meta property="og:updated_time" content="2017-07-05T01:27:41.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Construct-Binary-Tree-From-Preorder-And-Inorder-Traversal">
-<meta name="twitter:image" content="http://oon3lk745.bkt.clouddn.com/ConstructBinaryTreeFromPreorderAndInorderTraversal.png">
+<meta name="twitter:title" content="PermutationsII">
+<meta name="twitter:image" content="http://oon3lk745.bkt.clouddn.com/PermutationsII.png">
 
 
 
@@ -111,7 +111,7 @@
   };
 </script>
 
-  <title> Construct-Binary-Tree-From-Preorder-And-Inorder-Traversal | ephon的技术博客 </title>
+  <title> PermutationsII | ephon的技术博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -251,7 +251,7 @@
             
             
               
-                Construct-Binary-Tree-From-Preorder-And-Inorder-Traversal
+                PermutationsII
               
             
           </h1>
@@ -263,8 +263,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-04-30T14:03:56+08:00" content="2017-04-30">
-              2017-04-30
+            <time itemprop="dateCreated" datetime="2017-07-05T09:27:12+08:00" content="2017-07-05">
+              2017-07-05
             </time>
           </span>
 
@@ -293,8 +293,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/04/30/Construct-Binary-Tree-From-Preorder-And-Inorder-Traversal/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/30/Construct-Binary-Tree-From-Preorder-And-Inorder-Traversal/" itemprop="commentsCount"></span>
+                <a href="/2017/07/05/PermutationsII/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/07/05/PermutationsII/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -322,9 +322,9 @@
       
 
       
-        <p><img src="http://oon3lk745.bkt.clouddn.com/ConstructBinaryTreeFromPreorderAndInorderTraversal.png" alt="avator"></p>
+        <p><img src="http://oon3lk745.bkt.clouddn.com/PermutationsII.png" alt="avator"></p>
 <a id="more"></a>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * Definition for binary tree</div><div class="line"> * public class TreeNode &#123;</div><div class="line"> *     int val;</div><div class="line"> *     TreeNode left;</div><div class="line"> *     TreeNode right;</div><div class="line"> *     TreeNode(int x) &#123; val = x; &#125;</div><div class="line"> * &#125;</div><div class="line"> */</div><div class="line"><span class="keyword">import</span> java.util.Arrays;</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ConstructBinaryTreeFromPreorderAndInorderTraversal</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> TreeNode <span class="title">buildTree</span><span class="params">(<span class="keyword">int</span>[] preorder, <span class="keyword">int</span>[] inorder)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span> (preorder.length != inorder.length || preorder.length &lt;= <span class="number">0</span>) <span class="keyword">return</span> <span class="keyword">null</span>;</div><div class="line">        TreeNode root = <span class="keyword">new</span> TreeNode(preorder[<span class="number">0</span>]);</div><div class="line">        <span class="keyword">int</span> count = <span class="number">0</span>;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; inorder[i] != preorder[<span class="number">0</span>]; i++) count++;</div><div class="line"></div><div class="line">        <span class="keyword">if</span> (count != <span class="number">0</span>) &#123;</div><div class="line">            <span class="keyword">int</span>[] leftPreorder = Arrays.copyOfRange(preorder, <span class="number">1</span>, count+<span class="number">1</span>);</div><div class="line">            <span class="keyword">int</span>[] leftInorder = Arrays.copyOfRange(inorder, <span class="number">0</span>, count);</div><div class="line">            </div><div class="line">            root.left = buildTree(leftPreorder, leftInorder);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">int</span> araryLength = preorder.length;</div><div class="line">        <span class="keyword">int</span> rightArrayCount = araryLength - count - <span class="number">1</span>;</div><div class="line">        <span class="keyword">if</span> (rightArrayCount != <span class="number">0</span>) &#123;</div><div class="line">            <span class="keyword">int</span>[] rightPreorder = Arrays.copyOfRange(preorder, count+<span class="number">1</span>, araryLength);</div><div class="line">            <span class="keyword">int</span>[] rightInorder = Arrays.copyOfRange(inorder, count+<span class="number">1</span>, araryLength);</div><div class="line"></div><div class="line">            root.right = buildTree(rightPreorder, rightInorder);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">return</span> root;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.util.ArrayList;</div><div class="line"><span class="keyword">import</span> java.util.HashSet;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="keyword">public</span> ArrayList&lt;ArrayList&lt;Integer&gt;&gt; permuteUnique(<span class="keyword">int</span>[] num) &#123;</div><div class="line">        ArrayList&lt;ArrayList&lt;Integer&gt;&gt; result = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">        <span class="keyword">if</span> (num.length == <span class="number">0</span>) <span class="keyword">return</span> result;</div><div class="line">        ArrayList&lt;Integer&gt; numList = <span class="keyword">new</span> ArrayList();</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; num.length; i++)&#123;</div><div class="line">            numList.add(num[i]);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        result = permuteHelp(numList);</div><div class="line"></div><div class="line">        <span class="keyword">return</span> result;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> ArrayList&lt;ArrayList&lt;Integer&gt;&gt; permuteHelp(ArrayList&lt;Integer&gt; num) &#123;</div><div class="line">        ArrayList&lt;ArrayList&lt;Integer&gt;&gt; result = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line"></div><div class="line">        <span class="keyword">if</span> (num.size() == <span class="number">1</span>) &#123;</div><div class="line">            ArrayList&lt;Integer&gt; innerList = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">            innerList.add(num.get(<span class="number">0</span>));</div><div class="line">            result.add(innerList);</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            HashSet&lt;Integer&gt; set = <span class="keyword">new</span> HashSet&lt;&gt;();</div><div class="line">            <span class="keyword">int</span> size = num.size();</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size; i++) &#123;</div><div class="line">                <span class="keyword">int</span> key = num.get(i);</div><div class="line">                <span class="keyword">if</span> (set.contains(key)) <span class="keyword">continue</span>;</div><div class="line">                set.add(key);</div><div class="line">                num.remove(i);</div><div class="line">                ArrayList&lt;ArrayList&lt;Integer&gt;&gt; tempList = permuteHelp(num);</div><div class="line">                num.add(i, key);</div><div class="line"></div><div class="line">                <span class="keyword">for</span> (ArrayList&lt;Integer&gt; list : tempList) &#123;</div><div class="line">                    list.add(<span class="number">0</span>, key);</div><div class="line">                    result.add(list);</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">return</span> result;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -358,16 +358,12 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/30/Construct-Binary-Tree-From-Inorder-And-Postorder-Traversal/" rel="next" title="Construct-Binary-Tree-From-Inorder-And-Postorder-Traversal">
-                <i class="fa fa-chevron-left"></i> Construct-Binary-Tree-From-Inorder-And-Postorder-Traversal
-              </a>
-            
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/04/30/Reverse-Linked-List-II/" rel="prev" title="Reverse-Linked-List-II">
-                Reverse-Linked-List-II <i class="fa fa-chevron-right"></i>
+              <a href="/2017/07/05/Permutations/" rel="prev" title="Permutations">
+                Permutations <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -394,8 +390,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/04/30/Construct-Binary-Tree-From-Preorder-And-Inorder-Traversal/"
-           data-title="Construct-Binary-Tree-From-Preorder-And-Inorder-Traversal" data-url="http://yoursite.com/2017/04/30/Construct-Binary-Tree-From-Preorder-And-Inorder-Traversal/">
+      <div class="ds-thread" data-thread-key="2017/07/05/PermutationsII/"
+           data-title="PermutationsII" data-url="http://yoursite.com/2017/07/05/PermutationsII/">
       </div>
     
   </div>
