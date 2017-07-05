@@ -86,14 +86,14 @@
 
 <meta name="keywords" content="leetcode,Java,算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Max-Points-On-A-Line">
-<meta property="og:url" content="http://yoursite.com/2017/05/02/Max-Points-On-A-Line/index.html">
+<meta property="og:title" content="Permutations">
+<meta property="og:url" content="http://yoursite.com/2017/07/05/Permutations/index.html">
 <meta property="og:site_name" content="ephon的技术博客">
-<meta property="og:image" content="http://oon3lk745.bkt.clouddn.com/MaxPointsOnALine.png">
-<meta property="og:updated_time" content="2017-05-02T09:27:06.000Z">
+<meta property="og:image" content="http://oon3lk745.bkt.clouddn.com/Permutations.png">
+<meta property="og:updated_time" content="2017-07-05T01:26:21.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Max-Points-On-A-Line">
-<meta name="twitter:image" content="http://oon3lk745.bkt.clouddn.com/MaxPointsOnALine.png">
+<meta name="twitter:title" content="Permutations">
+<meta name="twitter:image" content="http://oon3lk745.bkt.clouddn.com/Permutations.png">
 
 
 
@@ -111,7 +111,7 @@
   };
 </script>
 
-  <title> Max-Points-On-A-Line | ephon的技术博客 </title>
+  <title> Permutations | ephon的技术博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -251,7 +251,7 @@
             
             
               
-                Max-Points-On-A-Line
+                Permutations
               
             
           </h1>
@@ -263,8 +263,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-05-02T17:25:57+08:00" content="2017-05-02">
-              2017-05-02
+            <time itemprop="dateCreated" datetime="2017-07-05T09:25:51+08:00" content="2017-07-05">
+              2017-07-05
             </time>
           </span>
 
@@ -293,8 +293,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/05/02/Max-Points-On-A-Line/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/05/02/Max-Points-On-A-Line/" itemprop="commentsCount"></span>
+                <a href="/2017/07/05/Permutations/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/07/05/Permutations/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -322,9 +322,9 @@
       
 
       
-        <p><img src="http://oon3lk745.bkt.clouddn.com/MaxPointsOnALine.png" alt="avator"></p>
+        <p><img src="http://oon3lk745.bkt.clouddn.com/Permutations.png" alt="avator"></p>
 <a id="more"></a>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * Definition for a point.</div><div class="line"> * class Point &#123;</div><div class="line"> *     int x;</div><div class="line"> *     int y;</div><div class="line"> *     Point() &#123; x = 0; y = 0; &#125;</div><div class="line"> *     Point(int a, int b) &#123; x = a; y = b; &#125;</div><div class="line"> * &#125;</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">       <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxPoints</span><span class="params">(Point[] points)</span> </span>&#123;</div><div class="line">        <span class="keyword">int</span> pointNum = points.length;</div><div class="line">        <span class="keyword">if</span> (pointNum &lt; <span class="number">2</span>) <span class="keyword">return</span> pointNum;</div><div class="line"></div><div class="line">        <span class="keyword">int</span> max = <span class="number">0</span>;</div><div class="line"></div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; pointNum; i++) &#123;</div><div class="line">            <span class="keyword">int</span> sumY = <span class="number">1</span>;</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = i + <span class="number">1</span>; j &lt; pointNum; j++) &#123;</div><div class="line">                </div><div class="line">                <span class="keyword">if</span> (points[i].y - points[j].y == <span class="number">0</span>) &#123;</div><div class="line">                    sumY++;</div><div class="line">                &#125; <span class="keyword">else</span> &#123;</div><div class="line">                    <span class="keyword">double</span> ratio = (<span class="keyword">double</span>)(points[i].x - points[j].x) / (points[i].y - points[j].y);</div><div class="line">                    <span class="keyword">int</span> sum = <span class="number">1</span>;</div><div class="line">                    <span class="keyword">for</span> (<span class="keyword">int</span> p = <span class="number">0</span>; p &lt; pointNum; p++) &#123;</div><div class="line">                        <span class="keyword">if</span> (p == i) <span class="keyword">continue</span>;</div><div class="line">                        <span class="keyword">if</span> (points[i].x == points[p].x &amp;&amp; points[i].y == points[p].y) &#123;</div><div class="line">                            sum++;</div><div class="line">                            <span class="keyword">continue</span>;</div><div class="line">                        &#125;</div><div class="line">                        <span class="keyword">double</span> newRatio = (<span class="keyword">double</span>)(points[i].x - points[p].x) / (points[i].y - points[p].y);</div><div class="line">                        <span class="keyword">if</span> (ratio == newRatio) sum++;</div><div class="line">                    &#125;</div><div class="line">                    max = sum &gt; max ? sum : max;</div><div class="line">                &#125;</div><div class="line"></div><div class="line">                max = sumY &gt; max ? sumY : max;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">return</span> max;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.util.ArrayList;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="keyword">public</span> ArrayList&lt;ArrayList&lt;Integer&gt;&gt; permute(<span class="keyword">int</span>[] num) &#123;</div><div class="line">        ArrayList&lt;ArrayList&lt;Integer&gt;&gt; result = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">        <span class="keyword">if</span> (num.length == <span class="number">0</span>) <span class="keyword">return</span> result;</div><div class="line">        ArrayList&lt;Integer&gt; numList = <span class="keyword">new</span> ArrayList();</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; num.length; i++)&#123;</div><div class="line">            numList.add(num[i]);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        result = permuteHelp(numList);</div><div class="line"></div><div class="line">        <span class="keyword">return</span> result;</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> ArrayList&lt;ArrayList&lt;Integer&gt;&gt; permuteHelp(ArrayList&lt;Integer&gt; num) &#123;</div><div class="line">        ArrayList&lt;ArrayList&lt;Integer&gt;&gt; result = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line"></div><div class="line">        <span class="keyword">if</span> (num.size() == <span class="number">1</span>) &#123;</div><div class="line">            ArrayList&lt;Integer&gt; innerList = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">            innerList.add(num.get(<span class="number">0</span>));</div><div class="line">            result.add(innerList);</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            <span class="keyword">int</span> size = num.size();</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size; i++) &#123;</div><div class="line">                <span class="keyword">int</span> key = num.get(i);</div><div class="line">                num.remove(i);</div><div class="line">                ArrayList&lt;ArrayList&lt;Integer&gt;&gt; tempList = permuteHelp(num);</div><div class="line">                num.add(i, key);</div><div class="line"></div><div class="line">                <span class="keyword">for</span> (ArrayList&lt;Integer&gt; list : tempList) &#123;</div><div class="line">                    list.add(<span class="number">0</span>, key);</div><div class="line">                    result.add(list);</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">return</span> result;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -358,16 +358,12 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/05/02/Sort-List/" rel="next" title="Sort-List">
-                <i class="fa fa-chevron-left"></i> Sort-List
-              </a>
-            
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/05/02/Evaluate-Reverse-Polish-Notation/" rel="prev" title="Evaluate-Reverse-Polish-Notation">
-                Evaluate-Reverse-Polish-Notation <i class="fa fa-chevron-right"></i>
+              <a href="/2017/07/04/Search-In-Rotated-Sorted-Array/" rel="prev" title="Search-In-Rotated-Sorted-Array">
+                Search-In-Rotated-Sorted-Array <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -394,8 +390,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/05/02/Max-Points-On-A-Line/"
-           data-title="Max-Points-On-A-Line" data-url="http://yoursite.com/2017/05/02/Max-Points-On-A-Line/">
+      <div class="ds-thread" data-thread-key="2017/07/05/Permutations/"
+           data-title="Permutations" data-url="http://yoursite.com/2017/07/05/Permutations/">
       </div>
     
   </div>
