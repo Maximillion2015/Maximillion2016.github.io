@@ -86,14 +86,14 @@
 
 <meta name="keywords" content="Java,leetcode,算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Jump-Game-II">
-<meta property="og:url" content="http://yoursite.com/2017/07/10/Jump-Game-II/index.html">
+<meta property="og:title" content="Count-And-Say">
+<meta property="og:url" content="http://yoursite.com/2017/07/19/Count-And-Say/index.html">
 <meta property="og:site_name" content="ephon的技术博客">
-<meta property="og:image" content="http://oon3lk745.bkt.clouddn.com/JumpGameII.png">
-<meta property="og:updated_time" content="2017-07-10T02:27:27.000Z">
+<meta property="og:image" content="http://oon3lk745.bkt.clouddn.com/CountAndSay.png">
+<meta property="og:updated_time" content="2017-07-19T02:31:27.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Jump-Game-II">
-<meta name="twitter:image" content="http://oon3lk745.bkt.clouddn.com/JumpGameII.png">
+<meta name="twitter:title" content="Count-And-Say">
+<meta name="twitter:image" content="http://oon3lk745.bkt.clouddn.com/CountAndSay.png">
 
 
 
@@ -111,7 +111,7 @@
   };
 </script>
 
-  <title> Jump-Game-II | ephon的技术博客 </title>
+  <title> Count-And-Say | ephon的技术博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -251,7 +251,7 @@
             
             
               
-                Jump-Game-II
+                Count-And-Say
               
             
           </h1>
@@ -263,8 +263,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-07-10T10:26:54+08:00" content="2017-07-10">
-              2017-07-10
+            <time itemprop="dateCreated" datetime="2017-07-19T10:31:06+08:00" content="2017-07-19">
+              2017-07-19
             </time>
           </span>
 
@@ -293,8 +293,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/07/10/Jump-Game-II/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/07/10/Jump-Game-II/" itemprop="commentsCount"></span>
+                <a href="/2017/07/19/Count-And-Say/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/07/19/Count-And-Say/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -322,10 +322,9 @@
       
 
       
-        <p><img src="http://oon3lk745.bkt.clouddn.com/JumpGameII.png" alt="avator"></p>
+        <p><img src="http://oon3lk745.bkt.clouddn.com/CountAndSay.png" alt="avaotor"></p>
 <a id="more"></a>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JumpGameII</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">jump</span><span class="params">(<span class="keyword">int</span>[] A)</span> </span>&#123;</div><div class="line">        <span class="keyword">int</span> length = A.length;</div><div class="line"></div><div class="line">        <span class="keyword">if</span> (length == <span class="number">1</span>) <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line"></div><div class="line">        <span class="keyword">int</span> index = <span class="number">0</span>;</div><div class="line">        <span class="keyword">int</span> start = index + <span class="number">1</span>;</div><div class="line">        <span class="keyword">int</span> end = index + A[<span class="number">0</span>];</div><div class="line">        <span class="keyword">int</span> count = <span class="number">1</span>;</div><div class="line">        <span class="keyword">while</span> (index &lt; length) &#123;</div><div class="line"></div><div class="line">            <span class="keyword">int</span> maxLen = <span class="number">0</span>;</div><div class="line">            <span class="keyword">int</span> maxIndex = <span class="number">0</span>;</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = start; i &lt;= end; i++) &#123;</div><div class="line">                <span class="keyword">if</span> (i == length - <span class="number">1</span>) <span class="keyword">return</span> count;</div><div class="line">                <span class="keyword">if</span> (A[i] + i &gt; maxIndex + maxLen) &#123;</div><div class="line">                    maxIndex = i;</div><div class="line">                    maxLen = A[i];</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line"></div><div class="line">            count++;</div><div class="line"></div><div class="line">            index = maxIndex + <span class="number">1</span>;</div><div class="line">            start = maxIndex + <span class="number">1</span>;</div><div class="line">            end = maxIndex + maxLen;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">return</span> count;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        JumpGameII jumpGameII = <span class="keyword">new</span> JumpGameII();</div><div class="line"></div><div class="line">        <span class="keyword">int</span>[] A = &#123;<span class="number">2</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">1</span>, <span class="number">4</span>&#125;;</div><div class="line"></div><div class="line">        System.out.println(jumpGameII.jump(A));</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> leetcode;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CountAndSay</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">countAndSay</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span> (n &lt; <span class="number">1</span>) <span class="keyword">return</span> <span class="string">""</span>;</div><div class="line">        String str = <span class="string">"1"</span>;</div><div class="line">        <span class="keyword">while</span> (--n != <span class="number">0</span>) &#123;</div><div class="line">            String result = nextString(str);</div><div class="line">            str = result;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> str;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">nextString</span><span class="params">(String str)</span> </span>&#123;</div><div class="line">        <span class="keyword">int</span> i = <span class="number">1</span>;</div><div class="line">        <span class="keyword">char</span> left = str.charAt(<span class="number">0</span>);</div><div class="line">        <span class="keyword">int</span> count = <span class="number">1</span>;</div><div class="line">        StringBuffer sb = <span class="keyword">new</span> StringBuffer();</div><div class="line">        <span class="keyword">while</span> (i &lt; str.length()) &#123;</div><div class="line">            <span class="keyword">if</span> (str.charAt(i) != left) &#123;</div><div class="line">                sb.append(String.valueOf(count)).append(left);</div><div class="line">                count = <span class="number">1</span>;</div><div class="line">                left = str.charAt(i);</div><div class="line">            &#125; <span class="keyword">else</span> &#123;</div><div class="line">                count++;</div><div class="line">            &#125;</div><div class="line">            i++;</div><div class="line">        &#125;</div><div class="line">        sb.append(String.valueOf(count)).append(left);</div><div class="line"></div><div class="line">        <span class="keyword">return</span> sb.toString();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        System.out.println(<span class="keyword">new</span> CountAndSay().countAndSay(<span class="number">4</span>));</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -359,16 +358,12 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/07/12/Anagrams/" rel="next" title="Anagrams">
-                <i class="fa fa-chevron-left"></i> Anagrams
-              </a>
-            
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/07/05/PermutationsII/" rel="prev" title="PermutationsII">
-                PermutationsII <i class="fa fa-chevron-right"></i>
+              <a href="/2017/07/18/Combination-Sum/" rel="prev" title="Combination-Sum">
+                Combination-Sum <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -395,8 +390,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/07/10/Jump-Game-II/"
-           data-title="Jump-Game-II" data-url="http://yoursite.com/2017/07/10/Jump-Game-II/">
+      <div class="ds-thread" data-thread-key="2017/07/19/Count-And-Say/"
+           data-title="Count-And-Say" data-url="http://yoursite.com/2017/07/19/Count-And-Say/">
       </div>
     
   </div>
