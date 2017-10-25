@@ -253,6 +253,130 @@
             
               
                 
+                <a class="post-title-link" href="/2017/10/25/Surrounded-Regions/" itemprop="url">
+                  Surrounded-Regions
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-10-25T16:33:23+08:00" content="2017-10-25">
+              2017-10-25
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/leetcode/" itemprop="url" rel="index">
+                    <span itemprop="name">leetcode</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/10/25/Surrounded-Regions/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/10/25/Surrounded-Regions/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+       
+          
+
+         </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><img src="http://oon3lk745.bkt.clouddn.com/SurroundedRegions.png" alt="avator"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*</span></div><div class="line">思路：1. 将四边的O赋值为A</div><div class="line">     2. 将与A相连的O变为A</div><div class="line">     3. 将所有的O变为X</div><div class="line">     4. 将所有的A变为O</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SurroundedRegions</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">solve</span><span class="params">(<span class="keyword">char</span>[][] board)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span>(board.length == <span class="number">0</span> || board[<span class="number">0</span>].length == <span class="number">0</span>) <span class="keyword">return</span>;</div><div class="line">        <span class="keyword">int</span> row = board.length;</div><div class="line">        <span class="keyword">int</span> column = board[<span class="number">0</span>].length;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; column; i++) &#123;</div><div class="line">            <span class="keyword">if</span> (board[<span class="number">0</span>][i] == <span class="string">'O'</span>) board[<span class="number">0</span>][i] = <span class="string">'A'</span>;</div><div class="line">            <span class="keyword">if</span> (board[row-<span class="number">1</span>][i] == <span class="string">'O'</span>) board[row-<span class="number">1</span>][i] = <span class="string">'A'</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; row; i++) &#123;</div><div class="line">            <span class="keyword">if</span> (board[i][<span class="number">0</span>] == <span class="string">'O'</span>) board[i][<span class="number">0</span>] = <span class="string">'A'</span>;</div><div class="line">            <span class="keyword">if</span> (board[i][column-<span class="number">1</span>] == <span class="string">'O'</span>) board[i][column-<span class="number">1</span>] = <span class="string">'A'</span>;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">boolean</span> flag = <span class="keyword">true</span>;</div><div class="line">        <span class="keyword">while</span> (flag) &#123;</div><div class="line">            flag = <span class="keyword">false</span>;</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; row-<span class="number">1</span>; i++)</div><div class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; column-<span class="number">1</span>; j++) &#123;</div><div class="line">                    <span class="keyword">if</span> (board[i][j] == <span class="string">'O'</span>) &#123;</div><div class="line">                        <span class="keyword">if</span> (board[i-<span class="number">1</span>][j] == <span class="string">'A'</span> || board[i+<span class="number">1</span>][j] == <span class="string">'A'</span> || board[i][j-<span class="number">1</span>] == <span class="string">'A'</span> || board[i][j+<span class="number">1</span>] == <span class="string">'A'</span>) &#123;</div><div class="line">                            board[i][j] = <span class="string">'A'</span>;</div><div class="line">                            flag = <span class="keyword">true</span>;</div><div class="line">                        &#125;</div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; row; i++)</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; column; j++) &#123;</div><div class="line">                <span class="keyword">if</span> (board[i][j] == <span class="string">'O'</span>)</div><div class="line">                    board[i][j] = <span class="string">'X'</span>;</div><div class="line">                <span class="keyword">if</span> (board[i][j] == <span class="string">'A'</span>)</div><div class="line">                    board[i][j] = <span class="string">'O'</span>;</div><div class="line">            &#125;</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        <span class="keyword">char</span>[][] board = &#123;&#123;<span class="string">'X'</span>, <span class="string">'O'</span>, <span class="string">'X'</span>, <span class="string">'O'</span>, <span class="string">'X'</span>, <span class="string">'O'</span>&#125;, &#123;<span class="string">'O'</span>, <span class="string">'X'</span>, <span class="string">'O'</span>, <span class="string">'X'</span>, <span class="string">'O'</span>, <span class="string">'X'</span>&#125;, &#123;<span class="string">'X'</span>, <span class="string">'O'</span>, <span class="string">'X'</span>, <span class="string">'O'</span>, <span class="string">'X'</span>, <span class="string">'O'</span>&#125;, &#123;<span class="string">'O'</span>, <span class="string">'X'</span>, <span class="string">'O'</span>, <span class="string">'X'</span>, <span class="string">'O'</span>, <span class="string">'X'</span>&#125;&#125;;</div><div class="line">        solve(board);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2017/08/03/Valid-Sudoku/" itemprop="url">
                   Valid-Sudoku
                 </a>
@@ -1357,136 +1481,11 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/07/12/Anagrams/" itemprop="url">
-                  Anagrams
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-07-12T14:31:22+08:00" content="2017-07-12">
-              2017-07-12
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/leetcode/" itemprop="url" rel="index">
-                    <span itemprop="name">leetcode</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2017/07/12/Anagrams/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/07/12/Anagrams/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-       
-          
-
-         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><img src="http://oon3lk745.bkt.clouddn.com/Anagrams.png" alt="avator"></p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2017/07/12/Anagrams/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1527,7 +1526,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">120</span>
+              <span class="site-state-item-count">121</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
